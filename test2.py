@@ -19,3 +19,5 @@ A.__y = 50
 A.x = 20
 A.tpel_koordinatners()
 A.tpel_koordinatners()
+A.x = 60
+A.tpel_koordinatners()
