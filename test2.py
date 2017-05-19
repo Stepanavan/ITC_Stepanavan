@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python ARTSVI
 # -*- coding: utf-8 -*-
 
 class Ket():
