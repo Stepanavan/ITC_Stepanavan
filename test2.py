@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 class Ket():
 	def __init__(self,x=10,y=10):
 		self.x=x
