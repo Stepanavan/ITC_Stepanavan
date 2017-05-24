@@ -4,12 +4,8 @@ body {
     background-repeat: no-repeat;
     background-color: #fff;
     background-position: bottom center ;
-    margin-right: 0px;
     background-attachment: fixed;
 }
-
-
-
 
 
 table {
@@ -95,7 +91,7 @@ li.dropdown {
 */
 body {
     width: 800px;
-    margin: 0 auto;
+    
     color:#777;
 }
 
@@ -110,7 +106,6 @@ h1, h2 {
 html, body {
    
     font: 100% helvetica, arial, sans-serif;
-    
     padding: 0;
     margin: 0 auto;
 }
@@ -143,7 +138,7 @@ a {
 }
 
 a:hover {
-    color: #555;    
+    color: #555; 
 }
 
 /*============================*/
@@ -159,6 +154,7 @@ a:hover {
     list-style: none;
     margin: 0;
     padding: 0;
+    z-index: 9999;
 }
 
 #nav li {    
@@ -570,7 +566,10 @@ input[type=radio]#button-5:checked~.arrows#arrow-4 { left: -73px }
 
 
 
-/**
+/** 
+ SlideShow Discription 
+
+
 .description {
     position: absolute;
     top: 0;
