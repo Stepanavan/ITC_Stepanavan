@@ -1,0 +1,151 @@
+body {
+
+	margin:3px;
+	background-image: url("bar.png"),url(bg.png) ;
+	background-repeat: repeat-x, repeat;
+
+}
+
+
+
+#ficon {
+	position: absolute;
+	margin-left: 3%;
+	cursor: pointer;
+	margin-bottom: 40;
+}
+
+
+.search {
+	margin-left : 7%;
+	margin-top:9px;
+	height: 18px;
+	width: 450px;
+	
+}
+
+#inputtext {
+	background-image: url(search.png);
+	background-repeat:no-repeat;
+	background-position: right;
+	background-color: rgba(255,255,255,.91);
+	height: 18px;
+	width: 450px;
+	border-radius: 2.7px;
+	box-shadow: 10px white;
+
+}
+
+#inputtext:focus {
+background-image: url(searchhover.png);
+background-repeat:no-repeat;
+background-color: rgba(255,255,255,1);
+
+}
+
+.user {
+	
+	margin:0;
+	margin-left :600px;
+	margin-top:-26px;
+	height: 43px; 
+	width: 75px;
+	
+	
+
+
+}
+.user:hover {
+	border:5px solid transparent inset;
+border-radius: 5px 5px 5px 5px;	
+box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
+
+
+}
+
+.SS {
+	margin-left :680px;
+	margin-top:-44px;
+	height: 43px; 
+	width: 75px;
+}
+.home {
+	
+	margin-left :690px;
+	margin-top:-42px;
+	height: 42px; 
+	width: 75px;
+
+}
+
+.home:hover {
+	border:5px solid transparent inset;
+border-radius: 5px 5px 5px 5px;	
+box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
+}
+
+.SS2 {
+	margin-left :767px;
+	margin-top:-44px;
+	height: 42px; 
+	width: 75px;
+}
+.findfriend {
+	
+	margin-left :780px;
+	margin-top:-40px;
+	height: 43px; 
+	width: 90px;
+
+}
+
+.findfriend:hover {
+	border:5px solid transparent inset;
+border-radius: 5px 5px 5px 5px;	
+box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
+}
+.req {
+	
+	margin-left :900px;
+	margin-top:-36px;
+	height: 43px; 
+	width: 90px;
+}
+
+.mess {
+	
+	margin-left :940px;
+	margin-top:-39px;
+	height: 43px; 
+	width: 90px;
+}
+
+.note {
+	
+	margin-left :975px;
+	
+	margin-top:-45.5px;
+	height: 43px; 
+	width: 90px;
+}
+.SS3 {
+	margin-left :1010px;
+	margin-top:-52px;
+	height: 42px; 
+	width: 75px;
+}
+
+.xz {
+	
+	margin-left :1025px;
+	margin-top:-37px;
+	height: 43px; 
+	width: 20px;
+}
+.splash {
+	margin-left: 30%;
+	display: inline-block;
+	width: 100%;
+	height:100%;
+	background-image: url(bg.png);
+}
