@@ -1,0 +1,10 @@
+div { 
+    display: block;
+    float: left;  
+}
+
+h1 {
+    text-shadow:3px 3px 1px;
+    font-family:Arial;
+    font-color:red 
+}
