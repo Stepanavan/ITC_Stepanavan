@@ -1,9 +1,7 @@
 body {
 
-	
 	background-image: url("bar.png"),url(bg.png) ;
 	background-repeat: repeat-x, repeat;
-
 }
 
 div {
@@ -15,7 +13,6 @@ div {
 	width:28px;
 	float: left;
 	cursor: pointer;
-	
 }
 
 
@@ -27,14 +24,12 @@ div {
 	height: 18px;
 	width: 450px;
 	border-radius: 2.7px;
-
 }
 
 #inputtext:focus {
 	background-image: url(searchhover.png);
 	background-repeat:no-repeat;
 	background-color: rgba(255,255,255,1);
-
 }
 
 .user {
@@ -42,28 +37,22 @@ div {
 	margin-left: 60px;
 	height: 28px; 
 	width: 75px;
-	
-	
-
-
 }
+
 .user:hover {
 	border:5px solid transparent inset;
-border-radius: 5px ;	
-box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
-
-
+    border-radius: 5px ;	
+    box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
 }
 
 .SS {
 	height: 28px; 
 	width: 6px;
 }
-.home {
-	
+
+.home {	
 	height: 28px; 
 	width: 75px;
-
 }
 
 .home:hover {
@@ -76,45 +65,43 @@ box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
 	height: 28px; 
 	width: 6px;
 }
+
 .findfriend {
-	
 	height: 28px; 
 	width: 90px;
-
 }
 
 .findfriend:hover {
 	border:5px solid transparent inset;
-border-radius: 5px 5px 5px 5px;	
-box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
+    border-radius: 5px 5px 5px 5px;	
+    box-shadow: 0 0 0 50px rgba(0,0,0,0.2) inset, 0 0 50px rgba(0,0,0,0.2) inset;
 }
-.req {
-	
+
+.req {	
 	height: 28px; 
 	width: 28px;
 }
 
 .mess {
-	
 	height: 28px; 
 	width: 28px;
 }
 
 .note {
-	
 	height: 28px; 
 	width: 28px;
 }
+
 .SS3 {
 	height: 28px; 
 	width: 6px;
 }
 
-.xz {
-	
+.xz {	
 	height: 28px; 
 	width: 55px;
 }
+
 .splash {
 	margin-left: 30%;
 	display: inline-block;
