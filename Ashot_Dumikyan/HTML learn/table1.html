@@ -3,13 +3,19 @@
 <head>
 	<title></title>
 	<style>
-		table tr td {
-			border: 2px dotted blue;
+		table, tr, td 
+		{
+			border-top:  2px dotted blue;
+			border-left:  2px solid red;
+			border-right:  2px dotted green;
+			border-bottom:  px solid black;
+			border-collapse: collapse;
 		}
 
 	</style>
 </head>
 <body>
+<div style="display: flex;justify-content: center;">
 	<table>
 		<script> 
 			var a=0;
@@ -30,5 +36,6 @@
 		</script>
 
 	</table>
+</div>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<div style="display: flex;justify-content: center;">
+	
+	<script> 
+
+		function test()
+		{
+					document.write(" <style> ")
+		document.write("table, tr, td {")
+			document.write("border-top:  2px dotted blue;")
+			document.write("order-left:  2px solid red;")
+			document.write("border-right:  2px dotted green;")
+			document.write("border-bottom:  px solid black;")
+			document.write("border-collapse: collapse;")
+			document.write("border-radius:2px 100px 25px 20px;")
+		document.write("}")
+
+	document.write("</style>")
+			document.write("<table>");
+			var a=0;
+			while (a<100)
+			{
+				document.write("<tr>")
+				var b=0;
+				while (b<4)
+				{	
+					var c=a*4+b+1
+					document.write("<td>" + c + "</td>")
+					b++;
+				}
+				document.write("</tr>")
+				a++;
+			}
+			document.write("</table>");
+		}
+	</script>
+
+	
+</div >
+<div>
+	<input type="button" value="Նկարել աղյուսակ" onclick="test()">
+</div>
+</body>
+</html>
