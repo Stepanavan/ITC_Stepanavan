@@ -11,10 +11,12 @@
 	<p> </p>
 	</div>
 	
-	<form action="http://google.ru">
-		<p style="font-size: 20px">user</p>
-		<p>password</p>
-		<input type="text" value="օգտատերի անուն"/><br/>
+	<form action="google.ru">
+		<br>
+		user <br>
+		<input type="text" name="օգտատերի անուն"/><br/>
+		password <br>
+
 		<input type="password" name="գաղտնանուն"/> <br/>
 		<br/>
 		<input type="radio" name="gender" value="male"/> Արական <br/>
@@ -23,7 +25,25 @@
 		<input type="checkbox" name="gender" value="male"/> Ամուսնացած <br/>
 		<input type="checkbox" name="gender" value="female"/> Անկապ <br/>
 		<br>
-		<input type="submit" value="Ուղարկել" >
+		<textarea name="message" rows="10" cols="30"> Այստեղ գրվում է ցանկացած տեքստ</textarea>
+		<br>
+		<input type="submit" name="Ուղարկել">
+		<button type="button" onclick="alert('Էջը վեջնական լրացված չէ')">Click Me!</button>
+		<input type="reset">
+		<br> <br>
+		Ներմուծել ամսաթիվը մինչև 1980-01-01 :<br>
+		<input type="date" name="bday" max="1979-12-31"><br><br>
+		
+		Ներմուծել ամսաթիվը 2000-01-01 ֊ից հետո :<br>
+		<input type="date" name="bday" min="2000-01-02"><br>
+		E-mail:
+  		<input type="email" name="email"> <br>
+  		թիվ (ներմուծել 1 ից 5):
+  		<input type="number" name="quantity" min="1" max="5"> <br> <br>
+  		<input type="range" name="points" min="0" max="10"> <br>
+  		Search Google:
+  		<input type="search" name="googlesearch">
+  		<input type="submit">
 	</form>
 
 
