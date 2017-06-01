@@ -16,7 +16,7 @@ class erankyun():
 	C=ket(0.0,0.0)
 	Or=ket(0.0,0.0)
 	OR=ket(0.0,0.0)
-	def __init__(self, a, b, c):
+	def __init__(self, a=A, b=B, c=C):
 		self.A.x=a.x
 		self.A.y=a.y
 		self.B.x=b.x

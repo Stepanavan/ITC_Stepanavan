@@ -14,7 +14,7 @@ B.y= float(raw_input("Մուտքագրեք B կետի y կոորդինատը։ "
 C.x= float(raw_input("Մուտքագրեք C կետի x կոորդինատը։ "))
 C.y= float(raw_input("Մուտքագրեք C կետի y կոորդինատը։ "))
 
-ABC=erankyun(A,B,C)
+ABC=erankyun(A,B)
 
 print 'Ներգծած շրջանագծի շառավղի երկարությունն է ',ABC.r
 print "ներգծած շրջանագծի կենտրոնի կոորդինատներն են: x= ", ABC.Or.x, ",", "y=",ABC.Or.y

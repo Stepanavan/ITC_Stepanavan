@@ -14,5 +14,7 @@ class First:
 asdasdasdasdasd = First()
 obj2 = First() 
 
+obj2.color="blue"
+
 asdasdasdasdasd.out()
 obj2.out()
