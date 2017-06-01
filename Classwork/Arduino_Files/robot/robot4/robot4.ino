@@ -15,7 +15,7 @@ int sensorLeftPin = A2;
 int sensorLeft = 0;        // value read from the pot
 int sensorCenter = 0;
 int sensorRight = 0;
-int Porog = 400; //int Porog = 650;
+int Porog = 650; //int Porog = 650;
 int shrjadardz = 300;
 int Trig = 2;
 int Echo = 13;
