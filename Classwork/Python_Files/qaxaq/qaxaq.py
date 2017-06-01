@@ -16,7 +16,7 @@ class Hasce():
 	def tur_hamar(self):
 		return self.__hamar
                  """setter"""
-	def veragri_hasce(self,poxoci_anun,hamar):
+	def veragri_hasce(self,poxoci_anun=0,hamar=0):
 		self.__poxoci_anun=poxoci_anun
 		self.__hamar=hamar
 		

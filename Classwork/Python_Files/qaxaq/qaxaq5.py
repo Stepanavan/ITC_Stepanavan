@@ -26,6 +26,7 @@ hark1.avelacnel_senyak(b)
 hark1.tpel_im_senyaknery()
 print hark1.hark
 print hark1.senyakner[0].hamar
+hark1.senyakner[0].tpel_senyaki_hamar()
 
 
 
