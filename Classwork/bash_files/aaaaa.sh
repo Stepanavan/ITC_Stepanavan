@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 reset
 
 for i in {1..9}
