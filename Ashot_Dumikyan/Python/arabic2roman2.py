@@ -15,27 +15,22 @@ def num2roman(num):
             while num >= i:
                 roman += r
                 num -= i
-
     return roman
 
 #num = input("ներմուծել արաբական թիվը  ")
 #print num2roman(num)
 
-
 class arabic():
-
     def __init__(self, num):
         self.num = num
         print self.num
     def tpel(self):
         print self.num
         
-
 class roman(arabic):
     def __init__(self, arabic):
         self.num = num2roman(arabic.num)
         print self.num
-
 
 a1 = arabic(456)
 r1 = roman(a1)

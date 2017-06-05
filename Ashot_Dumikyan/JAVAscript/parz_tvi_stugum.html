@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+<!--
+function isSample(a)
+{
+	for(count = 2; count < (Math.sqrt(a)+1); count++)
+	{
+		if ( a%count==0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+function CheckSample()
+{
+	if( document.myform.customer.value == "" )
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	aaa= parseInt(document.myform.customer.value);
+	if (aaa==0)
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	if (isSample(aaa))
+	{
+		document.write ("Թիվը պարզ է");
+	}
+	else
+	{
+		document.write ("Թիվը պարզ չէ");
+	}
+	
+}
+//-->
+</script>
+</head>
+<body>
+<form name="myform" action="">
+Enter nubmer: <input type="number" name="customer"/>
+<input type="button" value="Ստուգել թվի պարզությունը" onclick="CheckSample();"/>
+</form>
+</body>
+</html>
