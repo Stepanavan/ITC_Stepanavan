@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+<!--
+function convertToRoman(num) 
+{
+
+  var numeric = [ 5000,4000,1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+  var roman = [ 'V\u0305','I\u0305V\u0305','M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+
+  var output = '', i, len = numeric.length;
+
+  for (i = 0; i < len; i++) 
+  {
+    while (numeric[i] <= num) 
+    {
+      output += roman[i];
+      num -= numeric[i];
+    }
+  }
+
+  return output;
+}
+
+
+function CheckSample()
+{
+	if( document.myform.customer.value == "" )
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	aaa= parseInt(document.myform.customer.value);
+	if (aaa==0)
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	
+	document.write (convertToRoman(aaa));
+	
+	
+}
+
+//-->
+</script>
+</head>
+<body>
+<form name="myform" action="">
+Enter nubmer: <input type="number" name="customer"/>
+<input type="button" value="Փոխարինել արաբական թիվը հռոմեականի" onclick="CheckSample();"/>
+</form>
+</body>
+</html>
