@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+<!--
+function arabic_to_roman(number)
+{
+    conv = [[1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD'],
+            [ 100, 'C'], [ 90, 'XC'], [ 50, 'L'], [ 40, 'XL'],
+            [  10, 'X'], [  9, 'IX'], [  5, 'V'], [  4, 'IV'],
+            [   1, 'I']]
+    result = ''
+    for (item in conv)
+	{
+        var denom = conv[0];
+        var  roman_digit = conv[1];       
+        result += roman_digit*(number/denom)
+        number %= denom
+    }
+    return result;
+}
+
+
+function CheckSample()
+{
+	if( document.myform.customer.value == "" )
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	aaa= parseInt(document.myform.customer.value);
+	if (aaa==0)
+	{
+		alert ("Ներմուծեք թիվ");
+		return;
+	}
+	
+	document.write (arabic_to_roman(aaa));
+	
+}
+//-->
+</script>
+</head>
+<body>
+<form name="myform" action="">
+Enter nubmer: <input type="number" name="customer"/>
+<input type="button" value="փոխարինել արաբական թիվը հռոմեականի" onclick="CheckSample();"/>
+</form>
+</body>
+</html>
