@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script> 
+function baghdatum(n)
+{
+	var tver=[];
+	var count=0;
+	while (n>0)
+	{
+		tver[count]=n%10;
+		count+=1;
+		n=(n-n%10)/10;
+	}
+	return tver
+}
+
+function myFunction() {
+
+
+	number=parseInt(prompt("Enter number : ", ""));
+	var b=[];
+    b=baghdatum(number);
+	for (i=0;i<b.length;i++)
+	{
+		document.write(b[i]+"<br>" + "<br>");
+	}
+}
+ 
+</script>
+<p>gtnel kent tveri mijin tvabanakan@</p>
+<button onclick="myFunction()">sexmir</button>
+</body>
+</html>
