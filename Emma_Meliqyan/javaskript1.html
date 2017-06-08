@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+<script> 
+function myFunction() {
+	var number=[]
+
+	for (i=0; i<10;i++)
+	{
+		number[i]=parseInt(Math.random()*100);
+		//number[i]=parseInt(prompt("Enter number : ", ""));
+	}
+ 
+        var kent_tver_qanak=0;
+        var kent_tveri_qumar=0;
+        for (i=0; i<10;i++)
+        {
+			document.write(number[i]+"<br>"+"<br>")
+	      	if (number[i]%2==1)
+         	{
+				kent_tver_qanak+=1;
+				kent_tveri_qumar+=number[i];
+			}
+		}
+	document.write("<hr>"+kent_tver_qanak+"<br>" + "<br>");
+	document.write(kent_tveri_qumar+"<br>" + "<br>");	
+	document.write((kent_tveri_qumar/kent_tver_qanak)+"<br>" + "<br>");		
+}
+
+
+ 
+</script>
+<p>gtnel kent tveri mijin tvabanakan@</p>
+<button onclick="myFunction()">sexmir</button>
+</body>
+</html>
