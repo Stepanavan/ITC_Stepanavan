@@ -46,11 +46,11 @@ for (i=0; i<10;i++)
 }
 
 var total=0;
+var xx=[];
 for (k=0; k<10 ; k++)
 {
 
 	var gumar=maser(number[k]);
-	//alert(number[k]);
 	document.write("<hr>");
 	for (i = 0; i < gumar.length; i++)
 	{
@@ -59,13 +59,12 @@ for (k=0; k<10 ; k++)
 	}
 	if (lriv_kent(gumar))
 	{
-		total+=number[k];
+		total+=1;
+
 	}	
 }
 
 document.write("<hr>"+total + "<br>");
-
-
 
 
 </script>
