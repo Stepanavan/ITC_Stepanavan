@@ -45,7 +45,7 @@ for (i=0; i<10;i++)
 	document.write("<br>");
 }
 
-
+var total=0;
 for (k=0; k<10 ; k++)
 {
 
@@ -57,8 +57,13 @@ for (k=0; k<10 ; k++)
 		document.write(gumar[i] + "<br>");
 
 	}
+	if (lriv_kent(gumar))
+	{
+		total+=number[k];
+	}	
 }
 
+document.write("<hr>"+total + "<br>");
 
 
 
