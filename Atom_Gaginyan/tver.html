@@ -37,21 +37,30 @@ function lriv_kent(x)
 	return true;
 }
 
-var gumar=0;
 var number=[];
 for (i=0; i<10;i++)
 {
 	number[i]=parseInt(10000*Math.random());
-}
-
-for (i=0; i<10;i++)
-{
 	document.write(number[i]);
 	document.write("<br>");
 }
 
-document.write("gumar= " + gumar);
-document.write("<br>");
+
+for (k=0; k<10 ; k++)
+{
+
+	var gumar=maser(number[k]);
+	//alert(number[k]);
+	document.write("<hr>");
+	for (i = 0; i < gumar.length; i++)
+	{
+		document.write(gumar[i] + "<br>");
+
+	}
+}
+
+
+
 
 
 </script>
