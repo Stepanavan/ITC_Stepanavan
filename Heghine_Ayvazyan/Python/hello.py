@@ -1,0 +1,6 @@
+name = raw_input("Please enter your name:")
+print("Hello" + name + "!")
+age = raw_input("Please enter your age:")
+print("Wow! So you're " + age + " years old!)
+age = int(age)
+print("Next year you' 11 be " + (age+1) + " years old!") 
