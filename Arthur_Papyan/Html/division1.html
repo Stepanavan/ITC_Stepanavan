@@ -24,30 +24,24 @@ box-shadow:20px 20px 20px yellow inset,10px 10px 10px blue inset;
 
 function sprite()
 {
-	//document.getElementById("a1").style.height = "64px";
-	//document.getElementById("a1").style.width = "64px";
 	document.getElementById("a1").style.border = "3px solid";
+	document.getElementById("a3").innerHTML = "barev";
 } 
 
 function spriter(){
 	document.getElementById("a1").style.border = "3px dashed black";
+	document.getElementById("a3").innerHTML = "hajox";
 
 }
 function forDiv(){
 	document.getElementById("a2").style.height = "64px";
  	document.getElementById("a2").style.width = "64px";
-
-
 }
 
 function forDiv2(){
 	document.getElementById("a2").style.height = "128px";
  	document.getElementById("a2").style.width = "128px";
-
-
 }
-
-
 
 </script>
 
@@ -56,6 +50,7 @@ function forDiv2(){
 <div id="a1" onmouseover="sprite()" onmouseout="spriter()">
 
 <div id="a2" onclick="forDiv()" ondblclick="forDiv2()"></div>
+<p id="a3">aaa</p>
 
 
 
