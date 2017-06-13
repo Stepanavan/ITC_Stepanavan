@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>X_Y </title>
+<style>
+table, td, tr {
+border:solid black;
+}
+td {
+height:50px;
+width:50px;
+text-align:center;
+font-size: 35px;
+}
+
+</style>
+<script>
+var counter=1;
+var bbb=[];
+function aaa(x)
+{
+	var s=document.getElementById(x.id).innerText;
+	if (!(s==="X" || s==="O")){
+		counter++;
+		if (counter%2==0){	
+			document.getElementById(x.id).innerHTML="X";
+			if (stugum("X")){
+				alert("Հաղթեց X");
+			}
+		}else{
+			document.getElementById(x.id).innerHTML="O";
+			if (stugum("O")){
+				alert("Հաղթեց O");
+			}
+		}
+	}
+	if (counter === 10)
+	{
+		alert("StandoFF");
+	}
+
+}
+function stugum(X_kam_O)
+{
+	bbb[0]=document.getElementById("a1").innerText;
+	bbb[1]=document.getElementById("a2").innerText;
+	bbb[2]=document.getElementById("a3").innerText;
+	bbb[3]=document.getElementById("a4").innerText;
+	bbb[4]=document.getElementById("a5").innerText;
+	bbb[5]=document.getElementById("a6").innerText;
+	bbb[6]=document.getElementById("a7").innerText;
+	bbb[7]=document.getElementById("a8").innerText;
+	bbb[8]=document.getElementById("a9").innerText;
+
+	for (i=0;i<3;i++){
+		if ((bbb[3*i]===X_kam_O && bbb[3*i+1]===X_kam_O && bbb[3*i+2]===X_kam_O || bbb[i]===X_kam_O && bbb[i+3]===X_kam_O && bbb[i+6]===X_kam_O || bbb[6]===X_kam_O && bbb[4]===X_kam_O && bbb[2]===X_kam_O || bbb[0]===X_kam_O && bbb[4]===X_kam_O && bbb[8]===X_kam_O)){
+			return true
+		}
+	}
+ 	return false
+}
+
+
+
+</script>
+
+</head>
+<body>
+<center><table>
+<tr>
+<td id="a1" onclick="aaa(this)"></td>
+<td id="a2" onclick="aaa(this)"></td>
+<td id="a3" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a4" onclick="aaa(this)"></td>
+<td id="a5" onclick="aaa(this)"></td>
+<td id="a6" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a7" onclick="aaa(this)"></td>
+<td id="a8" onclick="aaa(this)"></td>
+<td id="a9" onclick="aaa(this)"></td>
+</tr>
+
+
+</table></center>
+
+
+</body>
+
+
+</html>
