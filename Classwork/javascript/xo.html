@@ -19,6 +19,7 @@ var counter=1;
 var bbb=[];
 function aaa(x)
 {
+if ( counter<11 ){
 	var s=document.getElementById(x.id).innerText;
 	if (!(s==="X" || s==="O")){
 		counter++;
@@ -26,11 +27,13 @@ function aaa(x)
 			document.getElementById(x.id).innerHTML="X";
 			if (stugum("X")){
 				alert("Հաղթեց X");
+				counter=11;
 			}
 		}else{
 			document.getElementById(x.id).innerHTML="O";
 			if (stugum("O")){
 				alert("Հաղթեց O");
+				counter=11;
 			}
 		}
 	}
@@ -39,6 +42,7 @@ function aaa(x)
 		alert("StandoFF");
 	}
 
+}
 }
 function stugum(X_kam_O)
 {
