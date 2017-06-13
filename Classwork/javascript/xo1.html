@@ -1,0 +1,91 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>X_Y </title>
+<style>
+table, td, tr {
+border:solid black;
+}
+td {
+height:50px;
+width:50px;
+text-align:center;
+font-size: 35px;
+}
+
+</style>
+<script>
+var counter=1;
+var bbb=[];
+function aaa(x)
+{
+if ( counter<11 ){
+	var s=document.getElementById(x.id).innerText;
+	if (!(s==="X" || s==="O")){
+		counter++;
+		if (counter%2==0){	
+			document.getElementById(x.id).innerHTML="X";
+			if (stugum("X")){
+				alert("Հաղթեց X");
+				counter=11;
+			}
+		}else{
+			document.getElementById(x.id).innerHTML="O";
+			if (stugum("O")){
+				alert("Հաղթեց O");
+				counter=11;
+			}
+		}
+	}
+	if (counter === 10)
+	{
+		alert("StandoFF");
+		for (i=0;i<9;i++){
+			alert(bbb[i])
+		}
+	}
+
+}
+}
+function stugum(X_kam_O)
+{
+	bbb=document.getElementsByClassName("test");
+	for (i=0;i<3;i++){
+		if ((bbb[3*i].innerText===X_kam_O && bbb[3*i+1].innerText===X_kam_O && bbb[3*i+2].innerText===X_kam_O || bbb[i].innerText===X_kam_O && bbb[i+3].innerText===X_kam_O && bbb[i+6].innerText===X_kam_O || bbb[6].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[2].innerText===X_kam_O || bbb[0].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
+			return true
+		}
+	}
+ 	return false
+}
+
+
+
+</script>
+
+</head>
+<body>
+<center><table>
+<tr>
+<td id="a1" class="test" onclick="aaa(this)"></td>
+<td id="a2" class="test" onclick="aaa(this)"></td>
+<td id="a3" class="test" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a4" class="test" onclick="aaa(this)"></td>
+<td id="a5" class="test" onclick="aaa(this)"></td>
+<td id="a6" class="test" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a7" class="test" onclick="aaa(this)"></td>
+<td id="a8" class="test" onclick="aaa(this)"></td>
+<td id="a9" class="test" onclick="aaa(this)"></td>
+</tr>
+
+
+</table></center>
+
+
+</body>
+
+
+</html>
