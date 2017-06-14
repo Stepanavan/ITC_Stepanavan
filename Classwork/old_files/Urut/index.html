@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <script type="text/javascript">
+        var numbers = [];
+
+		for (i=0;i<5;i++){
+			numbers[i]=parseInt(prompt("Input any nubers :"));
+		} 
+
+ 
+function sorting(A)
+{
+    var n = A.length, i = 1, j = 2;
+    while (i < n)
+    { 
+
+    if (A[i-1] < A[ i ]){
+    	i = j; j++; 
+
+ 	}
+    else
+    { 
+    	var t = A[i-1]; A[i-1] = A[ i ]; A[ i ] = t;
+           i--;
+
+           if (i == 0){ 
+           		i = j; 
+           		j++; 
+           }
+        }
+    }
+    return A;
+}		
+		sorting(numbers)
+		
+		for (i=0;i<5;i++){ 
+		document.write(numbers[i]+" ");  
+		}  
+        
+        
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
