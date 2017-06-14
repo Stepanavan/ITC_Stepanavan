@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Loading</title>
+		<style>
+		#mek {
+			border: 3px solid black;
+			height: 30px;
+			width: 100px;
+			floar:left;
+			
+			background-color:blue;
+		}
+		#erku {
+
+			height: 30px;
+			width:1%;
+			float:left;
+			background-color:green;  
+		}
+	
+		</style>
+		<script>
+		x=-1.0;
+			function loading(){
+						if (x>=100)
+						{
+							return;
+						}
+						x+=0.1;
+						document.getElementById('erku').style.width= x+"%";
+						console.log(x);
+						setTimeout(loading, 10);
+
+			}
+			
+		</script>
+
+	</head>
+	<body >
+		<div id="mek" onclick="loading()"><div id="erku"></div> </div>
+
+
+	</body>
+</html>
