@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #e9257f;
+}
+</style>
+<body onload="move('myBar')">
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+
+<script>
+function move(x) {
+  var elem = document.getElementById(x);   
+  var width = 1;
+  var id = setInterval(frame, 20);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
