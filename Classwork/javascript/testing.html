@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello " + document.getElementById("old_text").value;
+    document.getElementById("demo1").innerHTML = "Hello " + document.getElementById("old_text").value;
+}
+</script>
+</head>
+<body>
+
+<div>
+
+<p>Name: <input id="old_text" type="text" oninput="myFunction()"></p>
+<h1 id="demo">Hello </h1>
+<h1 id="demo1">Hello </h1>
+</div>
+
+</body>
+</html>
