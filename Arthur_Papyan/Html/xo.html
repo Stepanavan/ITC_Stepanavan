@@ -1,0 +1,200 @@
+<html >
+<head>
+<meta charset="utf-8">
+<title>X_0</title>
+<style>
+table, td, tr {
+border:solid black;
+box-shadow:00px 00px 40px 10px rgba(165, 43, 90,.3) , 00px 00px 40px 0px rgba(165, 43, 90,.2) inset;
+border-radius:5%; 
+}
+td {
+height:50px;
+width:50px;
+text-align:center;
+font-size: 35px;
+font:tahoma;
+color:black;
+border-radius:40%;
+
+}
+td:hover {
+box-shadow: 0px 0px 100px 10px  red;
+
+border-radius:50%;
+
+}
+td:active {
+box-shadow: 10px 10px 100px 10px yellow, 0px 0px 20px pink inset;
+height:55px;
+width:55px;
+
+}
+
+
+		#mek {
+			border: 1px solid black;
+			height: 35px;
+			width: 300px;
+			display: block;
+			
+			margin:50px;
+			border-radius: 20%;
+			float:center;
+			box-shadow: 0 0 35px gray;
+			z-index: 99999;
+
+			
+		}
+		#erku {
+
+			height: 35px;
+			width:1%;
+			float:left;
+			border-radius: 20%;
+			z-index: 9999;
+			display: block;
+
+			box-shadow: 0 0 20px rgba(165, 43, 90,.9) inset;
+			font:30px gray ;
+		}
+		#newgame {
+		border:1px solid;
+		height:45px;
+		width:180px;
+		
+		margin:50px;
+		font:tahoma;
+		color:black;
+		border-radius:15%;
+		box-shadow:0px 0px 40px rgba(165, 43, 90,.5) , 00px 00px 40px 0px rgba(165, 43, 90,.8) inset;
+
+		}
+		#newgame a {
+			color :black;
+			font-size:20px;
+			text-decoration: none;
+
+		}
+		#newgame a:hover {
+			color :black;
+			font-size:22px;
+			text-decoration: none;
+			
+		}
+
+		#newgame:active {
+			box-shadow:0px 0px 40px yellow , 00px 00px 40px red inset;
+			
+		}
+			
+
+
+</style>
+<script>
+
+
+var counter=1;
+var bbb=[];
+function aaa(x)
+{
+if ( counter<11 ){
+	var s=document.getElementById(x.id).innerText;
+	if (!(s==="X" || s==="O")){
+		counter++;
+		
+		if (counter%2==0){
+		    document.getElementById('erku').innerHTML="O - Player"	
+			document.getElementById(x.id).innerHTML="X";
+
+
+			if (stugum("X")){
+				document.getElementById('erku').innerHTML="X Wins";
+				document.getElementById('table').style.display="none"
+				counter=11;
+			}
+		}else{
+			document.getElementById(x.id).innerHTML="O";
+			document.getElementById('erku').innerHTML="X - Player"	
+			if (stugum("O")){
+				document.getElementById('erku').innerHTML="O Wins";
+				document.getElementById('table').style.display="none"
+				counter=11;
+			}
+		}
+	}
+	if (counter === 10)
+	{
+		document.getElementById('erku').innerHTML="StandoFF";
+		document.getElementById('table').style.display="none"	
+
+
+	}
+
+}
+}
+function stugum(X_kam_O)
+{
+	bbb=document.getElementsByClassName("test");
+	for (i=0;i<3;i++){
+		if ((bbb[3*i].innerText===X_kam_O && bbb[3*i+1].innerText===X_kam_O && bbb[3*i+2].innerText===X_kam_O || bbb[i].innerText===X_kam_O && bbb[i+3].innerText===X_kam_O && bbb[i+6].innerText===X_kam_O || bbb[6].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[2].innerText===X_kam_O || bbb[0].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
+			return true
+		}
+	}
+ 	return false
+}
+		x=-1.0;
+			function loading(){
+						if (x>=102)
+						{
+							document.getElementById('erku').innerHTML="Game Started";
+							return ;
+
+						}
+						
+						document.getElementById('erku').style.width= x+"%";
+						x+=2.25
+						setTimeout(loading, 10);
+
+			}
+
+
+
+
+</script>
+
+</head >
+<body onload="loading()"   >
+<center><div id="mek" ><div id="erku" ></div></div></center>
+<center><table id= "table">
+<tr>
+<td id="a1" class="test" onclick="aaa(this)"></td>
+<td id="a2" class="test" onclick="aaa(this)"></td>
+<td id="a3" class="test" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a4" class="test" onclick="aaa(this)"></td>
+<td id="a5" class="test" onclick="aaa(this)"></td>
+<td id="a6" class="test" onclick="aaa(this)"></td>
+</tr>
+<tr>
+<td id="a7" class="test" onclick="aaa(this)"></td>
+<td id="a8" class="test" onclick="aaa(this)"></td>
+<td id="a9" class="test" onclick="aaa(this)"></td>
+</tr>
+
+
+
+
+
+
+</table></center>
+
+
+<center><div id="newgame" ><p><a href="xo.html">New Game</a></p></div></center>
+
+
+</body>
+
+
+</html>
