@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<p>Գրել ձեր անուն ազգանունը.</p>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+Մուտքագրել անունը: <input type="text" ng-model="firstName"><br>
+Մուտքագրել ազգանունը: <input type="text" ng-model="lastName"><br>
+<br>
+Անուն ազգանունը: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= "Հեղինե";
+    $scope.lastName= "Այվազյան";
+});
+</script>
+
+</body>
+</html>
