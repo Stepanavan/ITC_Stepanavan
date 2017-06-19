@@ -32,7 +32,7 @@
 
 var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope,$interval) {
-	$interval(callAtInterval, 50);
+	$interval(callAtInterval, 2);
 	var x=0;
 	var y=0;
 	function callAtInterval(){
@@ -42,16 +42,15 @@ app.controller('customersCtrl', function($scope,$interval) {
 			x=x+y;
 		}
 		
-		if (x===100)
+		if (x>=100)
 		{
-			y=-1;
+			y=-0.1;
 		}
 
-		if (x===0)
+		if (x<=0)
 		{
-			y=1;
+			y=0.1;
 		}
-
 
 	}
 
