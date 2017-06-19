@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular PASKAL</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			var togh=[];
+			var element=[];
+			function faktorial(x){
+				if (x==0 || x==1){
+					return 1;
+				}
+				else {
+					return x*faktorial(x-1);
+				};
+			};
+			function zugordutyun (x,y){
+				return faktorial(x)/(faktorial(x-y)*faktorial(y));
+			};
+			for(i=0;i<10;i++){
+				element=[];
+				for (j=0;j<=i;j++){
+					element.push(zugordutyun(i,j));
+				}
+				togh.push(element);
+			}
+			$scope.togh = togh;
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+	<div ng-repeat="x in togh">
+		{{x}}	
+	</div>
+</body>
+</html>

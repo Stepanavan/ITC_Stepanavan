@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular Loading</title>
+	<style type="text/css">
+		#A1 {
+			width: 100%;
+			background-color: gray;
+		}
+		#A2 {
+			height: 40px;
+			width: 10%;
+			background-color: yellow;
+
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
+	
+
+
+	</script> 
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+
+	<div id="A1">
+		<div id="A2" ng-style="{width:( i +'%')}">
+			
+		</div>
+	</div>
+
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope,$interval) {
+	$interval(callAtInterval, 2);
+	var x=0;
+	var y=0;
+	function callAtInterval(){
+		$scope.i=x;
+		if (x<=100 || x>=0)
+		{
+			x=x+y;
+		}
+		
+		if (x>=100)
+		{
+			y=-0.1;
+		}
+
+		if (x<=0)
+		{
+			y=0.1;
+		}
+
+	}
+
+});
+</script>
+
+
+
+</body>
+</html>
