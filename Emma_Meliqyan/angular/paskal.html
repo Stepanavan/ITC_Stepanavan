@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular fibonachi</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			var element=[];
+			function fibonachi(x){
+				if (x==1 || x==2){
+					return 1;
+				}
+				else {
+					return (fibonachi(x-1)+fibonachi(x-2));
+				};
+			};
+			for(i=1;i<10;i++){
+					element.push(fibonachi(i));
+
+			}
+			$scope.element = element;
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+	<div>
+		{{element}}	
+	</div>
+</body>
+</html>
