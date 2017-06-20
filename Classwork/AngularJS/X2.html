@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Angular PASKAL</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			var d;
+			$scope.ashxatel = function(){
+				d = $scope.b*$scope.b-4*$scope.a*$scope.c;
+				if ($scope.a==0){
+					alert("Գծային հավասարում");
+					if ($scope.b==0){
+						alert("Լուծում չունի");
+					} else {
+						$scope.x1= -$scope.c/$scope.b;
+						$scope.x2= -$scope.c/$scope.b;
+					};
+				} else if ( d < 0) {
+					alert("Դետերմինանտը փոքր է զրոից, լուծում չունի");
+				} else {
+					$scope.x1 = (-$scope.b-Math.sqrt(d))/(2*$scope.a);
+					$scope.x2 = (-$scope.b+Math.sqrt(d))/(2*$scope.a);
+				};	
+			}
+		});
+	</script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="customersCtrl" ng-model="x1" ng-model="x2">
+		<div>
+			a = : <input type="text" ng-model="a">
+			b = : <input type="text" ng-model="b">
+			c = : <input type="text" ng-model="c">
+			<button ng-click="ashxatel()">Հաշվել</button>
+			<br>
+			x1={{x1}}
+			<br>
+			x2={{x2}}
+		</div>
+	</div>
+
+</body>
+</html>
