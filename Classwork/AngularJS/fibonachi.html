@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Angular Fibonachi</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			function fibonachi(x){
+				if (x==1 || x==2){
+
+					return 1;
+				}
+				else {
+					return (fibonachi(x-2)+fibonachi(x-1));
+				};
+			};
+			$scope.make = function(){
+				if ($scope.hamar<=30){
+					$scope.y = fibonachi($scope.hamar);
+				} else {
+					$scope.y="Մեծ թիվ է";
+				}
+			}
+			
+		});
+	</script>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="customersCtrl" ng-init="hamar=1">
+		<div>		
+			<input type="text" ng-model="hamar" value={{hamar}}>
+			<div>
+				{{make()}}{{y}}
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
