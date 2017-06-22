@@ -30,17 +30,17 @@
 			$scope.togh = togh;
 			$scope.aaa =function($scope){
 				if ( counter<11 ){
-					s=document.getElementById("a"+$scope.y).innerText;
+					s=angular.element( document.querySelector("#a"+$scope.y)) ;
 					if (!(s==="X" || s==="O")){
 						counter++;
 						if (counter%2==0){	
-							document.getElementById("a"+$scope.y).innerHTML="X";
+							angular.element( document.querySelector("#a"+$scope.y)).html("X");
 							if (stugum("X")!=0){
 								alert("Հաղթեց X");
 								counter=11;
 							}
 						}else{
-							document.getElementById("a"+$scope.y).innerHTML="O";
+							angular.element( document.querySelector("#a"+$scope.y)).html("O");
 							if (stugum("O")!=0){
 								alert("Հաղթեց O");
 								counter=11;
@@ -49,50 +49,29 @@
 					}
 					if (counter === 10)
 					{
-						alert("StandoFF");
+						alert("Ոչ ոքի");
 					}
 
 				}
 			}
 			function stugum(X_kam_O)
 			{
-				bbb=document.getElementsByClassName("test");
-	
-				if ((bbb[0].innerText===X_kam_O && bbb[1].innerText===X_kam_O && bbb[2].innerText===X_kam_O)){
-					bbb[0].style.color='red';
-					bbb[1].style.color='red';
-					bbb[2].style.color='red';
-					return 1;
-				}
-				if ((bbb[3].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[5].innerText===X_kam_O)){
-					bbb[3].style.color='red';
-					bbb[4].style.color='red';
-					bbb[5].style.color='red';
-					return 2;
-				}
-				if ((bbb[6].innerText===X_kam_O && bbb[7].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
-					bbb[6].style.color='red';
-					bbb[7].style.color='red';
-					bbb[8].style.color='red';	
-					return 3;
-				}
-				if ((bbb[0].innerText===X_kam_O && bbb[3].innerText===X_kam_O && bbb[6].innerText===X_kam_O)){
-					bbb[0].style.color='red';
-					bbb[3].style.color='red';
-					bbb[6].style.color='red';	
-					return 4;
-				}
-				if ((bbb[1].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[7].innerText===X_kam_O)){
-					bbb[1].style.color='red';
-					bbb[4].style.color='red';
-					bbb[7].style.color='red';	
-					return 5;
-				}
-				if ((bbb[2].innerText===X_kam_O && bbb[5].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
-					bbb[2].style.color='red';
-					bbb[5].style.color='red';
-					bbb[8].style.color='red';
-					return 6;
+				//bbb=document.getElementsByClassName("test");
+				bbb=angular.element(document.getElementsByClassName("test"));
+
+				for (i=0;i<3;i++){
+					if ((bbb[3*i].innerText===X_kam_O && bbb[3*i+1].innerText===X_kam_O && bbb[3*i+2].innerText===X_kam_O)){
+						bbb[3*i].style.color='red';
+						bbb[3*i+1].style.color='red';
+						bbb[3*i+2].style.color='red';
+						return i+1;
+					}
+					if ((bbb[i].innerText===X_kam_O && bbb[i+3].innerText===X_kam_O && bbb[i+6].innerText===X_kam_O)){
+						bbb[i].style.color='red';
+						bbb[i+3].style.color='red';
+						bbb[i+6].style.color='red';
+						return i+4;
+					}
 				}
 				if ((bbb[0].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
 					bbb[0].style.color='red';
