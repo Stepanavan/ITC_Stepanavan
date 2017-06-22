@@ -7,6 +7,8 @@
 			border: solid black;
 			height: 50px;
 			width: 50px;
+			text-align:center;
+			font-size: 35px;
 		}
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -15,6 +17,9 @@
 		app.controller('customersCtrl', function($scope) {
 			var togh=[];
 			var element=[];
+			var s;
+			var counter=1;
+			var bbb=[];
 			for(i=0;i<3;i++){
 				element=[];
 				for (j=0;j<3;j++){
@@ -24,18 +29,96 @@
 			}
 			$scope.togh = togh;
 			$scope.aaa =function($scope){
-				document.getElementById("a"+$scope.y).innerHTML="x";
+				if ( counter<11 ){
+					s=document.getElementById("a"+$scope.y).innerText;
+					if (!(s==="X" || s==="O")){
+						counter++;
+						if (counter%2==0){	
+							document.getElementById("a"+$scope.y).innerHTML="X";
+							if (stugum("X")!=0){
+								alert("Հաղթեց X");
+								counter=11;
+							}
+						}else{
+							document.getElementById("a"+$scope.y).innerHTML="O";
+							if (stugum("O")!=0){
+								alert("Հաղթեց O");
+								counter=11;
+							}
+						}
+					}
+					if (counter === 10)
+					{
+						alert("StandoFF");
+					}
+
+				}
 			}
+			function stugum(X_kam_O)
+			{
+				bbb=document.getElementsByClassName("test");
+	
+				if ((bbb[0].innerText===X_kam_O && bbb[1].innerText===X_kam_O && bbb[2].innerText===X_kam_O)){
+					bbb[0].style.color='red';
+					bbb[1].style.color='red';
+					bbb[2].style.color='red';
+					return 1;
+				}
+				if ((bbb[3].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[5].innerText===X_kam_O)){
+					bbb[3].style.color='red';
+					bbb[4].style.color='red';
+					bbb[5].style.color='red';
+					return 2;
+				}
+				if ((bbb[6].innerText===X_kam_O && bbb[7].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
+					bbb[6].style.color='red';
+					bbb[7].style.color='red';
+					bbb[8].style.color='red';	
+					return 3;
+				}
+				if ((bbb[0].innerText===X_kam_O && bbb[3].innerText===X_kam_O && bbb[6].innerText===X_kam_O)){
+					bbb[0].style.color='red';
+					bbb[3].style.color='red';
+					bbb[6].style.color='red';	
+					return 4;
+				}
+				if ((bbb[1].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[7].innerText===X_kam_O)){
+					bbb[1].style.color='red';
+					bbb[4].style.color='red';
+					bbb[7].style.color='red';	
+					return 5;
+				}
+				if ((bbb[2].innerText===X_kam_O && bbb[5].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
+					bbb[2].style.color='red';
+					bbb[5].style.color='red';
+					bbb[8].style.color='red';
+					return 6;
+				}
+				if ((bbb[0].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[8].innerText===X_kam_O)){
+					bbb[0].style.color='red';
+					bbb[4].style.color='red';
+					bbb[8].style.color='red';
+					return 7;
+				}
+				if ((bbb[6].innerText===X_kam_O && bbb[4].innerText===X_kam_O && bbb[2].innerText===X_kam_O)){
+					bbb[2].style.color='red';
+					bbb[4].style.color='red';
+					bbb[6].style.color='red';	
+					return 8;
+				}
+ 				return 0;
+			}
+
 		});
 	</script>
 </head>
 <body ng-app="myApp" ng-controller="customersCtrl" >
-	<table>
+	<center><table>
 		<tr ng-repeat="x in togh">
-			<td id="a{{y}}" ng-repeat="y in x" ng-click="aaa(this)">
+			<td id="a{{y}}" class="test" ng-repeat="y in x" ng-click="aaa(this)">
 
 			</td>	
 		</tr>
-	</table>
+	</table></center>
 </body>
 </html>
