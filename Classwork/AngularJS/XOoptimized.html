@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular XO</title>
+	<style>
+		td {
+			border: solid black;
+			height: 50px;
+			width: 50px;
+			text-align:center;
+			font-size: 35px;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			var togh=[];
+			var element=[];
+			var s;
+			var counter=1;
+			var bbb=[];
+			for(i=0;i<3;i++){
+				element=[];
+				for (j=0;j<3;j++){
+					element.push(i*3+j+1);
+				}
+				togh.push(element)
+			}
+			$scope.togh = togh;
+			$scope.aaa =function($scope){
+				if ( counter<11 ){
+					s=angular.element( document.querySelector("#a"+$scope.y)) ;
+					if (!(s==="X" || s==="O")){
+						counter++;
+						if (counter%2==0){	
+							angular.element( document.querySelector("#a"+$scope.y)).html("X");
+							if (stugum("X")!=0){
+								nerkel(stugum("X"));
+								alert("Հաղթեց X");
+								counter=11;
+							}
+						}else{
+							angular.element( document.querySelector("#a"+$scope.y)).html("O");
+							if (stugum("O")!=0){
+								nerkel(stugum("O"));
+								alert("Հաղթեց O");
+								counter=11;
+							}
+						}
+					}
+					if (counter === 10)
+					{
+						alert("Ոչ ոքի");
+					}
+
+				}
+			}
+			function stugum(X_kam_O)
+			{
+				var bbb=angular.element(document.getElementsByClassName("test"));
+				var counter=[];
+				for (i=0;i<8;i++){
+					counter.push(0);
+				}
+				for (i=0;i<3;i++){
+					for (j=0;j<3;j++){
+						if (bbb[3*i+j].innerText==X_kam_O){
+							counter[i]++;
+						}
+						if (bbb[i+3*j].innerText==X_kam_O){
+							counter[i+3]++;
+						}
+					}
+					if (bbb[4*i].innerText==X_kam_O){
+							counter[6]++;
+					}
+					if (bbb[2+2*i].innerText==X_kam_O){
+							counter[7]++;
+					}
+				}
+				for (i=0;i<8;i++){
+					if (counter[i]==3){
+						return 1+i;
+					}
+				}
+ 				return 0;
+			}
+			function nerkel(x){
+				var bbb=angular.element(document.getElementsByClassName("test"));
+				if (x>=1 && x<=3){
+					for (i=0;i<3;i++){
+						bbb[3*(x-1)+i].style.color='red';
+					}
+				}
+				if (x>=4 && x<=6){
+					for (i=0;i<3;i++){
+						bbb[(x-4)+i*3].style.color='red';
+					}
+				}
+				if (x==7) {
+					for (i=0;i<3;i++){
+						bbb[4*i].style.color='red';
+					}
+				}
+				if (x==8){
+					for (i=0;i<3;i++){
+						bbb[2+2*i].style.color='red';
+					}
+				}
+			}
+
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+	<center><table>
+		<tr ng-repeat="x in togh">
+			<td id="a{{y}}" class="test" ng-repeat="y in x" ng-click="aaa(this)">
+
+			</td>	
+		</tr>
+	</table></center>
+</body>
+</html>
