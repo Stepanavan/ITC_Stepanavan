@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>Angular Heron</title>
+	<style>
+		 div {
+                 border: 1px solid black;
+                 margin-top: 100px;
+                 margin-bottom: 200px;
+                 margin-right: 750px;
+                 margin-left: 600px;
+                 background-color: lightblue;
+             }
+		h1   {
+                 color: blue;
+             }
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+        	function erkar(x1,y1,x2,y2){
+			return (Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2)));
+		}
+		function mak(a,b,c) {
+			p=(a+b+c)/2;
+			return Math.sqrt(p*(p-a)*(p-b)*(p-c));
+		}
+		$scope.stugum = function(){
+			AB = erkar($scope.Ax,$scope.Ay,$scope.Bx,$scope.By);
+			BC = erkar($scope.Bx,$scope.By,$scope.Cx,$scope.Cy);
+			AC = erkar($scope.Ax,$scope.Ay,$scope.Cx,$scope.Cy);
+			BD = erkar($scope.Bx,$scope.By,$scope.Dx,$scope.Dy);
+			AD = erkar($scope.Ax,$scope.Ay,$scope.Dx,$scope.Dy);
+			DC = erkar($scope.Dx,$scope.Dy,$scope.Cx,$scope.Cy);
+			Sabc = mak(AB,BC,AC);
+			Sabd = mak(AB,BD,AD);
+			Sbcd = mak(BC,DC,BD);
+			Sadc = mak(AD,DC,AC);
+
+
+			k=(Sabc-(Sabd+Sbcd+Sadc));
+			if (-0.0000000001 <k && k<0.0000000001){
+				return "Պատկանում է";
+			} else {
+				return "Չի Պատկանում ";
+			}
+		}
+		});
+</script>
+</head>
+<div ng-app="myApp" ng-controller="customersCtrl"> 
+ A:<input ng-model="Ax"><input ng-model="Ay"><br>
+ B:<input ng-model="Bx"><input ng-model="By"><br>
+ C:<input ng-model="Cx"><input ng-model="Cy"><br>
+ D:<input ng-model="Dx"><input ng-model="Dy"><br>
+<h1>{{stugum()}}</h1>
+
+</div>
+</head>
+</html>
