@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular XO</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+		
+
+		function erkarutyun(a,b){
+			return Math.sqrt( (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y) )
+		}
+
+		class Ket {
+  			constructor(x, y) {
+    			this.x = x;
+    			this.y = y;
+  			}
+		}
+		class Erankyun  {
+			constructor (a,b,c){
+				var Or = new Ket(0,0);
+				var OR = new Ket(0,0);
+				this.Or=Or;
+				this.OR=OR;
+				var A;
+				var B;
+				var C;
+				var paragits;
+				var makeres;
+				var r;
+				var R;
+				this.A=a;
+				this.B=b;
+				this.C=c;
+				this.paragits = erkarutyun(a,b)+erkarutyun(a,c)+erkarutyun(b,c);
+				this.makeres = Math.sqrt((this.paragits/2)*(this.paragits/2-erkarutyun(a,b))*(this.paragits/2-erkarutyun(a,c))*(this.paragits/2-erkarutyun(c,b)));
+				this.r=2*this.makeres/this.paragits;
+				this.R=erkarutyun(a,b)*erkarutyun(a,c)*erkarutyun(b,c)/(4*this.makeres);
+				this.Or.x=(erkarutyun(a,b)*c.x+erkarutyun(a,c)*b.x+erkarutyun(b,c)*a.x)/this.paragits;
+				this.Or.y=(erkarutyun(a,b)*c.y+erkarutyun(a,c)*b.y+erkarutyun(b,c)*a.y)/this.paragits;
+				this.d=2*(a.x*(b.y-c.y)+b.x*(c.y-a.y)+c.x*(a.y-b.y));
+				this.OR.x=((a.x*a.x+a.y*a.y)*(b.y-c.y)+(b.x*c.x+b.y*b.y)*(c.y-a.y)+(c.x*c.x+c.y*c.y)*(a.y-b.y))/this.d;
+				this.OR.y=((a.x*a.x+a.y*a.y)*(c.x-b.x)+(b.x*b.x+b.y*b.y)*(a.x-c.x)+(c.x*c.x+c.y*c.y)*(b.x-a.x))/this.d;
+			}
+			
+		}
+
+		
+
+		var mek = new Ket(0,0);
+		var erkus= new Ket(10,0);
+		var ereq= new Ket(0,10);
+		var ABC = new Erankyun(mek,erkus,ereq);
+
+		
+		
+		function printKet(text){
+		document.write(text.x,"<br>",text.y,"<br><br>");
+		}
+		
+
+	
+		printKet(ABC.Or);
+		printKet(ABC.OR);
+		document.write(ABC.paragits,"<br>");
+		document.write(ABC.makeres,"<br>");
+		document.write(ABC.R,"<br>");
+		document.write(ABC.r,"<br>");
+
+		});
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+
+</body>
+</html>
