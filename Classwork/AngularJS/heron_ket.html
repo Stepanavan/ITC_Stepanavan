@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Angular Keti patkaneluutyun erankian@</title>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 	<script>
 		var app = angular.module('myApp', []);
@@ -14,6 +15,11 @@
 			p=(a+b+c)/2;
 			return Math.sqrt(p*(p-a)*(p-b)*(p-c));
 		}
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+
+
 		$scope.stugum = function(){
 			AB = erkar($scope.Ax,$scope.Ay,$scope.Bx,$scope.By);
 			BC = erkar($scope.Bx,$scope.By,$scope.Cx,$scope.Cy);
@@ -27,25 +33,47 @@
 			Sadc = mak(AD,DC,AC);
 
 
+
+
+			canvas.width = 500;
+			canvas.height = 500;
+			context.globalAlpha = 1.0;
+			context.beginPath();
+        		context.moveTo($scope.Ax,$scope.Ay);
+			context.lineTo($scope.Bx,$scope.By);
+			context.lineTo($scope.Cx,$scope.Cy);
+			context.lineTo($scope.Ax,$scope.Ay);
+			console.log($scope.Dx);
+			context.moveTo($scope.Dx,$scope.Dy);
+			context.arc($scope.Dx,$scope.Dy, 1, 0, 2*Math.PI, false);
+			context.strokeStyle = "black";
+        		context.stroke();
+
+
+
 			k=(Sabc-(Sabd+Sbcd+Sadc));
 			if (-0.0000000001 <k && k<0.0000000001){
 				return "Պատկանում է";
 			} else {
 				return "Չի Պատկանում ";
-			}
+			}		
 		}
+			
 		});
 </script>
 </head>
 <body>
-<div ng-app="myApp" ng-controller="customersCtrl" ng-init="Ax=0;Ay=0;Bx=0;By=10;Cx=10;Cy=0;Dx=1;Dy=1"> 
+<div ng-app="myApp" ng-controller="customersCtrl" ng-init="Ax=0;Ay=0;Bx=0;By=100;Cx=100;Cy=0;Dx=10;Dy=10">
+
  A:<input ng-model="Ax"><input ng-model="Ay"><br>
  B:<input ng-model="Bx"><input ng-model="By"><br>
  C:<input ng-model="Cx"><input ng-model="Cy"><br>
  D:<input ng-model="Dx"><input ng-model="Dy"><br>
-<h1>{{stugum()}}</h1>
+<h1>{{stugum()}}</h1><br>
+<canvas id="myCanvas" width="500" height="500" ></canvas> 
 
 </div>
+
 </body>
 </html>
 
