@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>calculator</title>
+	<style>
+		button{width:30px;margin:2px;}
+	</style>
+	<script>
+		function stanal(aaa){
+			var gorts;
+			var y;
+			var a = String(document.getElementById("himnakan").innerHTML);
+			var x = document.getElementById(aaa.id).innerHTML;
+			if (x>="0" && x<="9" || x=="."){
+				x=String(x);
+				document.getElementById("himnakan").innerHTML=a+x;
+			} else if (x=="+") {
+				katarel();
+				document.getElementById("operation").innerHTML="+";
+			}else if (x=="-") {
+				katarel();
+				document.getElementById("operation").innerHTML="-";		
+			}else if (x=="*") {
+				katarel();
+				document.getElementById("operation").innerHTML="*";		
+			}else if (x=="/") {
+				katarel();
+				document.getElementById("operation").innerHTML="/";		
+			}
+			 else if (x=="=") {
+				gorts = document.getElementById("operation").innerHTML;
+				if (gorts=="+") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").innerHTML);
+					document.getElementById("himnakan1").innerHTML=x+y;
+					jnjel();
+				}else if (gorts=="-") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").innerHTML);
+					document.getElementById("himnakan1").innerHTML=x-y;
+					jnjel();
+				}else if (gorts=="/") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").innerHTML);
+					document.getElementById("himnakan1").innerHTML=x/y;
+					jnjel();
+				}else if (gorts=="*") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").innerHTML);
+					document.getElementById("himnakan1").innerHTML=x*y;
+					jnjel();
+				}else if (gorts==" ") {
+					//x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").innerHTML);
+					document.getElementById("himnakan1").innerHTML=y;
+					jnjel();
+				}
+						
+			}				
+			
+		}
+		function jnjel(){
+			document.getElementById("himnakan").innerHTML="";
+			document.getElementById("operation").innerHTML=" ";
+		}
+		function katarel(){
+			var a = document.getElementById("himnakan").innerHTML;
+			if (a!= "") {
+			a=parseFloat(a);
+			document.getElementById("himnakan").innerHTML="";
+			document.getElementById("himnakan1").innerHTML=a;
+			}			
+		}
+		function jnjel1(){
+			jnjel();
+			document.getElementById("himnakan1").innerHTML="";		
+		}
+	</script>
+</head>
+<body>
+	
+	<br/>
+	
+	<button id="a7" type="button" onclick='stanal(this)'>7</button>
+	<button id="a8" type="button" onclick='stanal(this)'>8</button>
+	<button id="a9" type="button" onclick='stanal(this)'>9</button>
+	<button id="plus" type="button" onclick='stanal(this)'>+</button>
+	<br/>
+	<button id="a4" type="button" onclick='stanal(this)'>4</button>
+	<button id="a5" type="button" onclick='stanal(this)'>5</button>
+	<button id="a6" type="button" onclick='stanal(this)'>6</button>
+	<button id="division" type="button" onclick='stanal(this)'>/</button>
+	<br/>
+	<button id="a1" type="button" onclick='stanal(this)'>1</button>
+	<button id="a2" type="button" onclick='stanal(this)'>2</button>
+	<button id="a3" type="button" onclick='stanal(this)'>3</button>
+	<button id="multiple" type="button" onclick='stanal(this)'>*</button>
+	<br/>
+	<button id="a0" type="button" onclick='stanal(this)'>0</button>
+	<button id="ket" type="button" onclick='stanal(this)'>.</button>
+	<button id="havasar" type="button" onclick='stanal(this)'>=</button>
+	<button id="minus" type="button" onclick='stanal(this)'>-</button>
+	<br>
+	<button type="button" onclick='jnjel1()'>C</button>
+
+	<p id="himnakan"></p><br>
+	<lable>Grant total </lable><lable id="himnakan1"></lable><br>
+	<lable id="operation" hidden> </lable><br>
+	
+</body>
+</html>
