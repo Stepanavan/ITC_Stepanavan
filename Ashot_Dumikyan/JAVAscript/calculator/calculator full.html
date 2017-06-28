@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Калькулятор HTML&JavaScript</title>
+
+<link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<div id="mainDiv" align="center" >
+
+<p>Калькулятор</p>
+
+<form>
+
+<table >
+
+<tr>
+
+<td colspan="3"><input type="text" id="textField" readonly /></td>
+
+<td><input type="submit" id="submitButton" value="="/></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="1" onclick="addToField(1)"/></td>
+
+<td><input type="button" value="2" onclick="addToField(2)"/></td>
+
+<td><input type="button" value="3" onclick="addToField(3)"/></td>
+
+<td><input type="button" value="-" onclick="addToField('-')"/></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="4" onclick="addToField(4)"/></td>
+
+<td><input type="button" value="5" onclick="addToField(5)"/></td>
+
+<td><input type="button" value="6" onclick="addToField(6)"/></td>
+
+<td><input type="button" value="+" onclick="addToField('+')"/></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="7" onclick="addToField(7)"/></td>
+
+<td><input type="button" value="8" onclick="addToField(8)"/></td>
+
+<td><input type="button" value="9" onclick="addToField(9)"/></td>
+
+<td><input type="button" value="/" onclick="addToField('/')"/></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="." onclick="addToField('.')"/></td>
+
+<td><input type="button" value="0" onclick="addToField(0)"/></td>
+
+<td><input type="button" value="Пи" onclick="addToField(3.14159265359)"/></td>
+
+<td><input type="button" value="*" onclick="addToField('*')"/></td>
+
+</tr>
+
+<tr>
+
+<td><input type="button" value="x^2" onclick="power(2)"/></td>
+
+<td><input type="button" value="x^3" onclick="power(3)"/></td>
+
+<td><input type="button" value="10^x" onclick="powten()"/></td>
+
+<td><input type="reset" value="C" id="resetButton"/></td>
+
+</tr>
+
+</table>
+
+</form>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+    

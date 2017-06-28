@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title></title>
+</head>
+<body>
+	<h2 align="center">Ինչ կարող է անել JAva script-ը </h2 >
+	<br/>
+	<p id="xxx" >Այստեղ կարելի է փոխել տեքստը </p>
+	<button type="button" onclick='document.getElementById("xxx").innerHTML = "Ողջույն"'> Փոխել !</button>
+
+	<br/>
+	<p id="yyy">JavaScript֊ը կարող է թաքցնել էլեմենտը</p>
+	<button type="button" onclick="document.getElementById('yyy').style.display='none'">Թաքցնել!</button>	
+	<button type="button" onclick="document.getElementById('yyy').style.display='block'">ցուցադրել!</button>
+	
+	<br/>
+	<p id="zzz" style="display:none">Հայտնվեցի!</p>
+	<button type="button" onclick="document.getElementById('zzz').style.display='block'">ցուցադրել!</button>
+	<br>
+	<button type="button" onclick="myFunction()">փոխել</button>
+	<button type="button" onclick="myFunction1()">Հետ փոխել</button>
+	<script>
+	function myFunction() {
+		document.getElementById("zzz").innerHTML = "Փոխվեցի ֆունկցիայի օգնությամբ";
+	}
+	</script>
+	<script>
+	function myFunction1() {
+		document.getElementById("zzz").innerHTML = "Հայտնվեցի ֆունկցիայի օգնությամբ";
+	}
+	</script>
+
+</body>
+</html>
