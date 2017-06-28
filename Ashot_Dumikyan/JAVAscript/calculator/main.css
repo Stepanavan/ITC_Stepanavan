@@ -1,0 +1,65 @@
+p{
+
+font: 20px tahoma;
+
+}
+
+mainDiv{
+
+background: skyblue;
+
+width:350px;
+
+margin:20px auto;
+
+box-shadow:10px 10px 150px grey;
+
+padding-top: 5px;
+
+padding-bottom: 20px;
+
+}
+
+input[type="submit"]{
+
+width:50px;
+
+height:30px;
+
+opacity:0.8;
+
+border:0px;
+
+}
+
+input[type="button"], input[type="reset"]{
+
+width:50px;
+
+height:50px;
+
+opacity:0.8;
+
+border:0px;
+
+}
+
+input[type="text"]{
+
+border:0px;
+
+outline: none;
+
+opacity:0.8;
+
+height:27px;
+
+width:159px;
+
+}
+
+input:hover{
+
+opacity:1;
+
+}
