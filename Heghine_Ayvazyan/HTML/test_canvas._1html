@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150"
+style="border:5px solid #F55F50;">
+Your browser does not support the HTML5 canvas element.</canvas>
+<script>
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(300,150);
+ctx.stroke();
+</script>
+
+</body>
+</html>
