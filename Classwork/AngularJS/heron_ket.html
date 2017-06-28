@@ -37,13 +37,11 @@
 
 			canvas.width = 500;
 			canvas.height = 500;
-			context.globalAlpha = 1.0;
 			context.beginPath();
         		context.moveTo($scope.Ax,$scope.Ay);
 			context.lineTo($scope.Bx,$scope.By);
 			context.lineTo($scope.Cx,$scope.Cy);
 			context.lineTo($scope.Ax,$scope.Ay);
-			console.log($scope.Dx);
 			context.moveTo($scope.Dx,$scope.Dy);
 			context.arc($scope.Dx,$scope.Dy, 1, 0, 2*Math.PI, false);
 			context.strokeStyle = "black";
@@ -70,7 +68,7 @@
  C:<input ng-model="Cx"><input ng-model="Cy"><br>
  D:<input ng-model="Dx"><input ng-model="Dy"><br>
 <h1>{{stugum()}}</h1><br>
-<canvas id="myCanvas" width="500" height="500" ></canvas> 
+<canvas id="myCanvas"></canvas> 
 
 </div>
 

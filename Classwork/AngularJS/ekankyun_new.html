@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular erankiun</title>
+<style>
+#myCanvas {
+border:1px solid blue;
+}
+</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+		
+		//Canvas
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+
+		function erkarutyun(a,b){
+			return Math.sqrt( (a.x-b.x)*(a.x-b.x)+(a.y-b.y)*(a.y-b.y) );
+		}
+
+		function Ket(x, y) {
+  			 
+    			this.x = x+250;
+    			this.y = 250-y;
+  			
+		}
+		
+		function Erankyun(a,b,c){
+				var Or = new Ket(0,0);
+				var OR = new Ket(0,0);
+				this.Or=Or;
+				this.OR=OR;
+				var A;
+				var B;
+				var C;
+				var paragits;
+				var makeres;
+				var r;
+				var R;
+				this.A=a;
+				this.B=b;
+				this.C=c;
+				this.paragits = erkarutyun(a,b)+erkarutyun(a,c)+erkarutyun(b,c);
+				this.makeres = Math.sqrt((this.paragits/2)*(this.paragits/2-erkarutyun(a,b))*(this.paragits/2-erkarutyun(a,c))*(this.paragits/2-erkarutyun(c,b)));
+				this.r=2*this.makeres/this.paragits;
+				this.R=erkarutyun(a,b)*erkarutyun(a,c)*erkarutyun(b,c)/(4*this.makeres);
+				this.Or.x=(erkarutyun(a,b)*c.x+erkarutyun(a,c)*b.x+erkarutyun(b,c)*a.x)/this.paragits;
+				this.Or.y=(erkarutyun(a,b)*c.y+erkarutyun(a,c)*b.y+erkarutyun(b,c)*a.y)/this.paragits;
+				this.d=2*(a.x*(b.y-c.y)+b.x*(c.y-a.y)+c.x*(a.y-b.y));
+				this.OR.x=((a.x*a.x+a.y*a.y)*(b.y-c.y)+(b.x*b.x+b.y*b.y)*(c.y-a.y)+(c.x*c.x+c.y*c.y)*(a.y-b.y))/this.d;
+				this.OR.y=((a.x*a.x+a.y*a.y)*(c.x-b.x)+(b.x*b.x+b.y*b.y)*(a.x-c.x)+(c.x*c.x+c.y*c.y)*(b.x-a.x))/this.d;
+		}
+
+
+			$scope.stugum = function(){
+			var mek = new Ket($scope.Ax,$scope.Ay);
+			var erkus= new Ket($scope.Bx,$scope.By);
+			var ereq= new Ket($scope.Cx,$scope.Cy);
+			var ABC = new Erankyun(mek,erkus,ereq);
+			canvas.width = 1000;
+			canvas.height = 1000;
+			context.beginPath();
+        		context.moveTo(mek.x,mek.y);
+			context.lineTo(erkus.x,erkus.y);
+			context.lineTo(ereq.x,ereq.y);
+			context.lineTo(mek.x,mek.y);
+			context.strokeStyle = "black";
+        		context.stroke();
+			context.beginPath();
+			context.arc(ABC.Or.x,ABC.Or.y, ABC.r, 0, 2*Math.PI, false);
+			context.stroke();
+			context.beginPath();
+			context.arc(ABC.OR.x,ABC.OR.y, ABC.R, 0, 2*Math.PI, false);
+			context.strokeStyle = "black";
+        		context.stroke();
+			}		
+		
+		});
+	</script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="customersCtrl" ng-init="Ax=0;Ay=0;Bx=0;By=100;Cx=100;Cy=0;Dx=10;Dy=10">
+
+ A:<input ng-model="Ax"><input ng-model="Ay"><br>
+ B:<input ng-model="Bx"><input ng-model="By"><br>
+ C:<input ng-model="Cx"><input ng-model="Cy"><br>
+{{stugum()}}
+
+<canvas id="myCanvas" >Canvas</canvas> 
+
+</div>
+
+</body>
+</html>
