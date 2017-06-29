@@ -1,0 +1,146 @@
+<html>
+<head>
+	<title>Calculator</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<script>
+		var app = angular.module('Calculator',[]);
+
+		app.controller('ccontoll', ['$scope', function($scope) {
+		self=$scope;
+		
+		var a = "";
+		var b = "";
+		var result = "";
+		var operator = ""
+		var screen1 = document.getElementById('screen');
+
+
+		self.adder=function(x)
+		{
+			if (operator!=="+" && operator!=="-" && operator!=="/" && operator!=="*" )	{
+			
+			a=a+String(parseInt(x));
+			screen1.value=a+operator+b;
+			return parseInt(a);
+			
+			}else{
+
+
+				b=b+String(x);
+				screen1.value=a+operator+b;
+				
+				return parseInt(b);
+			}
+			
+		}
+
+
+
+		self.xxx= function(x){
+			
+			return operator= x;
+		
+
+
+			
+		}
+
+		self.ready= function()
+		{
+			if (operator==="+"){
+
+			self.result=(parseInt(a)+parseInt(b));
+			a=self.result;
+			b="";
+
+
+			}
+			if (operator==="-"){
+			self.result=(parseInt(a)-parseInt(b));
+			a=self.result;
+			b="";
+
+			}
+			if (operator==="/"){
+			self.result=(parseInt(a)/parseInt(b));
+			a=self.result;
+			b="";
+
+			}
+			if (operator==="*"){
+			self.result=(parseInt(a)*parseInt(b));
+			a=self.result;
+			b="";
+
+			}
+		}
+
+	
+		self.a=a;
+		self.b=b;
+		
+		}]);
+
+		
+
+
+
+	</script>
+
+<style type="text/css">
+	button{
+		height: 50px;
+		width: 50px;
+		margin:2px;
+	}
+	input {
+		width:200px;
+		margin:20px;
+		margin-left:-0px;
+		box-shadow: 0px 0 50px,;
+	}
+	#result{
+		width:200px;
+		margin-top :10px;
+	}
+
+</style>
+</head>
+<body>
+<div ng-app="Calculator" ng-controller="ccontoll">
+	<div class="calc" >
+	
+			<button type="button" id="a1" name="button" value="1" ng-click="adder(1)">1</button>
+			<button type="button" id="a2" name="button" value="2" ng-click="adder(2)">2</button>
+			<button type="button" id="a3" name="button" value="3" ng-click="adder(3)">3</button>
+			<br>
+			<button type="button" id="a4" name="button" value="4" ng-click="adder(4)">4</button>
+			<button type="button" id="a5" name="button" value="5" ng-click="adder(5)">5</button>
+			<button type="button" id="a6" name="button" value="6" ng-click="adder(6)">6</button>
+			<br>
+			<button type="button" id="a7" name="button" value="7" ng-click="adder(7)">7</button>
+
+			<button type="button" id="a8" name="button" value="8" ng-click="adder(8)">8</button>
+			<button type="button" id="a9" name="button" value="9" ng-click="adder(9)">9</button>
+			<button type="button" id="a0" name="button" value="0" ng-click="adder(0)">0</button><br><br>
+
+				<button type="button" id="plus" name="button" value="plus" ng-click="xxx('+')">+</button>
+				<button type="button" id="minus" name="button" value="minus" ng-click="xxx('-')">-</button>
+				<button type="button" id="bajanum" name="button" value="bajanac" ng-click="xxx('/')" >/</button>
+				<button type="button" id="bazmapatkum" name="button" value="bazmapatkac" ng-click="xxx('*')" >*</button>
+				<br>
+				<button type="button" id="result" name="button" value="havasare" ng-click="ready()" >=</button>
+				<br>
+
+				<input type="text" id="screen" name="ready" ng-model="a" >
+				<br>
+				<input type="text" id="result" name="ready" ng-model="result" >
+
+				
+	</div>
+
+</div>
+
+</body>
+</html> 
