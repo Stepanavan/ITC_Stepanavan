@@ -3,32 +3,134 @@
 <meta charset="utf-8">
 <head>
 	<title>calculator</title>
+	<style>
+		button{width:70px;
+			margin:4px;
+			font: 30px tahoma;
+			box-shadow:1px 1px 25px blue;
+			background: lightyellow;
+			padding-top: 10px;
+			border-radius: 15px;}
+		.button2 {width: 146px;
+			margin:4px;}
+		.button3 {width:70px;
+			margin:1px;
+			font: 30px tahoma;
+			box-shadow:1px 1px 25px blue;
+			background: lightyellow;
+			padding-top: 10px;
+			border-radius: 15px;}
+		input {
+			padding: 1px 8px 1px 8px;;
+			font-size: 200%;
+			text-align: right;
+		}
+	</style>
+	<script>
+		function stanal(aaa){
+			var gorts = document.getElementById("operation").innerHTML;
+			var y;
+			var a = String(document.getElementById("himnakan").value);
+			var x = document.getElementById(aaa.id).innerHTML;
+			if (gorts=="="){
+				a="0";
+				document.getElementById("operation").innerHTML=" ";
+			}
+			if ((x>="0" && x<="9" || x==".") ){
+				x=String(x);
+				if (a=="0" || a=="+" || a=="-" || a=="*" || a=="/")
+				{
+					 document.getElementById("himnakan").value=x;
+				} else {
+					document.getElementById("himnakan").value=a+x;
+				}
+			} else if (x=="+") {
+				katarel(x);
+				document.getElementById("operation").innerHTML="+";
+			}else if (x=="-") {
+				katarel(x);
+				document.getElementById("operation").innerHTML="-";		
+			}else if (x=="*") {
+				katarel(x);
+				document.getElementById("operation").innerHTML="*";		
+			}else if (x=="/") {
+				katarel(x);
+				document.getElementById("operation").innerHTML="/";		
+			}else if (x=="=") {
+				gorts = document.getElementById("operation").innerHTML;
+				if (gorts=="+") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").value);
+					document.getElementById("himnakan").value=x+y;
+					jnjel();
+				}else if (gorts=="-") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").value);
+					document.getElementById("himnakan").value=x-y;
+					jnjel();
+				}else if (gorts=="/") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").value);
+					document.getElementById("himnakan").value=x/y;
+					jnjel();
+				}else if (gorts=="*") {
+					x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").value);
+					document.getElementById("himnakan").value=x*y;
+					jnjel();
+				}else if (gorts==" ") {
+					//x = parseFloat(document.getElementById("himnakan1").innerHTML);
+					y = parseFloat(document.getElementById("himnakan").value);
+					document.getElementById("himnakan").value=y;
+					jnjel();
+				}
+				document.getElementById("operation").innerHTML="=";
+						
+			} else if (x=="C") {
+				jnjel();
+				document.getElementById("himnakan").value="0";
+			}				
+			
+		}
+		function jnjel(){
+			document.getElementById("himnakan1").innerHTML="0";
+			document.getElementById("operation").innerHTML=" ";
+		}
+		function katarel(aaa){
+			var a = document.getElementById("himnakan").value;
+			document.getElementById("himnakan1").innerHTML=a;
+			if (a!= "") {
+			document.getElementById("himnakan").value=aaa;
+			}			
+		}
+	</script>
 </head>
 <body>
 	
 	<br/>
-	
-	<button type="button" onclick='document.getElementById("a7").innerHTML = 7'> 7</button>
-	<button type="button" onclick='document.getElementById("a8").innerHTML = 8'> 8</button>
-	<button type="button" onclick='document.getElementById("a9").innerHTML = 9'> 9</button>
-	<button type="button" onclick='document.getElementById("x+").innerHTML = +'> +</button>
-	<br/>
-	<button type="button" onclick='document.getElementById("a4").innerHTML = 4'> 4</button>
-	<button type="button" onclick='document.getElementById("a5").innerHTML = 5'> 5</button>
-	<button type="button" onclick='document.getElementById("a6").innerHTML = 6'> 6</button>
-	<button type="button" onclick='document.getElementById("x/").innerHTML = /'> ./</button>
-	<br/>
-	<button type="button" onclick='document.getElementById("a1").innerHTML = 1'> 1</button>
-	<button type="button" onclick='document.getElementById("a2").innerHTML = 2'> 2</button>
-	<button type="button" onclick='document.getElementById("a3").innerHTML = 3'> 3</button>
-	<button type="button" onclick='document.getElementById("x*").innerHTML = *'> *</button>
-	<br/>
-	<button type="button" onclick='document.getElementById("a0").innerHTML = 0'> 0</button>
-	<button type="button" onclick='document.getElementById("a.").innerHTML = .'> ..</button>
-	<button type="button" onclick='document.getElementById("x=").innerHTML = ='> =</button>
-	<button type="button" onclick='document.getElementById("x-").innerHTML = -'> .-</button>
+	<input id="himnakan" type="text" value="0"><br><br>
+	<script>
+		var massiv = ["7","8","9","+","4","5","6","/","1","2","3","*"];
+		for (i=0;i<12;i++){
+			document.write("<button id='a");
+			document.write(i);
+			document.write("' type='button' onclick='stanal(this)'>");
+			document.write(massiv[i]);
+			document.write("</button>");
+			if ((i+1)%4==0){
+				document.write("<br>");
+			}
+		}
 
-	<p id="a0" ></p>
+	</script>
+	<button id="a12" type="button" onclick='stanal(this)' class="button2">0</button>
+	<button id="a13" type="button" onclick='stanal(this)' class="button3">.</button>
 	
+	<button id="a14" type="button" onclick='stanal(this)' class="button3">-</button>
+	<br>
+	<button id="aC" type="button" onclick='stanal(this)' class="button2">C</button>
+	<button id="a=" type="button" onclick='stanal(this)' class="button2">=</button>
+	<lable id="operation" hidden> </lable>
+	<lable id="himnakan1" hidden></lable>
 </body>
 </html>
