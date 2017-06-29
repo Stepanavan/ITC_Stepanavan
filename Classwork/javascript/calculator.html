@@ -4,7 +4,8 @@
 <head>
 	<title>calculator</title>
 	<style>
-		button{width:30px;margin:2px;}
+		button{width:70px;margin:3px;font: 30px tahoma;box-shadow:1px 1px 25px blue;background: lightyellow;padding-top: 5px;border-radius: 12px;}
+		.button2 {width: 150px;}
 	</style>
 	<script>
 		function stanal(aaa){
@@ -97,16 +98,18 @@
 	<button id="a3" type="button" onclick='stanal(this)'>3</button>
 	<button id="multiple" type="button" onclick='stanal(this)'>*</button>
 	<br/>
-	<button id="a0" type="button" onclick='stanal(this)'>0</button>
+	<button id="a0" type="button" onclick='stanal(this)' class="button2">0</button>
 	<button id="ket" type="button" onclick='stanal(this)'>.</button>
-	<button id="havasar" type="button" onclick='stanal(this)'>=</button>
+	
 	<button id="minus" type="button" onclick='stanal(this)'>-</button>
 	<br>
-	<button type="button" onclick='jnjel1()'>C</button>
-
+	<button type="button" onclick='jnjel1()' class="button2">C</button>
+	<button id="havasar" type="button" onclick='stanal(this)' class="button2">=</button>
+	
+	<lable id="operation" hidden> </lable><br>
 	<p id="himnakan"></p><br>
 	<lable>Grant total </lable><lable id="himnakan1"></lable><br>
-	<lable id="operation" hidden> </lable><br>
+	
 	
 </body>
 </html>
