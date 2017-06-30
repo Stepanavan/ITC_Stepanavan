@@ -2,7 +2,6 @@
 <head>
 	<title>Calculator</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-	
 	<script>
 		var app = angular.module('Calculator',[]);
 
@@ -10,38 +9,11 @@
 		$scope.keyPress = function(e){
    			console.log(e); // where 'e' is the keycode of whatever was pressed
 		}
-		
 		}]);
-
-		
-
-
-
 	</script>
-
 <style type="text/css">
-	button{
-		height: 50px;
-		width: 50px;
-		margin:2px;
-	}
-	input {
-		width:200px;
-		margin:20px;
-		margin-left:-0px;
-		box-shadow: 0px 0 50px,;
-	}
-	#result{
-		width:200px;
-		margin-top :10px;
-	}
-
 </style>
 </head>
 <body ng-app="Calculator" ng-controller="ccontoll" ng-keydown="keyPress($event.keyCode)">
-
-
-
-
 </body>
 </html> 

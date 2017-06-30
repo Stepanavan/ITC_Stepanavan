@@ -14,15 +14,11 @@
 			font-size: 200%;
 			text-align: right;
 		}
-		#a33{
-			background:yellow;
-		}
-
-
 	</style>
 	<script>
 		function bbb(){
-			var x =event.keyCode;
+			var a = String(document.getElementById("himnakan").value);
+			var x = event.keyCode;
 			switch(x) {
 				case 96:
 				case 48:
@@ -103,13 +99,18 @@
 					console.log("plus");
 					stanal1("+");
     					break;
-  				case 8:
 				case 46:
 					console.log("jnjel");
 					stanal1("C");
     					break;
+  				case 8:
+					console.log("jnjel het");
+					if (a!="0" && a!="" && a!="+" && a!="-" && a!="*" && a!="/"){
+						a=a.substring(0, a.length-1);
+						document.getElementById("himnakan").value=a;
+					};
+    					break;
   				default:
-   	
     					break;
 			}
 			console.log(event.keyCode);
@@ -213,7 +214,7 @@
 			}
 		}
 	</script>
-	<lable id="operation" hidden> </lable>
-	<lable id="himnakan1" hidden></lable>
+	<lable id="operation" > </lable>
+	<lable id="himnakan1" ></lable>
 </body>
 </html>
