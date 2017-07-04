@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="canvas" width="360" height="810" style="border:1px solid black;">
+</canvas>
+
+<script>
+var ctav = document.getElementById("canvas");
+var nkar = ctav.getContext("2d");
+
+function Box(x,y) {
+	nkar.fillStyle="red";
+	nkar.strokeRect(0+x,0+y,30,30);
+
+}
+
+function I(x,y,a){
+	
+	if (a==1 || a==3){
+		for (i=0;i<4;i++){
+			Box(x,i*30+y-60)
+		}
+	}else {
+		for (i=0;i<4;i++){
+			Box(i*30+x-30,y-30)
+		}
+	}
+}
+
+function T(x,y,a){
+        var x1=x-30,
+	    y1=y-30;
+	if (a==1){
+		for (i=0;i<3;i++){
+			Box(x1,i*30+y1)
+		}
+		Box(x1+30,30+y1)
+	}else if(a==2){
+		for (i=0;i<3;i++){
+			Box(i*30+x1,y1+30)
+		}
+		Box(x,y1)
+	}else if(a==3){
+		for (i=0;i<3;i++){
+			Box(x,i*30+y1-30)
+		}
+		Box(x1,y1)
+	}else if(a==4){
+		for (i=0;i<3;i++){
+			Box(i*30+x1-30,y1)
+		}
+		Box(x1,y)
+	}
+
+
+}
+
+function L(x,y,a,inv){
+	
+        var x1=x-30,
+	    y1=y-30;
+	if (a==1){
+		for (i=0;i<3;i++){
+			Box(x1,i*30+y1)
+		}
+		Box(x1+30,y1+inv*60)
+	}else if(a==2){
+		for (i=0;i<3;i++){
+			Box(i*30+x1,y1+30)
+		}
+		Box(x1+inv*60,y1)
+	}else if(a==3){
+		for (i=0;i<3;i++){
+			Box(x,i*30+y1-30)
+		}
+		Box(x1,y-inv*60)
+	}else if(a==4){
+		for (i=0;i<3;i++){
+			Box(i*30+x1-30,y1)
+		}
+		Box(x+inv*60-60,y)
+	}
+
+
+}
+
+function Z(x,y,a,inv){
+	
+        var x1=x-30,
+	    y1=y-30;
+	if (a==1){
+		for (i=0;i<2;i++){
+			Box(x1,i*30+y1);
+		}
+		for (i=0;i<2;i++){
+			Box(x,i*30+y1-30+inv*60);
+		}
+
+			
+		
+	}else if(a==2){
+		for (i=0;i<2;i++){
+			Box(x1+i*30,y)
+		}
+		for (i=0;i<2;i++){
+			Box(x1-30+i*30+inv*60,y1);
+		}
+		
+	}
+		
+
+
+}
+function maxB(x,y){
+	z+=30;
+  	nkar.fillStyle="red";
+	nkar.strokeRect(x-30,y-30,60,60);
+	
+}
+
+var x=100, 
+    y=0;
+var z=0;
+   
+
+I(100,100,1)
+	
+
+var timerId = setInterval(function(){
+	nkar.clearRect(0,0,360,810);
+	maxB(x,y+z);
+console.log(z);
+
+} ,1000);
+
+timerId;
+
+
+//LongBoxes(100,100,1);
+//LongBoxes(100,100,2);
+
+
+</script>
+
+</body>
+</html>
