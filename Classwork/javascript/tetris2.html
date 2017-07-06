@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="canvas" width="360" height="810" style="border:1px solid black;">
+</canvas>
+<script>
+var ctav = document.getElementById("canvas");
+var nkar = ctav.getContext("2d");
+
+var x=120, 
+    y=0;
+var z=30;
+var t = false;   
+var ob;
+
+function Box(x,y) {
+
+	this.x=x;
+	this.y=y;
+	this.max_x=this.x+30;
+	this.max_y=this.y+30;
+
+	function show() {
+	
+		nkar.fillRect(this.x,this.y,30,30);
+		//console.log("barev");	
+
+		}
+
+	function move() {
+		if (this.max_y<810){
+			nkar.clearRect(this.x,this.y,30,30);
+			this.y+=30;
+			this.max_y=this.y+30;
+
+		}
+	}
+
+	this.move=move;
+	this.show=show;
+
+}
+function I(x,y,a){
+	this.a = a;
+	this.y = y;
+	this.x = x;
+	var obji = [];
+	
+	function show() {	
+
+		if (this.a==0 || this.a==2){
+			this.obji=[];
+			for (i=0;i<4;i++){
+
+				var b=new Box(this.x,i*30+this.y);
+				console.log(i*30+this.y);
+				this.obji.push(b);
+				this.obji[i].move();
+				this.obji[i].show();
+			}
+			
+		}else {
+			this.obji=[];
+			for (i=0;i<4;i++){
+				var b= new Box(i*30+this.x,this.y);
+
+				this.obji.push(b);
+				this.obji[i].move();
+				this.obji[i].show();
+
+			}
+			
+		}
+	}
+	function move() {
+
+		this.y+=30;
+ 	}
+
+ 	this.move=move;	
+	this.show=show;
+}
+
+var g = new I(120,600,1);
+g.show();
+	
+
+var arr = [];
+var arraytox = [];
+
+for (var i =0; i<27; i++){
+	arraytox = [];
+	for(var  j=0; j<12; j++){
+		arraytox.push(0);	
+	}
+	arr.push(arraytox);
+}
+
+var Game = function() {
+		if(t == false){
+			var k = Math.floor(Math.random() * 5);
+			k = 0;
+			var ang = Math.floor(Math.random() * 4);
+			ang= 2;
+			var invert = Math.floor(Math.random() * 2);				
+			switch (k) {
+				case 0: 
+					ob = new I(120,120,ang);
+					break;
+				case 1: 
+					ob = new T(120,-120,ang);
+					break;
+				case 2: 
+					ob = new L(120,-120,ang,invert);
+					break;
+				case 3: 
+					ob = new Z(120,-120,ang,invert);
+					break;		
+				case 4: 
+					ob = new maxB(120,-120);
+					break;
+				default:
+					break;
+			}
+			t = true;
+			//console.log("False");		
+		} else {
+			
+			ob.move();
+			ob.show();
+			//t = false;
+			//console.log("True");
+		}	
+}
+
+
+
+
+var loop = setInterval(function(){
+	Game();
+
+} ,250);
+
+var key = 0;
+
+window.onkeydown=function(event){
+	key = event.keyCode
+	console.log(key);
+	switch(key){
+		case 37: 
+			x=x-30
+			//key=0;	
+			break;
+		case 39: 
+			x=x+30
+			//key=0;	
+			break;
+		case 40: 
+			z=z+3
+			//key=0;	
+			break;
+		default:
+			key=0;
+	}
+}
+</script>
+
+</body>
+</html>
