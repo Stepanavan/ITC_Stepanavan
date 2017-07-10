@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-
 <canvas id="canvas" width="360" height="810" style="border:1px solid black;">
 </canvas>
-
 <script>
 var ctav = document.getElementById("canvas");
 var nkar = ctav.getContext("2d");
-
 
 var x=120, 
     y=0;
@@ -17,6 +14,7 @@ var t = false;
 var ob;
 
 function Box(x,y) {
+	nkar.beginPath();
 	nkar.fillStyle="red";
 	nkar.strokeRect(0+x,0+y,30,30);
 
@@ -26,21 +24,26 @@ function I(x,y,a){
 	this.a = a;
 	this.y = y;
 	this.x = x;
+	this.maxY=0;
 	function show() {	
 		if (this.a==0 || this.a==2){
 			for (i=0;i<4;i++){
-				Box(this.x,i*30+this.y-60)
+				Box(this.x,i*30+this.y)
 			}
+			this.maxY = this.y + 120;  
 		}else {
 			for (i=0;i<4;i++){
-				Box(i*30+this.x-30,this.y-30)
+				Box(i*30+this.x,this.y)
 			}
+			this.maxY = this.y + 30;
 		}
 	}
 	function move() {
 		nkar.clearRect(0,0,360,810);
-		this.y+=30;
-		console.log(key);
+		if (this.maxY < 810 ){ 
+			this.y+=30;
+			console.log(key);
+ 		}
 		//console.log("I");	
 	}
 	this.show = show;
@@ -84,8 +87,6 @@ function T(x,y,a){
 	}
 	this.show = show;
 	this.move = move;
-
-
 }
 
 function L(x,y,a,inv){
@@ -126,8 +127,6 @@ function L(x,y,a,inv){
 	}
 	this.show = show;
 	this.move = move;
-
-
 }
 
 function Z(x,y,a,inv){
@@ -145,9 +144,6 @@ function Z(x,y,a,inv){
 			for (i=0;i<2;i++){
 				Box(this.x,i*30+this.y1-30+this.inv*60);
 			}
-
-			
-		
 		}else if(this.a==1 || this.a==3){
 			for (i=0;i<2;i++){
 				Box(this.x1+i*30,this.y)
@@ -166,10 +162,8 @@ function Z(x,y,a,inv){
 	}
 	this.show = show;
 	this.move = move;
-		
-
-
 }
+
 function maxB(x,y){
 	this.y = y;
 	this.x = x;
@@ -184,11 +178,7 @@ function maxB(x,y){
 	}
 	this.show = show;
 	this.move = move;
-	
 }
-
-//I(100,100,1)
-
 
 var arr = [];
 var arraytox = [];
@@ -201,31 +191,27 @@ for (var i =0; i<27; i++){
 	arr.push(arraytox);
 }
 
-/*var move = function() {
-	nkar.clearRect(0,0,360,810);
-	y = y + 30;
-}*/
-
 var Game = function() {
 		if(t == false){
 			var k = Math.floor(Math.random() * 5);		
 			var ang = Math.floor(Math.random() * 4);
+			ang= 1;
 			var invert = Math.floor(Math.random() * 2);				
 			switch (k) {
 				case 0: 
-					ob = new I(120,0,ang);
+					ob = new I(120,-120,ang);
 					break;
 				case 1: 
-					ob = new T(120,0,ang);
+					ob = new T(120,-120,ang);
 					break;
 				case 2: 
-					ob = new L(120,0,ang,invert);
+					ob = new L(120,-120,ang,invert);
 					break;
 				case 3: 
-					ob = new Z(120,0,ang,invert);
+					ob = new Z(120,-120,ang,invert);
 					break;		
 				case 4: 
-					ob = new maxB(120,0);
+					ob = new maxB(120,-120);
 					break;
 				default:
 					break;
@@ -245,7 +231,11 @@ var Game = function() {
 var loop = setInterval(function(){
 	Game();
 
+<<<<<<< HEAD
 } ,500);
+=======
+} ,250);
+>>>>>>> 53e21b602e2ef11da89d05816f22476777759744
 
 var key = 0;
 
@@ -257,7 +247,6 @@ window.onkeydown=function(event){
 			x=x-30
 			//key=0;	
 			break;
-			
 		case 39: 
 			x=x+30
 			//key=0;	
@@ -266,13 +255,10 @@ window.onkeydown=function(event){
 			z=z+3
 			//key=0;	
 			break;
-
 		default:
 			key=0;
 	}
-	
 }
-
 </script>
 
 </body>
