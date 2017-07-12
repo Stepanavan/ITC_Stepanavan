@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th,td{
+
+border: 2px solid black;
+}
+
+td {
+height:20px;
+width:20px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+vandak=[];
+k=0;
+	document.write("<table>");
+	for(var i=0;i<8;i++){
+		document.write("<tr>");
+		for(var j=0;j<8;j++){
+		k=i*8+j;
+		if ((i+j)%2==0){
+			document.write("<td id='a"+k+"' onclick='aaa(this)' ></td>");
+		} else {
+			document.write("<td id='a"+k+"' onclick='aaa(this)' style='background-color:black; color:white;'></td>");
+		}
+		
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	
+	function ast (aaaa){
+		if (aaaa==0){
+			return 1;
+		}else{
+			return 2*ast(aaaa-1);
+		}
+	}
+	function ggg(aa){
+		var z  = document.getElementById(aa.id)
+	
+		if (k%2==0){
+			z.style.backgroundColor="black"
+			
+			
+			
+			}
+			else if (k%2==1){
+			z.style.backgroundColor="white"
+			}
+	}
+	
+function aaa(hgfhgfh){
+
+	
+	var ssss=document.getElementById(hgfhgfh.id);
+	k=0;	
+			
+    for(var i=0;i<8;i++){
+
+	    for(var j=0;j<8;j++){
+			k=i*8+j;
+			Z=true;
+			if (hgfhgfh.id==("a"+k)){
+				ssss.innerHTML=ast(k);
+				
+				
+			};
+		}
+	}
+	
+
+			
+			
+	
+};
+
+
+
+
+</script>
+</body>
+
+</html>
