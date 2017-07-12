@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+td {
+border: solid black 1px;
+width: 50px;
+height: 20px;
+}
+textarea {
+color:green;
+background-color:red;
+}
+</style>
+</head>
+<body>
+
+
+
+<script>
+var c=0;
+var r=0;
+document.write("<table>");
+for (var  i = 0; i <10; i++) 
+{
+	document.write("<tr>")
+	for (var j =0;j<10;j++){
+		r=i*10+j+1;
+		c=c+r;
+		if ((i)%3==0 && (j)%3==0){
+			document.write("<td style='background-color:yellow;'>"+ r +"</td>");
+		} else if ((i)%3==0){
+			document.write("<td style='background-color:white;'>"+ r +"</td>");
+		} else if((j)%3==0){
+			document.write("<td style='background-color:green;'>"+ r +"</td>")
+			
+		} else {
+			document.write("<td style='background-color:blue;'>"+ r +"</td>");
+		}
+	}
+
+    document.write("</tr>")
+	
+}
+document.write("</table>");
+document.write("<textarea rows='4' cols='50'>"+c+"</textarea>");
+</script>
+
+</body>
+</html>
