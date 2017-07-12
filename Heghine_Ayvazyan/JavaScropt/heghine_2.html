@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th,td{
+
+border: 2px solid black;
+}
+
+td {
+height:20px;
+width:20px;
+}
+</style>
+</head>
+<body>
+<script>
+vandak=[];
+k=0;
+	document.write("<table>");
+	for(var i=0;i<10;i++){
+		document.write("<tr>");
+		for(var j=0;j<10;j++){
+		k=i*10+j;
+		document.write("<td id='a"+k+"' onclick='aaa(this)'></td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+function aaa(hgfhgfh){
+	var ssss=document.getElementById(hgfhgfh.id);
+	k=0;
+    for(var i=0;i<10;i++){
+	    for(var j=0;j<10;j++){
+			k=i*10+j;
+			if (hgfhgfh.id==("a"+k)){
+				ssss.innerHTML=i + "," +j;
+			};
+		}
+	}
+
+	if (ssss.style.borderRadius=="10px"){
+		ssss.style.borderRadius="0px";
+	} else {
+		ssss.style.borderRadius="10px";
+	}
+};
+</script>
+</body>
+
+</html>

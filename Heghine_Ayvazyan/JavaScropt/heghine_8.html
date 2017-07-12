@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Обязательные поля формы</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<p>Пожалуйста, заполните обязательные поля.</p>
+	<form action="action.php">
+		<label>Имя:</label><input type="text" name="firstname" required><span></span><br>
+		<label>Возраст:</label><input type="number" name="age" min="1" max="100" step="1"><span></span><br>
+		<label>E-mail:</label><input type="email" name="email" required><span></span><br>
+		<label>Сайт:</label><input type="url" name="url"><span></span><br>
+		<input type="submit"value="Отправить">
+	</form>
+</body>
+</html>

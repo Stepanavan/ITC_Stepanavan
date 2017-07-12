@@ -1,0 +1,44 @@
+<HTML>
+<HEAD><TITLE></TITLE></HEAD>
+<script language="JavaScript">
+
+ function plus()
+{
+rezultat.value=znah_1.value-(-1)*znah_2.value;
+}
+
+function minus()
+{
+rezultat.value=znah_1.value-znah_2.value;
+}
+
+ function umn()
+{
+rezultat.value=znah_1.value*znah_2.value;
+}
+
+function del()
+{
+rezultat.value=znah_1.value/znah_2.value;
+}
+</script>
+<table border="2">
+<tr>
+<td>
+<input id="znah_1" size="38">
+</td>
+<td rowspan="3" valign="top">
+<input type="button" value=" + " onclick="plus()">
+<input type="button" value=" - " onclick="minus()">
+<input type="button" value=" * " onclick="umn()">
+<input type="button" value=" / " onclick="del()"></td>
+</tr>
+<tr>
+<td><input id="znah_2" size="38"></td>
+</tr>
+<tr>
+<td><input id="rezultat" size="38"></td>
+</tr>
+</table>
+</BODY> 
+</HTML>

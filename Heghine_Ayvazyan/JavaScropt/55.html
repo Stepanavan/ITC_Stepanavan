@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Page Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <thead>
+            <tr>
+                <th>Heading 1</th>
+                <th>Heading 2</th>
+                <th>Heading 3</th>
+                <th>Heading 4</th>
+                <th>Heading 5</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tabledata">
+            <tr data-id="1">
+                <td class="field1">1</td>
+                <td class="field2">2</td>
+                <td class="field3">3</td>
+                <td class="field4">4</td>
+                <td class="field5">
+                    <textarea class="updatable">BOO</textarea>
+                </td>
+                <td class="actions">
+                    <button class="update_row">Update</button>
+                    <button class="delete_row">Delete</button>
+                </td>
+            </tr>
+            <tr data-id="2">
+                <td class="field1">5</td>
+                <td class="field2">6</td>
+                <td class="field3">7</td>
+                <td class="field4">8</td>
+                <td class="field5">
+                    <textarea class="updatable"></textarea>
+                </td>
+                <td class="actions">
+                    <button class="update_row">Update</button>
+                    <button class="delete_row">Delete</button>
+                </td>
+            </tr>
+            <tr data-id="3">
+                <td class="field1">9</td>
+                <td class="field2">10</td>
+                <td class="field3">11</td>
+                <td class="field4">12</td>
+                <td class="field5">
+                    <textarea class="updatable"></textarea>
+                </td>
+                <td class="actions">
+                    <button class="update_row">Update</button>
+                    <button class="delete_row">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<script>
+    function loadAll(targetField){
+        var tablebody = document.getElementById('tabledata');
+        var concatField = targetField - 1;
+        for (var i = 0, row; row = tablebody.rows[i]; i++) {
+            var str = [];
+            var tx = row.cells[concatField].children[0];
+            for (var j = 0, col; col = row.cells[j]; j++) {
+                if(j < concatField) {
+                    str[j] = col.innerHTML;
+                } else{
+                    break;
+                }
+            }
+            tx.innerHTML = str.join('_');
+        }
+    }
+    loadAll(5); // 5 = fifth column being the one you want to fill
+</script>
+</body>
+</html>
