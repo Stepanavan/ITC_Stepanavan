@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fib</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	<script>
+		var app = angular.module('myApp', []);
+		app.controller('customersCtrl', function($scope) {
+			var element=[];
+			var togh=[];
+			function fib(x){
+				if (x==1 || x==2){
+					return 1;
+				}
+				else {
+					return fib(x-1)+fib(x-2);
+				};
+			};
+			
+				togh.push(element);
+			}
+			$scope.togh = togh;
+		});
+		
+	</script>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl" >
+	<div ng-repeat="x in togh">
+		{{x}}	
+	</div>
+</body>
+</html>
