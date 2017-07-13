@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+td {
+height:50px;
+width:50px;
+}
+div {
+height:100%;
+width:100%;
+border: 1px solid black;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+vandak=[];
+k=0;
+	document.write("<table>");
+	for(var i=0;i<4;i++){
+		document.write("<tr>");
+		for(var j=0;j<4;j++){
+			document.write("<td ><div id='a"+k+"' onclick='move(this)' style='margin: 0 auto; ' ></div></td>");
+			k++;
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	
+		
+
+
+	function move(x) {
+		var elem = document.getElementById(x.id);
+		var xx = 99;
+		var qayl=-1;
+		var id = setInterval(frame, 5);
+		function frame() {
+			if (xx >= 100) {
+				clearInterval(id);
+			} else if (xx == 1){
+				qayl=1;
+			}
+			xx=xx+qayl; 
+			elem.style.width = xx + '%';
+		}
+	}
+	
+
+
+</script>
+</body>
+
+</html>
