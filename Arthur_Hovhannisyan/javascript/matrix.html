@@ -1,0 +1,93 @@
+<html>
+	<head>
+		<style>
+			table{
+			
+				overflow: hidden;
+				z-index: 1;
+ 				cursor: default;
+			}
+
+			td {
+				border: 1px solid black;
+				border-radius: 15px;
+				text-align: center;
+				padding: 7px;
+				margin-top: 50px;
+				position: relative;
+			}
+
+			td:hover::before
+			{
+				content: "";
+				position: absolute;
+				background: black;
+				left: -5000px;
+				top: 0;
+				height: 100%;
+				width: 10000px;
+				z-index: -1;
+			}
+
+			td:hover::after {
+				background: black;
+				content: '\00a0';
+				height: 10000px;
+				left: 0;
+				position: absolute;
+				top: -5000px;
+				width: 100%;
+				z-index: -1;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<table>
+		<script type="text/javascript">
+			var arr = [];	
+
+			for(var i = 0; i < 100; i++) {
+					arr[i] = (Math.floor(Math.random()*100));
+			}
+			var k=0;
+			for(var i = 0; i < 10; i++) {
+				document.write("<tr>");
+				for(var j = 0; j < 10; j++) {
+					k=10*i+j;
+					if (arr[i*10+j] % 2 == 0) {					
+						document.write("<td id ="+"a" +k +" style='background: yellow' onclick='barev(this)'>");
+						document.write(arr[i*10+j]);
+						document.write("</td>");
+					}
+					else {
+						document.write("<td id ="+"a"+ k +" style='background: aqua' onclick='barev(this)'>");
+						document.write(arr[i*10+j]);
+						document.write("</td>");
+					}
+				}
+				document.write("</tr>");
+			}
+			
+		    function barev(sss) {
+				k=sss.id;
+				k=parseInt(k.substring(1, 3));
+				//console.log(k);
+				var couter=0;
+				for (i=0;i<k;i++){
+					couter+=arr[i];
+				}
+				var s=document.getElementById(sss.id);
+				if (s.innerHTML==couter) {
+					s.innerHTML=arr[k];
+				}
+				else {
+					s.innerHTML=couter;
+				}
+			}
+
+		</script>
+		</table>
+	</body>
+</html>
