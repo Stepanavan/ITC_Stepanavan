@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title> New page </title>
+		<meta charset="utf-8">
+		<style>
+		
+			table, td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}
+			td {
+				border: 1px solid black;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+			}
+			
+			.disabledbutton {
+				pointer-events: none;
+			}
+			
+			.pair {
+				pointer-events: none;
+				color: red;
+			}
+		
+		</style>
+		
+	</head>
+	<body>
+		<table>
+		<script>
+		
+			var firstNum = 0;
+			var secondNum = 0;
+			var firstID = 0;
+			var secondID = 0
+			var firstElem = 0;
+			var secondElem = 0;
+			
+			var arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+			
+			for(var i = 0; i < 4; i++){
+				document.write("<tr>");
+				for (var j = 0; j < 4; j++){
+					do
+						var rand = Math.floor(Math.random()*17);
+					while (arr[rand] == undefined)
+					document.write("<td id="+'a'+arr[rand]+i+j+" onclick='myFunc(this)'>");
+					document.write("</td>");
+					arr.splice(rand, 1);
+				}
+				document.write("</tr>");
+			}
+			
+			function myFunc(aaa) {
+			
+					if (firstNum == 0) {
+						firstID = aaa.id;
+						firstNum = parseInt(firstID.substring(1, 2));
+						aaa.innerHTML = firstNum;
+					}
+					else {
+						if (aaa.id != firstID){
+							secondID = aaa.id;
+							secondNum = parseInt(secondID.substring(1, 2));
+							if (firstNum == secondNum) {
+								first = document.getElementById(firstID);
+								first.innerHTML = firstNum;
+								aaa.innerHTML = secondNum;
+								first.className = "pair";
+								aaa.className = "pair";
+								firstNum = 0;
+								secondNum = 0;
+								firstElem = 0;
+								secondElem = 0;
+							}
+							else {
+								secondElem = document.getElementById(secondID);
+								secondElem.innerHTML = secondNum;
+								setTimeout(lock, 1);
+								setTimeout(hidde, 700);
+								firstNum = 0;
+								secondNum = 0;
+							}
+						}
+						else {
+							aaa.innerHTML = "";
+							firstNum = 0;
+						}
+					}
+			}
+			
+			function lock() {
+				var x = document.getElementsByTagName("TD");
+				for(var i=0; i < x.length; i++) {
+					itemID = x[i].id
+					item = document.getElementById(itemID);
+					item.classList.add("disabledbutton");
+				}
+			}
+			
+			function hidde(){
+				var x = document.getElementsByTagName("TD");
+				for(var i=0; i < x.length; i++) {
+					itemID = x[i].id
+					item = document.getElementById(itemID);
+					item.classList.remove("disabledbutton");
+				}
+				firstElem = document.getElementById(firstID);
+				firstElem.innerHTML = "";
+				secondElem = document.getElementById(secondID);
+				secondElem.innerHTML = "";
+			}
+			
+		</script>
+		</table>
+	</body>
+</html>
