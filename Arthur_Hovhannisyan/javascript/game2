@@ -1,0 +1,175 @@
+<html>
+	<head>
+		<title> New page </title>
+		<meta charset="utf-8">
+		<style>
+		
+			table, td {
+				border-collapse: collapse;
+			}
+			td {
+				width: 50px;
+				height: 50px;
+			}
+
+			div {
+				border: 1px solid yellow;
+				width: 50px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				margin: 0 auto;
+			}
+			
+			.disabledbutton {
+				pointer-events: none;
+			}
+			
+			.pair {
+				pointer-events: none;
+				color: red;
+			}
+		
+		</style>
+		
+	</head>
+	<body>
+		<table>
+		<script>
+		
+			var firstNum = 0;
+			var secondNum = 0;
+			var firstID = 0;
+			var secondID = 0
+			var firstElem = 0;
+			var secondElem = 0;
+			var two = 0;
+			var fin = 0;
+			
+			var arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+			
+			for(var i = 0; i < 4; i++){
+				document.write("<tr>");
+				for (var j = 0; j < 4; j++){
+					do
+						var rand = Math.floor(Math.random()*17);
+					while (arr[rand] == undefined)
+					document.write("<td>");
+					document.write("<div id="+'a'+arr[rand]+i+j+" onclick='myFunc(this)'>");
+					document.write("</div>");
+					document.write("</td>");
+					arr.splice(rand, 1);
+				}
+				document.write("</tr>");
+			}
+			
+			function myFunc(aaa) {
+			
+					if (firstNum == 0) {
+						firstID = aaa.id;
+						firstNum = parseInt(firstID.substring(1, 2));
+						//aaa.innerHTML = firstNum;
+						move(aaa);
+						setTimeout(lock, 1);
+						setTimeout(hidde, 800);
+					}
+					else {
+						if (aaa.id != firstID){
+							secondID = aaa.id;
+							secondNum = parseInt(secondID.substring(1, 2));
+							if (firstNum == secondNum) {
+								two = 0;
+								fin++;
+								move(aaa);
+								setTimeout(lock, 1);
+								setTimeout(hidde, 1000);
+								first = document.getElementById(firstID);
+								//first.innerHTML = firstNum;
+								//aaa.innerHTML = secondNum;
+								if (fin == 8) {
+									setTimeout(function zuyg() {first.className = "pair"; aaa.className = "pair"; alert("You Win!!")}, 800);
+								}
+								else {
+									setTimeout(function zuyg() {first.className = "pair"; aaa.className = "pair";}, 800);
+								}
+								//first.className = "pair";
+								//aaa.className = "pair";
+								firstNum = 0;
+								secondNum = 0;
+								firstElem = 0;
+								secondElem = 0;
+							}
+							else {
+								move(aaa);
+								setTimeout(lock, 1);
+								setTimeout(hidde, 1000);
+								two = 1;
+								//secondElem = document.getElementById(secondID);
+								//secondElem.innerHTML = secondNum;
+								firstNum = 0;
+								secondNum = 0;
+							}
+						}
+						else {
+							move(aaa);
+							two = 2;
+							setTimeout(hidde, 1000);
+							firstNum = 0;
+						}
+					}
+			}
+			
+			function lock() {
+				var x = document.getElementsByTagName("DIV");
+				for(var i=0; i < x.length; i++) {
+					itemID = x[i].id
+					item = document.getElementById(itemID);
+					item.classList.add("disabledbutton");
+				}
+			}
+			
+			function hidde(){
+				var x = document.getElementsByTagName("DIV");
+				for(var i=0; i < x.length; i++) {
+					itemID = x[i].id
+					item = document.getElementById(itemID);
+					item.classList.remove("disabledbutton");
+				}
+				if (two == 1) {
+					firstElem = document.getElementById(firstID);
+					firstElem.innerHTML = "";
+					secondElem = document.getElementById(secondID);
+					secondElem.innerHTML = "";
+					two = 0;
+				}
+			}
+
+			function move(x) {
+				var elem = document.getElementById(x.id);
+				tiv = elem.id;
+				tiv = parseInt(tiv.substring(1, 2));
+				var xx = 95;
+				var qayl=-1;
+				var id = setInterval(frame, 1);
+				function frame() {
+					if (xx >= 96) {
+						clearInterval(id);
+					} else if (xx == 1){
+						qayl=1;
+						if (two != 2) {
+							elem.innerHTML = tiv;
+						}
+						else {
+							elem.innerHTML = "";
+							two = 0;
+						}
+					}
+					xx=xx+qayl; 
+					elem.style.width = xx + '%';
+				}
+			}
+			
+		</script>
+		</table>
+	</body>
+</html>
