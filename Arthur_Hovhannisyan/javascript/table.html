@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<style>
+			table, tr, td {
+				border: 1px solid black;
+			}
+			td {
+				width: 20px;
+				height: 20px;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<table>
+		<script type="text/javascript">
+
+			for (var i = 0; i < 21; i++){
+				document.write("<tr>");
+				for (var  j = 0; j < 21; j++){
+					if (i % 4 == 0 && j % 4 == 0){
+						document.write("<td style='background: yellow'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}
+					else if (i % 4 == 0) {
+						document.write("<td style='background: red'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}
+					else if (j % 4 == 0) {
+						document.write("<td style='background: blue'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}
+					else if (i == j) {
+						document.write("<td style='background: black'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}
+					else if (j == 21-i-1) {
+						document.write("<td style='background: black'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}
+					else {
+						document.write("<td style='background: white'>");
+						document.write(10*i + j);
+						document.write("</td>");
+					}				
+				}
+				document.write("</tr>");
+			}
+			
+		</script>
+		</table>
+	</body>
+</html>
