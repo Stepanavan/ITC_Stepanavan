@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <script src="animate.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="field">
+    <img src="https://js.cx/clipart/ball.svg" width="200" height="200" id="ball">
+  </div>
+
+<script>
+
+ball.onclick = function() {
+
+  var height = field.clientHeight - ball.clientHeight;
+  var width = 200;
+  var rotate = 360;
+
+  animate({
+    duration: 2000,
+    timing: bounceEaseOut,
+    draw: function(progress) {
+       ball.style.top = progress * height + 'px';
+    }
+  });
+
+  animate({
+    duration: 2000,
+    timing: quadEasyOut,
+    draw: function(progress) {
+       ball.style.left = progress * width + 'px';
+    }
+  });
+  
+  animate({
+    duration: 2000,
+    timing: quadEasyOut,
+    draw: function(progress) {
+       ball.style.transform = "rotate(" + progress*rotate + "deg)";
+    }
+  });
+  
+  
+
+}
+
+function linear(timeFraction) {
+  return timeFraction;
+}
+
+function bounce(timeFraction) {
+  for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+    if (timeFraction >= (9 - 4 * a) / 11) {
+      return -Math.pow((15- 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+    }
+  }
+}
+
+function quad(progress) {
+  return Math.pow(progress, 2)
+}
+
+// преобразователь в easeOut
+function makeEaseOut(timing) {
+  return function(timeFraction) {
+    return 1 - timing(1 - timeFraction);
+  }
+}
+
+var bounceEaseOut = makeEaseOut(bounce);
+var quadEasyOut = makeEaseOut(quad);
+  
+</script>
+
+</body>
+
+</html>
