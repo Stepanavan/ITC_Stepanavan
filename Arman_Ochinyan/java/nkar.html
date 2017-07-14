@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ td{
+
+border: 1px solid black;
+}
+
+td {
+height:10px;
+width:10px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+	k=-1;
+	document.write("<table>");
+	for(var i=0;i<30;i++){
+		document.write("<tr>");
+		for(var j=0;j<80;j++){
+		k++;
+			
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='border-color:#444;'></td>");
+		
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	function aaa(asas){
+		//document.getElementById(asas.id).style.backgroundColor=document.getElementById("guyn").value;
+	document.getElementById(asas.id).style.backgroundColor=document.getElementById("guyn").value;
+	}
+
+
+</script>
+<select id="guyn" >
+  <option value="red">red</option>
+  <option value="green">green</option>
+  <option value="blue">blue</option>
+  <option value="orange">orange</option>
+</select><br><br>
+
+  
+  
+</body>
+
+</html>
