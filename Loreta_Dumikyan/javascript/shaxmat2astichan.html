@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table{
+	border: 5px solid black;
+} 
+ td{
+
+border: 1px solid black;
+}
+
+td {
+height:50px;
+width:50px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+	 var k=0;
+	
+
+	document.write("<table>");
+	for(var i=0;i<8;i++){
+		document.write("<tr>");
+		for(var j=0;j<8;j++){
+			if((i+j)%2==0){
+				document.write("<td style='background:black;color:white;' id='a"+k+"' onclick='aa(this)' >" +aa(k)+"</td >" );
+			}else{
+				document.write("<td id='a"+k+"' onclick='aa(this)' >" +aa(k)+"</td >" );	
+			}
+		
+				
+								
+				k++;
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	function aa(x){
+		return Math.pow(2,x)
+	}
+
+	</script>
+	</body>
+	</html>
