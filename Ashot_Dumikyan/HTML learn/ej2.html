@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title > ԷՋ 2</title>
+	<link rel="stylesheet" type="text/css" href="example.css" >
+</head>
+<body>
+	<canvas id="canvas1" width="700" height="500">
+	</canvas>
+<script type="text/javascript">
+	var c=document.getElementById("canvas1");
+	var ctx=c.getContext("2d");
+	ctx.fillStyle = "rgba(0,200,0,1)";
+	ctx.fillRect(20,20,100,100);
+	ctx.textAlign = "start";
+	ctx.fillStyle = "rgba(0,200,200,200)";
+	ctx.fillText("start",10,30);
+	ctx.translate(100,150);
+	ctx.rotate((Math.PI/180)*25);
+	ctx.scale(2,4);
+	ctx.fillText("after translate",10,30)
+
+
+</script>
+</br> 
+	
+	<a href="ej1.html"> ԷՋ 1 </a>
+	<a href="form.html"> Ֆորմաներ </a>
+</body>
+</html>

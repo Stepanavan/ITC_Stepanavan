@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
 <head>
 	<title></title>
 
 </head>
 <body>
-<div style="display: flex;justify-content: center;">
-	
 	<script> 
 
 		function test()
 		{
-					document.write(" <style> ")
-		document.write("table, tr, td {")
+			document.write("<div style='display: flex;justify-content: center;'>");
+			document.write(" <style> ")
+			document.write("table, tr, td {")
 			document.write("border-top:  2px dotted blue;")
-			document.write("order-left:  2px solid red;")
+			document.write("border-left:  2px solid red;")
 			document.write("border-right:  2px dotted green;")
-			document.write("border-bottom:  px solid black;")
+			document.write("border-bottom:  2px solid black;")
 			document.write("border-collapse: collapse;")
 			document.write("border-radius:2px 100px 25px 20px;")
-		document.write("}")
+			document.write("}")
+			document.write("</style>")
 
-	document.write("</style>")
 			document.write("<table>");
 			var a=0;
 			while (a<100)
