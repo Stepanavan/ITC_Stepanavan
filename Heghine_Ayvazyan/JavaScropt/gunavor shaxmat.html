@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ td{
+
+border: 1px solid black;
+}
+
+td {
+height:40px;
+width:40px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+	k=-1;
+	document.write("<table>");
+	for(var i=0;i<8;i++){
+		document.write("<tr>");
+		for(var j=0;j<8;j++){
+		k++;
+			if ((k)%5==0) {
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='background-color: gray; color: white;'></td>");
+			} 
+			else if ((k)%5==1) {
+				document.write("<td id='a" +k+ "' onclick='aaa(this)'></td>");
+			}
+			else if ((k)%5==2) {
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='background-color: gold; color: blue;'></td>");
+			}
+			else if ((k)%5==3) {
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='background-color: lime; color:red;'></td>");
+			}
+			else  {
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='background-color:DeepPink; color:black;'></td>");
+			}
+		
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+
+function aaa(qqq){
+	var www = parseInt((qqq.id).slice(1, 5));
+	astichan = Math.pow(2, www);
+	console.log (astichan);
+	document.getElementById(qqq.id).innerHTML = astichan;
+	}
+
+
+	
+
+
+
+
+</script>
+
+  
+  
+</body>
+
+</html>

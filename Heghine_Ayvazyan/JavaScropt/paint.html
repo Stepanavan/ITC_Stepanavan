@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tablica</title>
+	<style type="text/css">
+		table {
+		border: 1px solid black; } 
+		td {
+			height: 10px;
+		width: 10px;
+		border-collapse: collapse;
+		border: 0px;
+		}
+	</style>
+<body onmousedown='fun_1()' onmouseup='fun_2()'>
+<script>
+var sexmvac=false;
+var k=0;
+document.write("<table >");
+for (i=0;i<=25;i++){
+	document.write("<tr>");
+	for (j=0;j<=25;j++){
+		document.write("<td id='b"+ k+ "' onmouseover='on_color(this)'>");
+
+		document.write("</td>");
+		k++;
+	}
+
+	document.write("</tr>");
+
+}
+document.write("</table>");
+var guyn;
+
+function take_color(x) {
+	guyn=document.getElementById(x.id).style.background;
+	console.log(guyn);
+}
+function on_color(x){
+	if (sexmvac){
+		document.getElementById(x.id).style.background=guyn;
+	}
+	
+}
+
+ function fun_1(){
+ 	sexmvac=true;
+
+ } 
+ function fun_2(){
+ 	sexmvac=false;
+}
+</script>
+<table>
+	<tr>
+		<td id="a1" style="background: red;" onclick="take_color(this)">
+			
+		</td>
+		<td id="a2" style="background: blue;" onclick="take_color(this)">
+			
+		</td>
+		<td id="a3" style="background: pink;" onclick="take_color(this)">
+			
+		</td> 
+		<td id="a4" style="background: yellow;" onclick="take_color(this)">
+			
+		</td>
+		<td id="a5" style="background: white;" onclick="take_color(this)">
+			
+		</td>
+	</tr>
+</table>
+</body>
+</html>
