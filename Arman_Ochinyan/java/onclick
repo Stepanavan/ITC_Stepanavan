@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+		</title>
+		<style>
+		td {background-color:red;
+			height:20px;
+			width: 100px;
+			border: 1px dotted black;
+		}
+		p{
+		width: 150px;
+		}
+		
+		</style>
+	</head>
+	<body>
+	<script>
+		function aaaaa(){
+			y=document.getElementById('b1');
+			x='<table>';
+			for (i=0;i<5;i++){
+				x=x+'<tr><td style=color:white>sdsdrewr</td></tr>';
+			}
+			x=x+'</table>';
+			y.innerHTML=x;
+		}
+			
+			function menu(){
+			document.getElementById("b2").innerHTML="55555";
+			}		
+	</script>
+	<p onclick="aaaaa()" style="border:1px dotted black;">Menu</p>
+	<p id='b1'></p>
+	<img src="easy5.jpg" onmousedown="menu()" style="width:50px">
+	<p id='b2'> <table>
+	<tr>
+	<td style="background-color:>aaa</td>
+	<td>ss</td>
+	<td>ggg</td>
+	
+	</tr>
+	
+	
+	</table></p>
+	</body>
+	
+</html>
