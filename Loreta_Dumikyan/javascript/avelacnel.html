@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>avelacnel</title>
+	<h2>JavaScript Arrays</h2>
+	<p>The push method appends a new element to an array.</p>
+</head>
+<body>
+<button onclick="myfunction()">Try it</button>
+<p id="demo"></p>
+<script type="text/javascript">
+	var fruits = ["Banana","Orange","Apple","Mango"];
+	document.getElementById("demo").innerHTML = fruits;
+function myfunction() {
+	fruits.push("Lemon");
+	document.getElementById("demo").innerHTML = fruits;	
+}
+
+</script>
+
+</body>
+</html>
