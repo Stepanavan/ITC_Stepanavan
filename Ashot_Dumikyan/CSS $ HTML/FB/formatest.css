@@ -1,0 +1,147 @@
+body {
+	background-image: url("bar2.png");
+    background-repeat: repeat-x;
+    background-position: top;
+    background-color: #EDF0F5;
+}
+.topfon {
+	border:0px solid black;
+	height: 85px;
+	margin: -10px;
+	/*background-color: #3b5998;
+	background: linear-gradient(#4e69a2,#3b5998);*/
+}
+.himnakan {
+	width: 980px;
+	height: 500px;
+	border:0px solid black;
+	margin: auto;
+	margin-top: -80px;
+}
+.dzax {
+	width: 57%;
+	border:0px solid red;
+	float: left;
+	padding-top: 23px;
+}
+.aj{
+	width: 42%;
+	border:0px solid green;
+	float: right;
+}
+a.mail {
+	color: white;
+	font-size: 12px;
+	cursor: pointer;
+}
+#loginknopka {
+	background-color: #4267b2;
+	border-radius: 2px;
+	color: white;
+	border: 1px solid #29487d;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+#loginknopka:hover {
+	background-color: #365899;
+}
+a.harcakan {
+	color: #ADD8E6;
+	font-size: 12px;
+}
+a.harcakan:link {
+    text-decoration: none;
+
+}
+a.harcakan:hover{
+	text-decoration: underline;
+}
+
+h2 {
+	padding: 52px 0 24px;
+	font-family:   Arial, sans-serif ;
+	line-height: 36px
+	font-size: 32px; 
+	font-weight: bold ;
+	color: #4a4a4a;
+	
+	
+}
+img.img{
+	vertical-align: middle
+
+}
+span.bold{
+	font-size: 17px;
+	line-height: 22px;
+	font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+	font-weight: bold ;
+	padding-left: 20px;
+	color: #4a4a4a;
+
+}
+span.norma{
+	font-size: 17px;
+	line-height: 22px;
+	font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif ;
+	padding-left: 20px;
+	color: #4a4a4a;
+}
+.mutq{
+	margin-top: -25px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+	font-size: 35px;
+	
+}
+.free{
+	font-family: 'Freight Sans', Helvetica, Arial, sans-serif !important;
+	font-size: 18px; 
+	color: #4a4a4a;
+	margin-top: -20px;
+	margin-left: 5px;
+
+}
+input.anunazganun{
+	width: 45%;
+	padding: 8px 10px;
+	margin:8px 5px;
+	box-sizing: border-box;
+
+}
+input.anunazganunerkar{
+	width: 94%;
+	padding: 8px 10px;
+	margin:8px 5px;
+	box-sizing: border-box;
+
+}
+.cnund{
+	font-family: 'Freight Sans', Helvetica, Arial, sans-serif !important;
+	font-size: 18px; 
+	color: #4a4a4a;
+	margin-top: 12px;
+	font-weight: bold ;
+	margin-left: 5px;
+	margin-bottom: -15px;
+}
+a.harcakan1 {
+	color: #365899;
+	font-size: 11px;
+}
+a.harcakan1:link {
+    text-decoration: none;
+
+}
+a.harcakan1:hover{
+	text-decoration: underline;
+}
+.axmax{
+	width: 50%;
+	border:0px solid green;
+	float: right;
+}
+
