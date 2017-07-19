@@ -27,22 +27,37 @@
 	<svg width="200" height="200">
 	<path d="M0 0 L200 200 L200 0 Z" style="stroke: #000; fill: none;"/>
 	</svg>
-	<!--<script type="text/javascript">
-	document.write("STATUS:<progress min="0" value="35" max="100"></progress>");
-	function aaa(i){
-	var i = 0
-	if (i<=100){
-		i++;
-	}
-	else {
-		i--;
-	}
-	document.write("STATUS:<progress min="0" value="35" max="100"></progress>");
-	}
-		aaa()
-	</script> -->
 	</br> 
-	<a href="main.html"> Գլխավոր էջ </a>
+	STATUS:<progress id="bar" min="0" value="10" max="100"></progress>
+	<script type="text/javascript">
+	
+	var qayl=1.0;
+	var y=document.getElementById("bar");
+	var jamanak=setInterval(aaa,50);
+	function aaa(){
+	
+	if (y.value==100){
+		//qayl=-1.0;
+		window.location.assign('https://www.google.ru/?gws_rd=ssl')
+		clearInterval(jamanak)
+	}
+	else if (y.value==0){
+		qayl=1.0;
+	}
+	y.value+=qayl;
+	//console.log(y.value);
+	
+	}
+	
+	
+	</script>
+	</br> 
+	<!--<a href="main.html"> Գլխավոր էջ </a>
 	<a href="ej2.html"> ԷՋ 2 </a>
+	</br> -->
+	<input  type="button" onclick="window.location.assign('main.html')" value="Գլխավոր էջ" >
+	<input  type="button" onclick="window.location.assign('ej2.html')" value="ԷՋ 2" >
+	<input  type="button" onclick="window.location.assign('form.html')" value="Ֆորմաներ" >
+
 </body>
 </html>
