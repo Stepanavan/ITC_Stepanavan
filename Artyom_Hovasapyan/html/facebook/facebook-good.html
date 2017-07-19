@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+		#logo{
+
+			background-color:#3B5998;
+			width: 100%;
+			height: 185px;
+		}
+
+	</style>
+	<title>facebook</title><script type="text/javascript">
+		
+     function valid(form) {
+     	var emale=form.emale.value;
+	  var name=form.name.value;
+		var fail = false;
+		var password = form.password.value;
+		var RePassword = form.RePassword.value;
+		var state = form.state.value;
+/*emaili kod */		var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i
+		if(name == "" || name == " ")
+				fail = "Введитье Имя";
+			else if (emale.split("@").length - 1 == 0)
+				fail = "Введитье Электронные адреса ";
+			else if (password == "")
+				fail = "введи  пароль сново";
+			else if (adr_pattern.test(emale) == false) 
+			fail = "Введитье Электронные адреса ";		
+			else if (password != RePassword) 
+				fail = "Пароль не совпадает";
+			else if(state == "")	
+				fail = "Выбирайте пол";	
+			if(fail)
+				alert(fail);
+			else
+				window.location ="http://google.com";
+
+
+}
+
+	</script>
+
+
+
+
+</head>
+<body>
+<div id="logo">
+
+<a href="https://web.facebook.com/"><img src="2.png" style="position: relative;margin: 1px;"></a>
+
+
+<div style="float: right;padding-top: none">
+<a href="" ><h4>Пароль</h4></a>
+<input type="asd" name="ds" placeholder="пароль" >
+<a href="https://web.facebook.com/login/identify?ctx=recover&lwv=110"><p>Запомнить</p></a>
+<div style="float: right;"><button style="margin: -200px;">Воиты</button></div>
+</div>
+<div style="float: right;margin: 3px;">
+<a href=""><h3>Электронные адреса</h3></a>
+<div style="float: right; margin: 20px;" ></div>
+
+
+
+
+<input type="asdasdas" name="asd" placeholder="Электронные адреса" ></div>
+</div>
+<br>
+ <div style="float: right;margin: 100px;"></div>
+ <form action="" method="post" name="test" id="form" style="float: right;">
+ 	<label for="name">Имя</label>
+ 	<input type="text" name="name" placeholder="Имя" id="name"><br><br>
+ 	<label for="emale">Электронные адреса</label>
+ 	<input type="text" name="emale" placeholder="Email" id="emale"><br><br>
+ 	<label for="password">Пароль:</label>
+ 	<input type="password" name="password" placeholder="введи новий пароль" id="password"><br><br>
+ 	<label for="RePassword">Введи пароль</label>
+ 	<input type="password" name="RePassword" placeholder="повтари пароль" id="RePassword"><br>
+ 	<span >Пол:</span>
+
+<input type="radio" name="state" id="male" value="муж"><label for="male">муж</label>
+ 	
+<input type="radio" name="state" id="female" value="жен"><label for="female">жен</label><br>
+<input type="button" onclick="valid(document.getElementById('form')) " name="submit" value="Гатов">
+
+
+
+ </form>
+</body>
+</html>

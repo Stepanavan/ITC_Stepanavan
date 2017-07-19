@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="utf-8">
+	<title>facebook</title><script type="text/javascript">
+		
+     function valid(form) {
+     	var emale=form.emale.value;
+	  var name=form.name.value;
+		var fail = false;
+		var password = form.password.value;
+		var RePassword = form.RePassword.value;
+		var state = form.state.value;
+/*emaili kod */		var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i
+		if(name == "" || name == " ")
+				fail = "duc ceq grel der anun@";
+			else if (emale.split("@").length - 1 == 0) 
+				fail = "duq ceq nermutel Email";
+			else if (password != "")
+				fail = "duq ceq nermutel parol";
+			else if (adr_pattern.test(emale) == false) 
+			fail = "duc sxaleq grel emale@";		
+			else if (password == RePassword) 
+				fail = "parol@ ci ham@nknum";
+			else if(state == "")	
+				fail = "yntreq ser@";	
+			if(fail)
+				alert(fail);
+			else
+				window.location ="http://google.com";
+
+
+}
+
+	</script>
+
+
+
+
+</head>
+<body>
+ <form action="" method="post" name="test" id="form" >
+ 	<label for="name">imya</label>
+ 	<input type="text" name="name" placeholder="imya" id="name"><br><br>
+ 	<label for="emale">Email</label>
+ 	<input type="text" name="emale" placeholder="Email" id="emale"><br><br>
+ 	<label for="password">parol:</label>
+ 	<input type="password" name="password" placeholder="vvedi parol" id="password"><br><br>
+ 	<label for="RePassword">proverte parol  </label>
+ 	<input type="password" name="RePassword" placeholder="vvedi parol" id="RePassword"><br>
+ 	<span >pol:</span>
+
+<input type="radio" name="state" id="male" value="murjkoi"><label for="male">murjkoi</label>
+ 	
+<input type="radio" name="state" id="female" value="jenski"><label for="female">jenski</label><br>
+<input type="button" onclick="valid(document.getElementById('form')) " name="submit" value="gatova">
+
+
+
+ </form>
+</body>
+</html>
