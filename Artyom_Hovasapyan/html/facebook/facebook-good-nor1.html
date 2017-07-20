@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style type="text/css">
+		#logo{
+
+			background-color:#3B5998;
+			width: 100%;
+			height: 185px;
+		}
+
+	</style>
+	<title>facebook</title><script type="text/javascript">
+		
+     function valid(form) {
+     	var familia=form.familia.value;
+     	var emale=form.emale.value;
+	  var name=form.name.value;
+		var fail = false;
+		var password = form.password.value;
+		var RePassword = form.RePassword.value;
+		var state = form.state.value;
+/*emaili kod */		var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i
+		if(name == "" || name == " ")
+				fail = "Введитье Имя";
+			else if(familia == "" || familia == " ")
+				fail = "Введитье Фамилья";
+			else if (emale.split("@").length - 1 == 0)
+				fail = "Введитье Электронные адреса ";
+			else if (password == "")
+				fail = "введи  пароль сново";
+			else if (adr_pattern.test(emale) == false) 
+			fail = "Введитье Электронные адреса ";		
+			else if (password != RePassword) 
+				fail = "Пароль не совпадает";
+			else if(state == "")	
+				fail = "Выбирайте пол";	
+			if(fail)
+				alert(fail);
+			else
+				window.location ="http://google.com";
+
+
+}
+
+	</script>
+
+
+
+
+</head>
+<body>
+<div id="logo">
+
+<a href="https://web.facebook.com/"><img src="2.png" style="position: relative;margin: 1px;"></a>
+
+
+<div style="float: right;padding-top: none">
+<a href="" ><h4>Пароль</h4></a>
+<input type="asd" name="ds" placeholder="пароль" >
+<a href="https://web.facebook.com/login/identify?ctx=recover&lwv=110"><p>Запомнить</p></a>
+<div style="float: right;"><button style="margin: -120px;">Воиты</button></div>
+</div>
+<div style="float: right;margin: 3px;">
+<a href=""><h3>Электронные адреса</h3></a>
+<div style="float: right; margin: 20px;" ></div>
+
+
+
+
+<input type="asdasdas" name="asd" placeholder="Электронные адреса" ></div>
+</div>
+<br>
+ <div style="float: right;margin: 100px;"></div>
+ <form action="" method="post" name="test" id="form" style="float: right;font-size: 30px;">
+ 	<label for="name"></label>
+ 	<input type="text" name="name" placeholder="Имя" id="name" style="height: 30px;font-size: 15px;"><label for="name"></label>
+ 	<input type="text" name="familia" placeholder="Фамилья" id="familia" style="height: 30px;font-size: 15px;">
+ 	<br><br>
+ 	<label for="emale"></label>
+ 	<input type="text" name="emale" placeholder="Электронные адреса" id="emale" style="width: 390px;height: 30px;font-size: 15px;"><br><br>
+ 	<label for="password"></label>
+ 	<input type="password" name="password" placeholder="Введи  пароль" id="password" style="width: 390px;height: 30px;font-size: 15px;"><br><br>
+ 	<label for="RePassword"></label>
+ 	<input type="password" name="RePassword" placeholder="Повтари пароль" id="RePassword" style="width: 390px;height: 30px;font-size: 15px;"><br>
+ 	<span >Пол:</span>
+
+<input type="radio" name="state" id="male" value="муж"><label for="male">муж</label>
+ 	
+<input type="radio" name="state" id="female" value="жен"><label for="female">жен</label><br>
+<input type="button" onclick="valid(document.getElementById('form')) " name="submit" value="Гатова " style="margin: 30px;height: 40px;width: 120px;font-size: 15px;">
+
+
+
+ </form>
+ <div style="text-align-last: center;"><h1 style="font-size: 47px;">Недавние входы</h1></div>
+ <div style="text-align-last: center;"><h2 style="font-size: all;">Нажмите на фото, чтобы войти.</h2></div>
+  <div style="text-align-last: center;"><img src="asd.jpg"></div>
+
+</body>
+</html>
