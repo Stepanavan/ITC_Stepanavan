@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.aaa {
+height:100px;
+font-size: 250%;
+}
+div {
+display: block;
+}
+form {
+top:30px;
+position:relative;
+float:right;
+}
+</style>
+<script src="search.js"> </script>
+</head>
+<body>
+
+<div class="aaa" style="background-color:red; ">
+<div style="background-color:orange; color:white; top:30px; left:800px; position:absolute;">
+ Stepanavan Central Library
+</div>
+<div >
+
+<form action="" style="top:20px; right:850px;">
+  <input id="firstnameid" align="center" type="text" name="firstname" placeholder="email or phone">
+  <input id="passvordid" type="text" name="lastname" placeholder="passvord">
+  <input type="submit" onclick="search()" value="log in">
+</form>
+
+</div>
+</div>
+
+<form action="">
+  Search Gradaran:
+  <input id="searchinput" type="search" name="gradaransearch">
+  <input type="button" value="Search" onclick="my()"> 
+ <p id="searchresult"></p>
+</form>
+
+</body>
+</html>
