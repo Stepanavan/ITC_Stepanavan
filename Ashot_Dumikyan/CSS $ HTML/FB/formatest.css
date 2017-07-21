@@ -14,19 +14,19 @@ body {
 .himnakan {
 	width: 980px;
 	height: 500px;
-	border:0px solid black;
+	border:2px solid black;
 	margin: auto;
 	margin-top: -80px;
 }
 .dzax {
 	width: 57%;
-	border:0px solid red;
+	border:2px solid red;
 	float: left;
 	padding-top: 23px;
 }
 .aj{
 	width: 42%;
-	border:0px solid green;
+	border:2px solid green;
 	float: right;
 }
 a.mail {
@@ -63,7 +63,7 @@ a.harcakan:hover{
 h2 {
 	padding: 52px 0 24px;
 	font-family:   Arial, sans-serif ;
-	line-height: 36px
+	line-height: 36px;
 	font-size: 32px; 
 	font-weight: bold ;
 	color: #4a4a4a;
@@ -71,7 +71,7 @@ h2 {
 	
 }
 img.img{
-	vertical-align: middle
+	vertical-align: middle;
 
 }
 span.bold{
@@ -106,14 +106,14 @@ span.norma{
 
 }
 input.anunazganun{
-	width: 45%;
+	width: 40%;
 	padding: 8px 10px;
 	margin:8px 5px;
 	box-sizing: border-box;
 
 }
 input.anunazganunerkar{
-	width: 94%;
+	width: 90%;
 	padding: 8px 10px;
 	margin:8px 5px;
 	box-sizing: border-box;

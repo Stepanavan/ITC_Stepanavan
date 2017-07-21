@@ -7,6 +7,9 @@
 	</title>
 	<link rel="shortcut icon" type="image/x-icon" href="fb_icon_325x325.png">
 	<link rel="stylesheet" type="text/css" href="formatest.css">
+
+	
+	 <script src="test.js"></script> 
 </head>
 <body>
 <div class="topfon">
@@ -36,13 +39,14 @@
 
     			<td >
     				<!--<p class="mail">Email or Phone</p>-->
-                    <a class="mail" >Email or Phone</a><br>
-                    <input id="user" type="text" name="օգտատերի անուն" placeholder="անուն" autofocus required/><br><br>
+                    <a class="mail" onclick="getfocus('user')" >Email or Phone</a><br>
+                    <input id="user" type="text" name="օգտատերի անուն" placeholder="անուն"  required  /><br><br>
+
     			</td>
 
     			<td >
-    				<a class="mail" >Password</a><br>
-                    <input type="password" name="գաղտնանուն" placeholder="ծածկանուն"/><br>
+    				<a class="mail" onclick="getfocus('pass')" >Password</a><br>
+                    <input id="pass" type="password" name="գաղտնանուն" placeholder="ծածկանուն"/><br>
                     <a class="harcakan" href="https://web.facebook.com/recover/initiate?lwv=110" >Forgot account?</a>
     			</td>
     			<td> 
@@ -57,55 +61,35 @@
         <div class="inputform"></div>
             <input class="anunazganun" type="text" name="օգտատերի անուն" placeholder="First name" required="Ինչ է քո անունը" />
             <input class="anunazganun" type="text" name="օգտատերի անուն" placeholder="Last name" required="Ինչ է քո անունը" />
-            <input class="anunazganunerkar" type="text" name="օգտատերի անուն" placeholder="Mobile number or email" required="Ինչ է քո անունը" />
+            
+            <input class="anunazganunerkar" type="email" name="email"  placeholder="Mobile number or email" required="Ինչ է քո անունը" />
             <input class="anunazganunerkar" type="text" name="օգտատերի անուն" placeholder="New password" required="Ինչ է քո անունը" />
 
             <p class="cnund">Birthday</p><br>
             <span>
-                <select id="month" class="" name="Birthday_month" title="Month">
+                <select id="month" class="" name="Birthday_month" title="Month" onselect ="yntrel()">
                 <option value="0">Month</option>
-                <option value="1">Jan</option>
-                <option value="2">Feb</option>
-                <option value="3">Mar</option>
-                <option value="4">Apr</option>
-                <option value="5">May</option>
-                <option value="6">Jun</option>
-                <option value="7">Jul</option>
-                <option value="8">Aug</option>
-                <option value="9">Sep</option>
-                <option value="10">Oct</option>
-                <option value="11">Nov</option>
-                <option value="12">Dec</option>
+                <script type="text/javascript">
+                	grel_amis();
+                </script>
+
                 </select>
                 <select id="day" class="" name="Day" title="Day">
                 <option value="0">Day</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
+                <script type="text/javascript" >
+                	grel_orer();
+
+                </script>  
+
                 </select>
                 <select id="Year" class="" name="Year" title="Year">
-                <option value="0">2017</option>
-                <option value="1">2016</option>
-                <option value="2">2015</option>
-                <option value="3">2014</option>
-                <option value="4">2013</option>
-                <option value="5">2012</option>
-                <option value="6">2011</option>
-                <option value="7">2010</option>
-                <option value="8">2009</option>
-                <option value="9">2008</option>
-                <option value="10">2007</option>
-                <option value="11">2006</option>
-                <option value="12">2005</option>
+                <option value="0">Year</option>
+                <script type="text/javascript">
+                grel_tariner();
+
+
+                </script>
+                
                 </select>
 
 
