@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="">
+<head> 
+<meta charset="utf-8">
+	<title>new</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<l
+<link href="gradaranimasin.html">
+
+<link  href="gradaran1.html">
+</head>
+<body id="guyn">
+
+
+
+<script type="text/javascript">
+function valid(form) {
+     	var familia=form.familia.value;
+     	var emale=form.emale.value;
+	  var name=form.name.value;
+		var fail = false;
+		var password = form.password.value;
+		var RePassword = form.RePassword.value;
+		var state = form.state.value;
+/*emaili kod */		var adr_pattern = /[0-9a-z_-]+@[0-9a-z_-]+\.[a-z]{2,5}/i
+		if(name == "" || name == " ")
+				fail = "Введитье Имя";
+			else if(familia == "" || familia == " ")
+				fail = "Введитье Фамилья";
+			else if (emale.split("@").length - 1 == 0)
+				fail = "Введитье Электронные адреса ";
+			else if (password == "")
+				fail = "введи  пароль сново";
+			else if (adr_pattern.test(emale) == false) 
+			fail = "Введитье Электронные адреса ";		
+			else if (password != RePassword) 
+				fail = "Пароль не совпадает";
+			else if(state == "")	
+				fail = "Выбирайте пол";	
+			if(fail)
+				alert(fail);
+			else
+				alert("snorakalutyun grancvelu hamar");
+				window.location ="file:///home/artyom/Desktop/onlinegradaran.html";}
+
+
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script> 
+
+
+
+<br><br><br>
+<div id="tox">
+<a href="file:///home/artyom/Desktop/gradaranimasin.html "  id="a1" ><h4  >Gradarani masin</h4></a>
+<a href="file:///home/artyom/Desktop/onlinegradaran.html" id="a1"><h4 >online gradaran</h4></a>
+
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn" style="padding: 20px;margin: 20px ;color: rgb(85, 0, 198);"> temaner <img src="erankiun.png" style="width: 10px;height: 10px;"></button>
+  <div id="myDropdown" class="dropdown-content" style="margin: -18px;" >
+    <a href="#home">mankakan</a>
+    <a href="#about">texnikakan</a>
+    <a href="#contact">gexarvestakan</a>
+  </div>
+</div></a>
+
+<a href="file:///home/artyom/Desktop/patvirel.html" id="a1" ><h4 >patvirel</h4></a>
+<a href="file:///home/artyom/Desktop/banastexcner.html" id="a1" > <h4 >banastexcner</h4></a>
+
+
+<div style="float: right;padding: 10px;margin: 10px;"><a href="#"><img src="hay.jpg " style="width: 30px;height:25;border: 20px;"><img src="rus.png" style="width: 30px;height:16px;border: 20px;"><img src="amn.png" style="width: 30px;height:25;border: 20px;"></div>
+<input type="text" name="pntrel" placeholder="Voronel" style="float: right;margin:40px; ">
+</div>
+</div>
+<br><br><br>
+
+<div  style="float: left;width: 200px;height: 1000px;">
+
+
+
+<a href="#">erger</a><br><br>
+
+<a href="#">bararan</a><br><br>
+<a href="#">spasarkman bajin</a><br><br>
+<a href="#">kanonner</a><br><br>
+<a href="#">elektronayin grqer</a>
+
+</div>
+
+	<div style="float: right;margin: 100px;"></div>
+ <form action="" method="post" name="test" id="form" style="float: right;font-size: 30px;">
+ 	<label for="name"></label>
+ 	<input type="text" name="name" placeholder="Имя" id="name" style="height: 30px;font-size: 15px;"><label for="name"></label>
+ 	<input type="text" name="familia" placeholder="Фамилья" id="familia" style="height: 30px;font-size: 15px;">
+ 	<br><br>
+ 	<label for="emale"></label>
+ 	<input type="text" name="emale" placeholder="Электронные адреса" id="emale" style="width: 390px;height: 30px;font-size: 15px;"><br><br>
+ 	<label for="password"></label>
+ 	<input type="password" name="password" placeholder="Введи  пароль" id="password" style="width: 390px;height: 30px;font-size: 15px;"><br><br>
+ 	<label for="RePassword"></label>
+ 	<input type="password" name="RePassword" placeholder="Повтари пароль" id="RePassword" style="width: 390px;height: 30px;font-size: 15px;"><br>
+ 	<span >Пол:</span>
+
+<input type="radio" name="state" id="male" value="муж"><label for="male">муж</label>
+ 	
+<input type="radio" name="state" id="female" value="жен"><label for="female">жен</label><br>
+<input type="button" onclick="valid(document.getElementById('form')) " name="submit" value="Гатова " style="margin: 30px;height: 40px;width: 120px;font-size: 15px;">
+
+</form>
+<h1>Zgusacnum enq vor girq@ stanaluc petqe greq der anun azganun ev parol</h1>
+
+
+
+
+
+</body>
+
+</html>
