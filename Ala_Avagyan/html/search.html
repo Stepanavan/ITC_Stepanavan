@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <script type="text/javascript" src="books.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<form id="searchForm" >
+   <div class="input-group">
+		<input type="text" id="author" class="form-control" placeholder="Հեղինակ">
+		<input type="text" id="creation" class="form-control" placeholder="Ստեղծագործություն">
+		<input class="btn btn-default" type="button"  value="Փնտրել" onclick="search();">
+   </div>
+</form>
+<br><br>
+<div id="books">
+</div>
+<br><br>
+<div>
+<form action="#" onsubmit="return validateFormOnSubmit(this);">
+<input type="text" id="user" placeholder="Անուն" required="required"><br /> <br />
+<input type="password" id="pass" placeholder="Ծածկագիր" required="required"><br /><br />
+<input type="submit" value="Մուտք" Onclick="Clicked();">
+<div id="peoples">
+</div>
+</form>
+</div>
+</body>
+</html>
