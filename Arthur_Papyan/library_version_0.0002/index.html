@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stepanavan Library</title>
+    <link rel="stylesheet" href="style.css">
+   <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" defer></script>
+	<script src="search.js" defer></script>
+
+    
+</head>
+<body>
+	<header id="x">
+      <center><canvas id="textSlider" height="20px" width="1000px"> Your Canvas Dont Work </canvas></center>
+	</header>
+<div id="site" >
+
+		<header id="headertop">
+			<div id="header">
+			<div id="profile" >
+				<img id='userimg' src="" alt="">
+				<span id='username'>Name</span>
+				<input onclick="logout()" id="logoutbtn" type="button" value="Log out">
+				
+			</div>
+			<div id="auth">
+			<span id="login" onclick="openLoginMenu()" >Sign in</span>
+				
+			<span onclick="openRegisterMenu()" id="password">Sign up</span>
+			<div id="loginframe" >
+				
+			<form id="lform" action=""><br>
+							<span id="h">SOME TEXT</span><br>
+							<span>Login </span>
+							
+							<input  id='logininput' class="logform"  type="text">
+							
+							<br><span><br>Password </span><br>
+							
+							<input id='passwordinput' class="logform"  type="password">
+							
+						
+							<input onclick="login()" id="loginbtn" class="logform"  type="button" value="Sign in">
+			</form>
+					
+				
+			</div>
+			<div class="hideform" id="regframe"><iframe id='form' src="registration.html" frameborder="0"></iframe> </div>
+			</div>
+			
+			</div>
+			
+			
+			
+  		</header>
+   
+     
+     
+      <!--MENU -->
+      
+     <div id="menu" >
+			
+				<img onclick="openLeftMenu()" id='openmenu' src="image/icons/arrow.png" alt="">
+			
+	   
+	   
+	  <span class="links"><a href="index.html">Home</a></span>
+	  <span class="links"><a href="search.html">Search</a></span>
+	 
+
+
+	   </div>
+	 
+	 
+	 <!--Search-->
+	 
+	   <div class="searchbar" ng-app="app" ng-controller="Ctrl" id="categories">
+	   <img onclick="openRightMenu()" id='opencategories' src="image/icons/arrow.png" alt="">
+			
+			
+			<span class="searchbar">
+		
+
+				<input id="searchinput" type="text" ng-model="searchString" placeholder="Enter your book name" >
+		
+
+		
+
+			<div id="categoriesRight">  <!--searchFor:searchString"-->
+					<span class="hs" id="phantasy" onclick="hideShow(this)">Phantasy</span><br> 
+					<span  ng-repeat="book in books | filter : 'phantasy' | filter : searchString">
+					
+					 <a href="{{book.url}}">{{book.title}}</a><br>
+					</span>
+					<span class="hs"  id="roman" onclick="hideShow(this)">Romance</span><br> 
+					<span  ng-repeat="book in books | filter : 'romance' | filter : searchString ">
+					
+					 <a href="{{book.url}}">{{book.title}}</a><br>
+					</span>
+					
+					
+			</div>
+			
+		  </span>
+
+
+	   </div>
+	   
+	   
+
+	   <div  id="main">
+
+	   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, neque omnis nihil, earum facilis aperiam doloremque fugit saepe error et enim architecto possimus dignissimos aut non, ex delectus provident dolor.
+	   </div> 
+</div>    
+	
+</body>
+
+
+
+</html>
