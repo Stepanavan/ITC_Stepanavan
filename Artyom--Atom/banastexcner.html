@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="">
+<head> 
+<meta charset="utf-8">
+	<title>new</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<link href="gradaranimasin.html">
+<link href="onlinegradaran.html">
+</head>
+<body id="guyn" style="height: 1000px;box-shadow: 1px 3px 20px blue;">
+
+
+
+<script >
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script> 
+ <center>
+<div style="width: 100%;height: 150px;">
+<img src="div.jpg" style="width: 100%;height: 150px;">
+  
+</center>
+<div id="tox" >
+
+<a href="gradaranimasin.html" id="a1" class="link" ><h4  >Գրադարանի մասին</h4></a>
+<a href="onlinegradaran.html" id="a1" class="link" ><h4 >Առցանց գրադարան</h4></a>
+
+<div class="dropdown">
+<button onmouseover= "myFunction()" class="dropbtn" style="padding: -10px ; margin: 15px;color: rgb(85, 0, 198);">Գրքերի թեմաներ  </button>
+  <div id="myDropdown" class="dropdown-content" style="margin: -10px;" >
+    <a href="mankakan.html">Մանկական</a>
+    <a href="#about">Ծեխնիկական</a>
+    <a href="#contact">Գեղարվեստական</a>
+  </div>
+</div></a>
+<a href="patvirel.html" id="a1" class="link" ><h4 >Պատվիրել</h4></a>
+<a href="banastexcner.html" id="a1" class="link"> <h4 >Բանաստեղծություններ</h4></a>
+
+
+<div style="float: right;padding: 10px;margin: 4px;"><a href="#"><img src="hay.jpg " style="width: 30px;height:25;border: 20px;position: relative;right: 8px; ;"><img src="rus.png" style="width: 30px;height:16px;border: 20px;position: relative;right: 5px;"><img src="amn.png" style="width: 30px;height:25;border: 20px;position: relative;right: 1px;"></div>
+<input type="text" name="pntrel" placeholder="Որոնել" style="float: right;margin:40px; ">
+</div>
+</div>
+<br><br><br>
+
+<div  id="guyn" style="float: left;width: 200px;height: 180px;background: url(div.jpg);margin:0px;padding: 10px;position: relative;top: -54px; ">
+
+
+<a href="erg.html">Երգեր</a><br><br>
+
+<a href="bar.html">Բառարան</a><br><br>
+<a href="spasarkum.html">Սպասարկման բաժին</a><br><br>
+<a href="kanon.html">Կանոններ</a><br><br>
+<a href="email.html">Ելեկտռոնային գրքեռ</a>
+</div>
+<div style="float: left;position: relative;left: 20px;">
+<a href="Muracan.html"><img src="Mouratsan.jpg" style="height: 200px;">
+<h1>Մուրացան</h1> </a>
+<a href="#"><img src="Tumanyan.jpg" style="height: 200px;margin:20px;float: left; ">
+<h1>Թումանյան</h1> </a>
+
+</div>
+<div style="float: left;position: relative;left: 40px">
+<a href="#"><img src="Sevak.jpg" style="height: 200px;">
+<h1 style="padding: 1px;">Պ. Սևակ</h1> </a>
+<a href="#"><img src="bagrat.jpg" style="height: 200px;float: left;margin : 10px;padding: 10px; ">
+<h1 style="padding: 10px;position: relative;left: 10px;"> Բագրատ</h1> </a>
+
+</div>
+
+
+
+</body>
+
+</html>
