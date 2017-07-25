@@ -1,0 +1,117 @@
+-<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.dropbtn {
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: magenta;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:  chartreuse;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: yellow}
+
+.show {display:block;}
+</style>
+</head>
+<body>
+<div class="nem" style="background-color: aqua ">
+<h1>Ստեփանավանի կենտրոնական գրադարան</h1>
+<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Սեղմել գրադարան</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="#Գլխավոր էջ">Գլխավոր էջ</a>
+        <a href="#Մեր մասին">Մեր մասին</a>
+        <a href="#Նորություններ">Նորություններ</a>
+        <a href="#Հեղինակներ">Հեղինակներ</a>
+        <a href="#Ընթերցողներին">Ընթերցողներին</a>
+        <a href="#Կապը մեզ հետ">Կապը մեզ հետ</a>
+    </div>
+</div>
+
+
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+</script>
+</head>
+<body>
+
+
+<div   style="float:right; ">
+<form>
+	<input id="name" align="center" type="text" name="firstname" placeholder="Էլ․ փոստ կամ հեռախոս">
+	<input id="password" type="password" name="lastname" placeholder="Գաղտնաբառը">
+    <input type="submit" onclick="search()" value="Մուտք գործել">
+  
+</form>
+</div>
+
+</div>
+<script>
+
+var person = {Ani:"an1", Anush:"astx",Xoren:"dss"};
+var search=function(){
+	var login = document.getElementById("name").value;
+	var password = document.getElementById("password").value;
+		for (i in person){
+			if (login==i && password==person[i]){
+				alert("Գոյություն ունի");
+				return 0;
+			}			
+		}
+		       alert("Գոյություն չունի");
+}
+
+</script>
+<body>
+<h2>Որոնել</h2>
+<script>
+function myfunc (){ 
+	book=['book1','book2'];
+	var x = document.getElementById("myInput").value;
+	for(var i = 0; i < book.length; ++i) {
+		if (book[i] == x) {
+			alert("Գոյություն ունի");
+			return 0;
+		}
+	}
+	alert("Գոյություն չունի");
+}
+</script>
+<input type="text" id="myInput" "placeholder="Որոնել ըստ հեղինակի" title="Որոնել ըստ վերնագրի">
+<button onclick="myfunc()"> Որոնել</button>
+</body>
+</body>
+</html>
