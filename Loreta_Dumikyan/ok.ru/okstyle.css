@@ -1,0 +1,67 @@
+body {	
+	background: #ffe783;
+	background-image: url(image.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 500px;
+	height: 490px;
+
+}
+a.mail {
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+a.pass1 {
+	color: black;
+	font-size: 15px;
+	cursor: pointer;	
+}
+input:focus {
+    background-color:  #ffcc80;
+}
+a.rem1 {
+	color: black;
+	font-size: 15px;
+	cursor: pointer;
+}
+#znachok{
+	position: fixed;
+	left: 400px;
+	top: 60px;
+}
+/*img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); 
+}
+
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); 
+}*/
+#text1{
+	position: absolute;
+	left: 480px;
+	top: 65px;
+	background: orange;
+	color: white;
+}
+.block1{ 
+    width: 300px; 
+    height: 250px;
+    background: white; 
+    padding: 5px; 
+    float: left; 
+    position: absolute; 
+    top: 40px; 
+    left: 1000px; 
+   }
+
+.button1{
+	background: orange;
+	width: 70px; 
+    height: 30px; 
+    cursor: pointer;
+}
+
+

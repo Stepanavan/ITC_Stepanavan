@@ -1,0 +1,60 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #a0a7ab;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 14px;
+	line-height: 1.5em; 
+	background-color: #060e13;
+}
+
+a, a:link, a:visited { color: #bea68e; text-decoration: underline; }
+a:hover { color: #FFFF00; text-decoration: none; }
+
+p { margin: 0 0 10px 0; padding: 0; }
+
+
+h1, h2, h3, h4, h5, h6 { color: #fff; }
+h1 { font-size: 26px; font-weight: normal; margin: 0 0 20px 0; padding: 5px 0; }
+h2 { font-size: 22px; font-weight: normal; margin: 0 0 15px 0; font-weight: normal; }
+h3 { font-size: 16px; margin: 0 0 15px 0; padding: 0; padding: 0; font-weight: normal;  }
+h4 { font-size: 14px; margin: 0 0 5px 0; padding: 0; }
+
+
+.float_l { float: left; }
+.float_r { float: right; }
+
+.image_wrapper { display: inline-block; }
+.image_fl { float: left; margin: 3px 15px 0 0 }
+.image_fr { float: right; margin: 3px 0 0 15px }
+
+.col_550 { width: 450px; } 
+.col_300 { width: 300px; }
+.col_380 { width: 380px; }
+
+#social_box {
+	display: block;
+	height: 5px;
+}
+
+#social_box li {
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+#social_box li a {	
+	margin-right: 60px;
+}
+
+
+.service_list { margin: 40px 0 0 30px; padding: 0; list-style: none; }
+.service_list li { margin: 0; padding: 0; }
+.service_list li a { font-size: 16px; display: block; height: 25px; margin-bottom: 20px; padding-left: 40px; text-decoration: none; }
+.service_list li .service_one { background: url(../images/onebit_08.png) center left no-repeat; }
+.service_list li .service_two { background: url(../images/onebit_11.png) center left no-repeat; }
+.service_list li .service_three { background: url(../images/onebit_17.png) center left no-repeat; }
+.service_list li .service_four { background: url(../images/onebit_21.png) center left no-repeat; }
+.service_list li .service_five { background: url(../images/onebit_12.png) center left no-repeat; }

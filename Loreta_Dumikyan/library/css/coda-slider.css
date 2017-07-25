@@ -1,0 +1,134 @@
+#header_wrapper {
+	width: 100%;
+	background: url(../images/templatmeo_header.jpg) no-repeat top center;
+}
+
+#header {
+	
+	width: 980px;
+	height: 180px;
+	margin: 0 auto;
+	padding-top: 10px;
+	text-align: center;
+}
+
+#menu_wrapper {
+	width: 100%;
+	background: url(../images/templatemo_menu.jpg) no-repeat top center;
+}
+
+#menu {
+	background: url(../images/templatemo_menu.jpg) no-repeat top center;
+	width: 980px;
+	height: 103px;
+	margin: 0 auto;
+	padding-top: 4px;
+}
+
+#content_wrapper {
+	width: 100%;
+	background: url(../images/templatemo_content.jpg) no-repeat top center;
+}
+
+#content {
+	background: url(../images/templatemo_content.jpg) no-repeat top center;
+	width: 860px;
+	height: 428px;
+	padding: 0 60px;
+	margin: 0 auto
+}
+
+#footer_wrapper { 
+	width: 100%;
+	background: url(../images/templatemo_footer.jpg) no-repeat top center
+}
+
+#footer {
+	height: 92px;
+	width: 980px;
+	padding: 20px 0;
+	margin: 0 auto;
+	color: #999;
+	text-align: center;
+	background: url(../images/templatemo_footer.jpg) no-repeat top center	
+}
+#mutq {
+	 position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    }
+ #mutq1 {
+ 	display:none;
+	 position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    } 
+#username {	
+	cursor: pointer;
+	font-size:80%;
+	color: gray;
+}
+#password {
+	cursor: pointer;
+	font-size:80%;
+	color: gray;	
+}
+#confirm_password{
+	cursor: pointer;
+	font-size:80%;
+	color: gray;	
+}
+
+}
+#rem1 {
+	color: white;
+	font-size: 20px;
+	cursor: pointer;
+}
+#footer a {
+	color: #fff;
+}
+
+.scroll {
+    height: 415px;
+    width: 860px;
+    overflow: auto;
+ /*   overflow-x: hidden; */
+    position: relative;
+    clear: left;
+}
+
+.scrollContainer div.panel {
+    height: 380px;
+    width: 800px;
+	padding: 35px 30px 0 30px;
+}
+
+ul.navigation {
+	width: 670px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.navigation li {
+    display: inline;
+    margin: 0px;
+	padding: 0;
+}
+
+ul.navigation a {
+	float: left;
+	display: block;
+	width: 104px;
+	height: 70px;
+	padding: 34px 15px 0;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+    text-decoration: none;
+	text-align: center;
+	background: url(../images/templatemo_menu_bg.png) no-repeat top center
+}
