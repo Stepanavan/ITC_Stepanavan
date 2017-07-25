@@ -14,19 +14,19 @@ body {
 .himnakan {
 	width: 980px;
 	height: 500px;
-	border:2px solid black;
+	border:0px solid black;
 	margin: auto;
 	margin-top: -80px;
 }
 .dzax {
 	width: 57%;
-	border:2px solid red;
+	border:0px solid red;
 	float: left;
 	padding-top: 23px;
 }
 .aj{
 	width: 42%;
-	border:2px solid green;
+	border:0px solid green;
 	float: right;
 }
 a.mail {

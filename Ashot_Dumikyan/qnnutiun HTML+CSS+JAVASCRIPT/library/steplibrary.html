@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang=""><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+       
+	<script src="./steplibrary_files/jquery.min.js"></script>
+	<script src="./steplibrary_files/script.min.js"></script>
+    <script src="./steplibrary_files/login.js"></script>
+    <script src="./steplibrary_files/search.js"></script>
+    <link rel="stylesheet" type="text/css" href="./steplibrary_files/style.min.css">
+    <link rel="stylesheet" type="text/css" href="./steplibrary_files/style2.css">
+                      
+
+        
+        <title>Ստեփանավանի գրադարան</title>
+       
+</head>
+<body>
+    <div class="header">
+        <div id="imglogo">
+        	<img src="./steplibrary_files/logo.png" alt="">
+        </div>
+        
+        <div class="phone1 ">+374 99 99 99 99</div>
+        
+            <div class="hxum">
+                <ul><li><a href="#registration" title="ԳՐԱՆՑՈՒՄ">ԳՐԱՆՑՈՒՄ</a></li></ul>         
+            </div>
+            <div class="hxum">
+                <ul><li><a href="#mermasin" title="ՄԵՐ ՄԱՍԻՆ">ՄԵՐ ՄԱՍԻՆ</a></li></ul>
+            </div>
+            <div class="hxum">
+                <ul><li><a href="#gallery" title="ՑՈՒՑԱՍՐԱՀ">ՑՈՒՑԱՍՐԱՀ</a></li></ul>
+            </div>
+            <div class="hxum">
+                <ul><li><a href="#contact" title="ԿՈՆՏԱԿՏՆԵՐ">ԿՈՆՏԱԿՏՆԵՐ</a></li></ul>
+            </div>            
+        
+        <div class="container" id="container">
+                <div class="main">
+                    <h3>ՄՈՒՏՔ ԳՈՐԾԵԼ</h3>
+                    <form >
+                        <label>User Name :</label>
+                        <input type="text" name="username" id="username"/>
+                        <label>Password :</label>
+                        <input type="password" name="password" id="password"/>
+                        <input type="button" value="Login" id="submit" onclick="validate()"/>
+                    </form>
+                    
+                </div>
+		</div>
+		<div class="container1" id="container1">
+                <div class="main">
+                    <h3>ԲԱՐԻ ԳԱԼՈՒՍՏ</h3>
+                    <form >
+                       	<h2 id="uname">test</h2>
+                       	<p id="info1"> Փնտրել գրքի առկայությունը գրադարանում</p>
+                    	<input id="bookin" type="text" name="օգտատերի անուն" placeholder=" ներմուծել գրքի անունը"  /> 
+						<input type="button" value="գտնել" onclick="books()" />
+                        
+                    </form>
+                    
+                </div>
+		</div>
+
+    </div>
+  
+        
+
+<div class="section section153   fixed " style="background-color:#ffffff; background-image:url(./steplibrary_files/library.png);" ><a name="registration"></a>
+							
+							<div class="dark"></div>
+							<div class="noise" style="background-image:url(/img/null.png);"></div>
+							<div class="section_inner  big   ">
+								<div class="layer"><div class="title  ">Ստեփանավանի "Գրադարան"</div>
+								<div class="sub_title  "><div><br></div>Այցելելով մեր գրադարան՝ դուք կդառնաք իմաստուն !<div><br></div></div>
+								
+									<div class="btn1 surround  " style="background-color:#8F4200;      ">ԳՐԱՆՑՎԵԼ</div>
+									<div class="btn_descr"><span style="font-size:20px;">Այժմ առկա է եզակի հնարավորություն - դուք կարող եք նախապես առցանց ճշտել գրքի առկայությունը&nbsp;</span></div>
+								</div>
+								
+                          <div class="popup_form">
+                            <div class="popup_form_inner">
+                                <div class="popup_form_close">X</div>
+                                <div class="popup_form_title"><p style="text-align: center;">ՀԱՅՏ</p></div>
+                                <form action="" enctype="multipart/form-data" method="post">
+                                        <div class="form1"><input type="hidden" name="" value="">	
+                                        <div class="field">
+                                        <div class="field_title">Ներմուծել անունը</div>
+                                        <div class="field_description"></div>
+                                        <div class="field_input">
+                                        <input type="text" required="required" name="Ներմուծել անունը" placeholder="անուն"></div></div>
+                                        <div class="field">
+                                        <div class="field_title">Ներմուծել գաղտնագիրը</div>
+                                        <div class="field_description"></div>
+                                        <div class="field_input">
+                                        <input type="text" required="required" name="Ներմուծել էլ.հասցեն" placeholder="գաղտնագիրը"></div>
+                                        </div>
+                                        <div class="field">
+                                        <div class="field_title">Ներմուծել գաղտնագիրը կրկին</div>
+                                        <div class="field_description"></div>
+                                        <div class="field_input">
+                                        <input type="text" required="required" name="Ներմուծել էլ.հասցեն" placeholder="գաղտնագիրը"></div>
+                                        </div>
+                                        <div class="field">
+                                        <div class="field_input">
+                                        <input type="submit" class="submit_btn surround" data-action="redirect" data-url="" data-amount="0" value="ԳՐԱՆՑՎԵԼ" style="background-color:#8F4200;   " onClick="registration()"></div>
+                                        </div>
+                                        </div>
+                                </form>
+                                <div class="popup_form_text">Ձեր անձնական ինֆորմացիան չի տրամադրվում այլ անձանց:</div>
+                            </div>
+                    </div>
+                
+                                                                        
+					<div class="popup_thanks">
+                        <div class="popup_thanks_inner">
+                            <div class="popup_thanks_close">X</div>
+                            <div class="popup_thanks_title">Շնորհակալություն հայտի համար</div>
+                            <div class="popup_thanks_text">Ձեր հայտն ուղարկված է . Մենք կապ կհաստատենք ձեզ հետ Էլեկտրոնային նամակով :</div>
+                        </div>
+                    </div>
+                
+							</div>
+						</div>
+
+<div class="hide_line  section  transparent_ico section128  " style="background-color:#FFFFFF;  background-image:url(/img/pattern_11.png);" data-id="542658" id="b_542658"><a name="mermasin"></a>
+							<div class="section_inner">
+								<div class="title  ">ԳՐԱԴԱՐԱՆԻ ՄԱՍԻՆ</div>
+								<div class="sub_title  "></div>
+								  
+									<div class="arr1">
+										<div class="col_3">
+											<div class="image1 s200  radius     border   shadow  "><img src="./steplibrary_files/25c53df731b0fb763f7437accddd6240.jpg" alt=""></div>
+											
+											
+											
+											<div class="title1">Մաքուր և տաք սենյակներ</div>
+											
+											
+                                                                                        
+											
+                                                                                        
+											
+                                                                                            <div class="popup_form">
+                            <div class="popup_form_inner">
+                                
+
+                                
+
+                                <form action="" enctype="multipart/form-data" method="post">
+                                       
+                                </form>
+                               
+                            </div>
+                    </div>
+                
+                                                                                        
+										</div>
+										<div class="col_3">
+											<div class="image2 s200  radius      border   shadow  "><img src="./steplibrary_files/760d80d1fb0b1b2839339569823865dd.jpg" alt=""></div>
+											
+											
+											
+											<div class="title2">Հարմարավետ և ժամանակակից կահավորում</div>
+											
+                                           </div> </div>
+											
+                                                                                       
+											
+                                                                                        
+                            <div class="popup_form">
+                            <div class="popup_form_inner"></div>
+                    		</div>
+                
+                                                                                        
+										</div>
+										<div class="col_3 last">
+											<div class="image3 s200  radius      border   shadow  "><img src="./steplibrary_files/5e194cb2f465b1dff3eda85fc3dd739d.jpg" alt=""></div>
+											
+											
+											
+											<div class="title3">Համակարգիչներ և WIFI</div>
+								
+                            </div>
+                    </div>
+                
+                                                                                        
+										
+										<div class="clear"></div>
+                                                                                <div class="extra_info_block_wrapper">
+                                                                                    <div class="extra_info_block">
+                                                                                        <div class="close">Х</div>    
+                                                                                        <div class="left"><img src="./steplibrary_files/25c53df731b0fb763f7437accddd6240.jpg" alt="">
+                                                                                        </div>    
+                                                                                           
+                                                                                        <div class="clear"></div>
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="extra_info_block_wrapper">
+                                                                                    <div class="extra_info_block">
+                                                                                        
+                                                                                        <div class="left"><img src="./steplibrary_files/760d80d1fb0b1b2839339569823865dd.jpg" alt="">
+                                                                                            
+                                                                                        </div>    
+                                                                                        
+                                                                                        <div class="clear"></div>
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="extra_info_block_wrapper">
+                                                                                    <div class="extra_info_block">
+                                                                                        
+                                                                                        <div class="left"><img src="./steplibrary_files/5e194cb2f465b1dff3eda85fc3dd739d.jpg" alt="">
+                                                                                        
+                                                                                            
+                                                                                        </div>    
+                                                                                           
+                                                                                        <div class="clear"></div>    
+                                                                                            
+                                                                                    </div>
+                                                                                </div>
+									
+									<div class="popup_thanks">
+                        
+                    </div>
+                
+								
+							
+						
+
+<div class="hide_line section section138  " style="background-color:#ffffff;  " data-id="542659" id="b_542659"><a name="acnhor2"></a>
+							<div class="section_inner">
+								<div class="title  ">Ինչպես գրանցվել ընթերցասրահ</div>
+								<div class="sub_title  "><div><font face="tahoma, geneva, sans-serif"> Կարող են գրանցվել ցանկացած գրքասեր, մաքրասեր, ուսումնատենչ անձինք առանց տարիքային սահմանափակման:</font></div></div>
+								
+								<div class="image  border   shadow  "><img src="./steplibrary_files/a99db91764d1f74f5909f4cf2c28c0db.jpg"></div> 
+							</div>
+						</div>
+
+<div class="hide_line section section138  " style="background-color:#ffffff;  background-image:url(/img/pattern_11.png);" data-id="542662" id="b_542662"><a name="a_214783"></a>
+							<div class="section_inner">
+								<div class="title  ">Ինտերնետի հասանելիություն</div>
+								<div class="sub_title  "><div>Գրադարանում առկա է գերարագ համացանց ցանկացած համակարգչից:</div><div>Ընթերցողներին տրամադրվում է  համակարգիչներից օգտվելու հնարավություն միանգամայն անվճար:</div></div>
+								
+								<div class="image  border   shadow  "><img src="./steplibrary_files/70f6e8f7b132c9c7fe4fbe3a2de82489.jpg"></div> 
+							</div>
+						</div>
+
+<div class="hide_line section section148    img_zoom" style="background-color:#ffffff;  background-image:url(/img/pattern_11.png);" data-id="542664" id="b_542664"><a name="gallery"></a>
+							<div class="section_inner">
+								<div class="title  ">ՑՈՒՑԱՍՐԱՀ</div>
+								<div class="sub_title  "></div>
+								  
+									<div class="arr1">
+										<div class="image_box1  border   shadow  ">
+											<img src="./steplibrary_files/6982c1bc54762879c8cc54b6e19e0d75.jpg" alt="">
+											<div class="x" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box2  border   shadow  ">
+											<img src="./steplibrary_files/447caf6ccec58bb4810b95702f488d81.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box3  border   shadow  ">
+											<img src="./steplibrary_files/10641b84f4e71c0246225b8c9171161c.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box4  border   shadow  ">
+											<img src="./steplibrary_files/20db58d3f7868d204e0a3d2845c53ea0.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box5  border   shadow  ">
+											<img src="./steplibrary_files/b60ea278371b8e943e6cce134414ca5d.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+									</div>
+								  
+									<div class="arr1">
+										<div class="image_box1  border   shadow  ">
+											<img src="./steplibrary_files/6982c1bc54762879c8cc54b6e19e0d75.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box2  border   shadow  ">
+											<img src="./steplibrary_files/447caf6ccec58bb4810b95702f488d81.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box3  border   shadow  ">
+											<img src="./steplibrary_files/10641b84f4e71c0246225b8c9171161c.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box4  border   shadow  ">
+											<img src="./steplibrary_files/20db58d3f7868d204e0a3d2845c53ea0.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+										<div class="image_box5  border   shadow  ">
+											<img src="./steplibrary_files/b60ea278371b8e943e6cce134414ca5d.jpg" alt="">
+											<div class="" data-link="">
+												<div class="overlay_image_title"></div>
+												<div class="overlay_image_descr"></div>
+											</div>
+										</div>
+									</div>
+								
+								<div class="clear"></div>
+							</div>
+						</div>
+
+<div class="hide_line  section  transparent_ico section128  " style="background-color:#FFFFFF;  background-image:url(/img/pattern_11.png);" data-id="542667" id="b_542667"><a name="contact"></a>
+							<div class="section_inner">
+								<div class="title  ">Կոնտակտներ</div>
+								<div class="sub_title  ">Կարող եք կապ հաստատել հետևյալ կերպ՝</div>
+								  
+									</div>
+									</div>
+									
+									
+										<div class="arr1">
+										<div class="col_3">
+											
+											
+											<div class="ico1   radius    "><i class="fa fa-map-marker" style="color:#8F4200; text-align: center" ></i></div>
+											
+											<div class="title1" style="text-align: center">Մենք գտնվում ենք հետևյալ հասցեում</div>
+											<div class="txt1 " style="text-align: center">ՀՀ Լոռու մարզ, ք. Ստեփանավան&nbsp;</div>
+										                         
+										</div>
+										<div class="col_3" style="text-align: center">
+											<div class="ico2  radius    "><i class="fa fa-phone" style="color:#8F4200;"></i></div>
+											<div class="title2">Հեռախոսահամար</div>
+											<div class="txt2 ">+374 99 99 99 99</div>
+										</div>
+										
+										<div class="col_3 last" style="text-align: center">
+											<div class="ico3   radius    "><i class="fa fa-envelope" style="color:#8F4200;"></i></div>
+											<div class="title3">Էլ. փոստ</div>
+											<div class="txt3 ">steplibrary@gmail.com</div>
+										</div>
+										
+                    
+										</div>
+</body>
+</html>
