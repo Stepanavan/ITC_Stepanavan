@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<div >
+<form action="" style="top:20px; right:850px;">
+  <input id="tivid" align="center" type="text" name="firstname" placeholder="tiv">
+ 
+  <input id="dsass" type="button" value="grir">
+  
+</form>
+</div>
+
+<script>
+var hashivar=[1,2,3,4,5,6,7,8,9,10,11];
+	var drsic=document.getElementById("tivid").value;
+	var minindex=0;
+	var maxindex= hashivar.length-1;
+	var middleindex=parseInt((maxindex+minindex)/2);
+ //for (var i=0;i<( hashivar.length/2);++i){}
+ var fact=function (aaaa){
+		middleindex=parseInt((maxindex+minindex)/2);
+		if (drsic< (hashivar[middleindex])){
+			return 1;
+		}else{
+			return (aaaa)*fact(aaaa-1);
+		}
+		console.log(fact(random));
+	}
+
+
+</script>
+</body>
+</html>
