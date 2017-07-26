@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+	</head>
+	<body>
 
-</head>
-<body>
+		<script>
+			var arr=[1,5,42,82,96,102,175,1024,1500,2100,7000];
+			var minindex=0;
+			var maxindex= arr.length-1;
+			if ((maxindex+minindex)%2==0){
+				var middleindex=parseInt((maxindex+minindex)/2);
+			}else{
+				var middleindex=parseInt((maxindex+minindex+1)/2);
+			}
+			
+			function poisk(){
+				var tiv=document.getElementById("tivid").value;
+				if ((maxindex+minindex)%2==0){
+					middleindex=parseInt((maxindex+minindex)/2);
+				}else{
+					middleindex=parseInt((maxindex+minindex+1)/2);
+				}
+				if (tiv==arr[middleindex]){
+					document.getElementById("result").innerHTML=middleindex;
+					return;
+				}else if(tiv<arr[middleindex]){
+					maxindex=middleindex;
+				}else{
+					minindex=middleindex;
+				}
+				poisk();
+			}
 
-<div >
-<form action="" style="top:20px; right:850px;">
-  <input id="tivid" align="center" type="text" name="firstname" placeholder="tiv">
- 
-  <input id="dsass" type="button" value="grir">
-  
-</form>
-</div>
 
-<script>
-var hashivar=[1,2,3,4,5,6,7,8,9,10,11];
-	var drsic=document.getElementById("tivid").value;
-	var minindex=0;
-	var maxindex= hashivar.length-1;
-	var middleindex=parseInt((maxindex+minindex)/2);
- //for (var i=0;i<( hashivar.length/2);++i){}
- var fact=function (aaaa){
-		middleindex=parseInt((maxindex+minindex)/2);
-		if (drsic< (hashivar[middleindex])){
-			return 1;
-		}else{
-			return (aaaa)*fact(aaaa-1);
-		}
-		console.log(fact(random));
-	}
+		</script>
 
-
-</script>
-</body>
+		<div >
+			  <input id="tivid" type="text"> 
+			  <input type="button" onclick="poisk()" = value="gtir">
+			  <p id="result"></p>
+		</div>
+	</body>
 </html>
