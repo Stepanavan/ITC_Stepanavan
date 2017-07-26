@@ -27,7 +27,7 @@ var autoLogin = function (){
 	img:'image/users/YourLogoHere.jpg'
 	},{
 	log:'2',
-	pass:'2',
+	pass:'ar2r',
 	name:'2',
 	img:'image/users/YourLogoHere.jpg'
 	},{
@@ -133,6 +133,14 @@ function login(){         //
 					localStorage.setItem(log, pass);  //
 
 			}
+			else if (log==checklog && !(pass==checkpass)){
+					alert('wrong pass')
+			}
+			else if (!(log==checklog) && pass==checkpass){
+					alert('wrong log')
+			}
+
+
 		}
 	setTimeout(function(){location.reload()},1000);  //   
 	}

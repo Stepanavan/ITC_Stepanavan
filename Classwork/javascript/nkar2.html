@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ td{
+
+border: 1px solid black;
+}
+
+td {
+height:10px;
+width:10px;
+}
+</style>
+
+
+</head>
+<body>
+
+<script>
+	gggg="white";
+	k=-1;
+	document.write("<table>");
+	for(var i=0;i<30;i++){
+		document.write("<tr>");
+		for(var j=0;j<80;j++){
+		k++;
+			
+				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='border-color:#444;'></td>");
+		
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+	function aaa(asas){
+		//document.getElementById(asas.id).style.backgroundColor=document.getElementById("guyn").value;
+		//document.getElementById("red").checked = true;
+		document.getElementById(asas.id).style.backgroundColor=gggg;
+	}
+
+	function ddd(www){
+		gggg=document.getElementById(www.id).style.backgroundColor;
+	
+	}
+	
+		
+
+
+</script>
+<select id="guyn" >
+  <option value="red">red</option>
+  <option value="green">green</option>
+  <option value="blue">blue</option>
+  <option value="orange">orange</option>
+</select><br><br>
+ 
+ 
+ <table align:center;>
+	<tr>
+		<td style="background-color:white;"  id="s1" onclick="ddd(this)"></td>
+		<td style="background-color:red;" id="s2" onclick="ddd(this)"></td>
+		<td style="background-color:blue;" id="s3" onclick="ddd(this)"></td>
+		<td style="background-color:yellow;" id="s4" onclick="ddd(this)"></td>
+		<td style="background-color:green;" id="s5" onclick="ddd(this)"></td>
+		<td style="background-color:orange;" id="s6" onclick="ddd(this)"></td>
+		<td style="background-color:#545;" id="s7" onclick="ddd(this)"></td>
+		<td style="background-color:#225;" id="s8" onclick="ddd(this)"></td>
+		<td style="background-color:#885;" id="s0" onclick="ddd(this)"></td>
+	</tr>
+
+ </table>
+  
+  
+  
+  
+</body>
+
+</html>
