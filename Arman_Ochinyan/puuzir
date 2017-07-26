@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+
+
+	</head>
+	<body>
+		<script>
+			var puzzir=[4,8,3,2,1,9,7,5,6];
+			console.log(puzzir);
+			console.log(puzzir.length);
+			var puzir=function(){
+				for(var j=(puzzir.length-1);j>=0;--j){
+					for(var i=0;i<j;++i){
+						if(puzzir[i]>puzzir[i+1]){
+							[puzzir[i],puzzir[i+1]]=[puzzir[i+1],puzzir[i]];
+						}
+					} 
+				}	
+			};
+			puzir();
+			console.log(puzzir);
+		</script>
+
+
+
+	</body>
+</html>
