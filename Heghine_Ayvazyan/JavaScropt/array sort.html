@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+
+  		<script>
+			var arr=[2,13,17,25,34,42,83,93,97,99];
+			var minindex=0;
+			var maxindex= arr.length-1;
+			if ((maxindex+minindex)%2==0){
+				var middleindex=parseInt((maxindex+minindex)/2);
+			}else{
+				var middleindex=parseInt((maxindex+minindex+1)/2);
+			}
+		
+			function search() {
+				var tiv=document.getElementById("tivid").value;
+				if ((maxindex+minindex)%2==0){
+					middleindex=parseInt((maxindex+minindex)/2);
+			    }else{
+					middleindex=parseInt((maxindex+minindex+1)/2);
+			    }
+			    if(tiv==arr[middleindex]){
+				    document.getElementById("resultat").innerHTML=middleindex;
+					return;
+			    }else if(tiv < arr[middleindex]){
+				    maxindex=middleindex;
+			    }else{
+				    minindex=middleindex;
+			    }
+			    search(); 
+            }
+            
+            
+		</script>
+		
+		<div>
+  			<input id="tivid" type="text" placeholder="Թիվ">
+  			<input type="button" onclick="search()" = value="Գրել թիվ">
+  			<p id="resultat"></p>
+		</div>
+    </body>
+</html>

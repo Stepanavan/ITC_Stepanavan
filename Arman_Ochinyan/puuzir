@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+
+
+	</head>
+	<body>
+		<script>
+			var puzzir=[4,8,3,2,1,9,7,5,6];
+			console.log(puzzir);
+			console.log(puzzir.length);
+			var puzir=function(){
+				for(var j=(puzzir.length-1);j>=0;--j){
+					for(var i=0;i<j;++i){
+						if(puzzir[i]>puzzir[i+1]){
+							[puzzir[i],puzzir[i+1]]=[puzzir[i+1],puzzir[i]];
+						}
+					} 
+				}
+	
+				for(var k=0;k<=(puzzir.length-1);++k){
+					for(var i=0;i>k;++i){
+						if(puzzir[i]>puzzir[i+1]){
+							[puzzir[i+1],puzzir[i]]=[puzzir[i],puzzir[i+1]];
+						}
+					}
+				}
+			}
+			puzir();
+			console.log(puzzir);
+			alert(puzzir);
+		</script>
+
+
+
+	</body>
+</html>
