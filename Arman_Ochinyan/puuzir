@@ -17,10 +17,19 @@
 							[puzzir[i],puzzir[i+1]]=[puzzir[i+1],puzzir[i]];
 						}
 					} 
-				}	
-			};
+				}
+	
+				for(var k=0;k<=(puzzir.length-1);++k){
+					for(var i=0;i>k;++i){
+						if(puzzir[i]>puzzir[i+1]){
+							[puzzir[i+1],puzzir[i]]=[puzzir[i],puzzir[i+1]];
+						}
+					}
+				}
+			}
 			puzir();
 			console.log(puzzir);
+			alert(puzzir);
 		</script>
 
 
