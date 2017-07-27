@@ -82,22 +82,13 @@
 			<span class="searchbar">
 		
 
-				<input id="searchinput" type="text" ng-model="searchString1" placeholder="Enter your book name" />
+				<input id="searchinput" type="text"   />
 		
 
 		
 
 			<div id="categoriesRight">  <!--searchFor:searchString"-->
-					<span class="hs" id="phantasy" onclick="hideShow(this)">Phantasy</span><br> 
-					<span  ng-repeat="book in books | filter : 'phantasy' | filter : searchString1 | limitTo:10">
-					
-					 <a href="{{book.url}}">{{book.title}}</a><br>
-					</span>
-					<span class="hs"  id="roman" onclick="hideShow(this)">Romance</span><br> 
-					<span ng-repeat="book in books | filter : 'romance' | filter : searchString1 | limitTo:10">
-					
-					 <a href="{{book.url}}">{{book.title}}</a><br>
-					</span>
+
 					
 					
 			</div>
@@ -107,11 +98,14 @@
 
 	   </div>
 	   
-	  <!-- //---------------      Main PAGE    --------------//-->
+	 
 
 
 	   
 </div>   
+   
+    <!-- //---------------      Main PAGE    --------------//-->
+   
 	   <div  id="main"  >
 
 
@@ -124,7 +118,7 @@
 
 			<div   class="box" scroll-position>
 
-				<div  id="searchres" class="search" ng-repeat="book in books | filter : searchString | limitTo:display_limit "  >  <!--searchFor:searchString"--> 
+				<div  id="searchres" class="search" ng-repeat="book in books | searchFor : searchString | limitTo:display_limit "  >  <!--searchFor:searchString"--> 
 					<img ng-src="{{book.image}}" alt=""><br>
 					<a  href="{{book.url}}">{{book.title}}</a>
 					<span>{{book.author}}</span><span>{{book.id}}</span>
@@ -134,8 +128,8 @@
 			</div>
 
 
-	
-	   </div>  
+		
+	   </div> 
 
 </body>
 

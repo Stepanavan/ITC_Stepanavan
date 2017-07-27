@@ -1,4 +1,4 @@
-console.log("Page changed")
+//console.log("Page changed")
 
 function clickChecker(){
 	console.log("chekced will be done");
@@ -20,8 +20,10 @@ var autoLogin = function (){
 	
 	
 	
-	users = [{
-	log:'ar2rs',
+	users = [
+		
+	{
+	log:'ar2r',
 	pass:'ar2r',
 	name:'Ar2r_Papian',
 	img:'image/users/YourLogoHere.jpg'
@@ -35,7 +37,9 @@ var autoLogin = function (){
 	pass:'3',
 	name:'3',
 	img:'image/users/YourLogoHere.jpg'
-	},{
+	},
+		
+		{
 	log:'4',
 	pass:'4',
 	name:'4',
@@ -43,7 +47,11 @@ var autoLogin = function (){
 	}
 				 
 	];
+	
 
+
+	
+	
 	
 	var profile=document.getElementById('profile');
 	var auth=document.getElementById('auth');
@@ -58,17 +66,17 @@ var autoLogin = function (){
 
 	users.push({log:newlog,pass:newpass,name:newname,img:newimg});
 
-	console.log(users)
+	//console.log(users)
 	
 	
 	var userphoto=document.getElementById('userimg');
 	var username=document.getElementById('username');
 	
 	for (var i=0; i < users.length; ++i){
-		console.log(localStorage.getItem(users[i].log),users[i].pass);
+		//console.log(localStorage.getItem(users[i].log),users[i].pass);
 		var x=0
 		if(localStorage.getItem(users[i].log) === users[i].pass){
-				console.log('work');
+				//console.log('work');
 				username.innerHTML=users[i].name;
 				userphoto.setAttribute('src', users[i].img);
 				autentification();
@@ -92,24 +100,15 @@ var autoLogin = function (){
 
 
 
-
-//autoLogin();
-
-	
-/*
-	window.onscroll = function(e){
-	 //scroll+=4;
-		console.log(e)
-	}
-*/
-
-
-
 	
 
 function logout(){
-	console.log('logout');
+	//console.log('logout');
 	localStorage.clear();
+	for (var i=0; i<users.length; ++i){          
+  				localStorage.removeItem(users[i].log);
+
+	}
 	unAutentification();
 	setTimeout(function(){location.reload()},1000);
 	document.getElementById('profile').style.display='none'
@@ -119,31 +118,47 @@ function logout(){
 
 
 
-function login(){         // 
-		console.log('login')              
-		var log = document.getElementById('logininput').value;   // 
-		var pass= document.getElementById('passwordinput').value;  // 
-		for (var i=0; i<users.length; ++i){         //  
-			var checklog = users[i].log;			//  
-			var checkpass = users[i].pass;			//	
-				                                    //	
-			if( log==checklog &&  pass==checkpass){	//  
-				console.log('Login work');   
-					autentification();                // 
-					localStorage.setItem(log, pass);  //
-
-			}
-			else if (log==checklog && !(pass==checkpass)){
-					alert('wrong pass')
-			}
-			else if (!(log==checklog) && pass==checkpass){
-					alert('wrong log')
-			}
-
-
+function login(){        
+		var auth;           
+		var log = document.getElementById('logininput').value;   
+		var pass= document.getElementById('passwordinput').value;  
+		var checklog=[];  			 
+		var checkpass=[];
+		for (var i=0; i<users.length; ++i){          
+  				
+			checklog.push(users[i].log);
+			checkpass.push(users[i].pass);
+			
+			
 		}
-	setTimeout(function(){location.reload()},1000);  //   
-	}
+		if ( checklog.indexOf( log ) != -1 ){
+			alert("Login ready");
+			if ( checkpass.indexOf( pass ) != -1 ){
+				alert("Pass ready");
+				autentification();              
+				localStorage.setItem(log, pass);  
+			}else{
+				alert("Password Wrong")
+			}
+		}	
+		else{
+		alert("Login Wrong")
+	
+}
+	
+	
+	console.log(checklog,checkpass)
+	setTimeout(function(){location.reload()},1000);
+	}	
+			
+		
+		
+
+
+
+
+
+
 
 /*document.getElementById('logoutbtn').onclick= function(){
 	localStorage.clear();
@@ -412,9 +427,6 @@ var loop = setInterval(function(){
 	sliding();
 
 } ,25);
-
-
-
 
 
 
