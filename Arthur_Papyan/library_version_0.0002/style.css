@@ -475,11 +475,11 @@ input:active {
 	z-index: 0;
 }
 
-.box::-webkit-scrollbar {
+/*.box::-webkit-scrollbar {
 
 width: 0px;
 
-}
+}*/
 input {
 	border:none;
 }
