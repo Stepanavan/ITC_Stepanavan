@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+div {
+	display:block;
+}
+
+ 
+table, tr {
+width: 100%:
+}
+td {
+	border-collapse:collapse;
+	width:14%;
+	height:80px;
+	font-size: 70%;
+}
+td > img {
+	width:80%;
+	height:80%;
+}
+
+
+@media only screen and (max-width: 500px){
+    
+
+
+	td {display: block;
+	width:50%;
+	padding-top:20px;
+	}
+	
+
+}
+
+
+</style>
+
+
+</head>
+<body>
+	
+	
+	<div style="margin-top:80px;">
+	<fieldset>
+		<legend >Our Member Companies</legend>
+			<table >
+				 
+				<tr>
+					<td ><img src="vallex.jpg"  height=100% width=100%><br><a href="">Visit W3Schools.com!</a></td>
+					<td><img src="ameria.jpg" height=100% width=100%><br><a href="">Visit W3Schools.com!</a></td>
+					<td><img src="bet.jpg" height=100% width=100%><br><a href="">Visit W3Schools.com!</a></td>
+					<td><img src="jti.JPG" height=100% width=100%><br><a href="https://www.w3schools.com">Visit W3Schools.com!</a></td>
+					<td><img src="grand.jpg" height=100% width=100%><br><a href="https://www.w3schools.com">Visit W3Schools.com!</a></td>
+					<td><img src="your.jpg" height=100% width=100%><br><a href="https://www.w3schools.com">Visit W3Schools.com!</a></td>
+					<td><img src="arge.jpg" height=100% width=100%><br><a href="https://www.w3schools.com">Visit W3Schools.com!</a></td>
+				</tr>
+				
+			</table>
+	</fieldset>
+	</div>
+</body>
+</html>
