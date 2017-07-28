@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Qayl</title>
+</head>
+<body>
+<canvas id="canvas" width=" 950"; height="150"></canvas>
+<img src="" id="image">
+
+
+
+<script type="text/javascript">
+	var context = document.getElementById('canvas').getContext('2d');
+	var width=1000 , height=1000;
+	var image = document.getElementById('image');
+	
+var x = 0;
+var i =1;
+
+setInterval(function(){
+	drawImage('00.png',i,3);
+	 
+	
+	if (i>=5) {i=1;
+
+	}else
+	i+=1;
+
+
+},200);
+
+
+
+
+function drawImage(img,num,speed) {	
+	num=num ? num-1 : 0	;
+	x+= speed ? speed : 0;
+
+	
+image.onload=function () {
+	width=image.width;
+	height=image.height;
+context.clearRect(0,0,1000,1000);
+
+	context.drawImage( image, 50*num, 0,44,100,x,0,44,100);
+
+
+	
+	image.style.display = 'none';
+};
+image.src = img;
+};
+
+
+
+
+</script>
+</body>
+</html>

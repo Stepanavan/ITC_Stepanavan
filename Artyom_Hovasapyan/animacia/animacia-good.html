@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Qayl</title>
+</head>
+<body>
+<canvas id="canvas" width=" 950"; height="150"></canvas>
+
+
+
+<script type="text/javascript">
+	var context = document.getElementById('canvas').getContext('2d');
+	var width=1000 , height=1000;
+	var cop = loadImage('00.png',40,100,5);
+
+setInterval(function(){
+	context.clearRect(0,0,100,100)
+drawImage(cop,0,0);
+	 
+},140);
+//jamank
+
+
+function drawImage(img,x,y) {
+
+if (img.num>=img.count) img.num =1;
+else img.num +=1;
+	
+
+context.drawImage( img.dom,52*(img.num-1), 0,img.width,img.height,x,y,44,100);
+//width,heihgt karelia poxel
+};
+
+function  loadImage(path,width ,height,count){
+var image = document.createElement('img');
+var result= {dom : image,width:width,height:height,count:count,loaded:false,
+	num:1
+
+
+};
+
+
+
+
+	image.onload=function () {
+	image.style.display = 'none';
+	result.loaded = true;
+};
+image.src = path;
+return result;
+}
+
+
+</script>
+</body>
+</html>
