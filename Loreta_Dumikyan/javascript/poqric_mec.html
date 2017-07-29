@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>օրինակ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+
+
+<p>Թվերի սորտավորում</p>
+
+<button onclick="sortavorum()">Սեղմիր</button>
+
+<p id="aaa"></p>
+
+<script>
+var points = [40, 8787878787878787, 100, 1, 5, 25, 10, 5555555, 1020];    
+console.log(points);
+document.getElementById("aaa").innerHTML = points;    
+
+function sortavorum() {
+    points.sort(function(a, b){return a - b});
+    document.getElementById("aaa").innerHTML = points;    
+
+   console.log(points);
+
+}
+</script>
+
+</body>
+</html>
