@@ -21,26 +21,31 @@
 
   function searchbook(indexmin,indexmax){
   bar = document.getElementById("search2").value;
-  
-  
+  if(!indexmin) {
+    indexmin = 0;
+    if(bar < masivsort[indexmin]) {
+      console.log("durs e --------");
+      return;
+    }
+  } 
   if (!indexmax) {
     indexmax = imax;
     if(bar > masivsort[indexmax]) {
-      console.log("Բացակայում է ցավոք");
+      console.log("durs e ++++++++++");
       return;
     }
   }
 
   var k = 0;
    
-  if ((indexmin+indexmax)%2 == 1){
+  if ((indexmin+indexmax)%2==1){
     k = parseInt((indexmin+indexmax+1)/2);
   } else {
     k = parseInt((indexmin+indexmax)/2);
   }
   
-  if (bar == masivsort[k]) {
-    console.log("+++");
+  if(bar == masivsort[k]) {
+    console.log("+++++");
     return;
   } else if(bar < masivsort[k]) {
     indexmax = k;
