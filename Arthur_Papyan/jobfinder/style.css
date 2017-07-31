@@ -1,0 +1,135 @@
+* {
+	margin: 0;
+	padding: 0;
+    color: #27408B;
+}
+html {
+    display: block;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #EEEEEE;
+    font-size: 9pt;
+    font-family: Verdana,Tahoma,Sylfaen,sans-serif;
+}
+#job{
+	background-color: white;
+	height: 100vh;
+	width: 1050px;
+	border-left: 2px solid gray; 
+	border-right: 2px solid gray; 
+	
+}
+.logo{
+	float: left;
+	
+}
+.topheader{
+	position: relative;
+	left:135px;
+}
+.adding{
+	border-right: 1px solid  black;
+	padding-right: 10px;
+	padding-left: 10px;
+	border-collapse: separate;
+	color:	#0091DB;
+	cursor: pointer;
+}
+
+.adding > img{
+	position: relative;
+	top:5px; 
+}
+.auth > #reg,#log {
+	cursor: pointer;
+	color:	#0091DB;
+}
+
+#reg {
+	padding-left: 10px;
+	padding-right: 10px;
+	border-right: 1px solid black;
+}
+#log {
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.mainMenu{
+	
+	height: 15px;
+	width: 794px;
+	background-color: #EEEEEE;
+	position: relative;
+	right: 132px;
+	top:13px;
+	border-bottom: 2px solid gray;
+	border-top: 2px solid gray;
+	border-left: 2px solid gray;
+	padding: 5px 15px 5px 8px;
+    margin: 0px;
+    color: #0091E5;
+    font-family: Arial;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+	text-align: left;
+	float:left;
+}
+
+.mainMenu > span{
+	color: #0091E5;
+	margin-right: 15px;
+}
+
+.mainMenu > span:hover{
+	cursor:pointer;
+	color: rgba(0,0,0,0.6);
+}
+
+#omc{
+	width: 1034px;
+	height: 143px;
+	display:inline-block;
+	position: relative;
+	/*text-align: left;*/
+  /*  vertical-align: middle;*/
+	font-weight: bold;
+	
+}
+.partners{
+	position: relative;
+	display: inline-block;
+	margin-left: 10px;
+	
+	
+
+}
+
+.ptext {
+	
+	font-weight: normal;
+}
+.plarge{
+	width: 70px;
+	height: auto;
+	background-color: black;
+	margin-bottom: 15px;
+	
+		
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

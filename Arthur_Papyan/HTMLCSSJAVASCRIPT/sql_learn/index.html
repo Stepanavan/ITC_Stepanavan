@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data</title>
+	 <style >
+		table, tr, .aaaaa{
+
+			border:3px groove red;
+			transition: all ease 1s;
+
+		}
+				table, tr, .aaaaa::after{
+
+			border:3px groove red;
+			transition: all ease 1s;
+
+		}
+
+
+	</style>
+</head>
+<body >
+
+
+
+
+<script>
+var loadDoc =function () {
+	  var xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function() {
+	  	
+
+    	if (this.readyState == 4 && this.status == 200) {
+		   	var obj = JSON.parse(this.responseText);
+		  
+		 	var qqq="";
+		   	for (var i = 0 ;i<obj.records.length ; i++){
+		   		qqq=qqq+`<tr><td class="aaaaa">${obj.records[i].Name}</td> <td class="aaaaa">${obj.records[i].City}</td><td class="aaaaa">${obj.records[i].Country}</td></tr>`
+		   	}
+
+
+	   		
+		  
+		
+		   	document.getElementById('fff').innerHTML=qqq;
+		   	
+    	}
+  };
+  xhttp.open("GET", "https://www.w3schools.com/angular/customers_sql.aspx");
+  xhttp.send();
+}();
+
+
+
+
+
+</script>
+<table id='fff'></table>
+
+</body>
+</html>

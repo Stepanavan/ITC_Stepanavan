@@ -23,13 +23,13 @@ var autoLogin = function (){
 	users = [
 		
 	{
-	log:'ar2r',
-	pass:'ar2r',
-	name:'Ar2r_Papian',
+	log:'1',
+	pass:'1',
+	name:'1',
 	img:'image/users/YourLogoHere.jpg'
 	},{
 	log:'2',
-	pass:'ar2r',
+	pass:'2',
 	name:'2',
 	img:'image/users/YourLogoHere.jpg'
 	},{
@@ -62,7 +62,7 @@ var autoLogin = function (){
 	var newlog='10';
 	var newpass='10';
 	var newname='10';
-	var newimg='image/users/ar2r.jpg';
+	var newimg='image/users/SRC.jpg';
 
 	users.push({log:newlog,pass:newpass,name:newname,img:newimg});
 
@@ -119,36 +119,35 @@ function logout(){
 
 
 function login(){        
-		var auth;           
+		           
 		var log = document.getElementById('logininput').value;   
 		var pass= document.getElementById('passwordinput').value;  
-		var checklog=[];  			 
-		var checkpass=[];
-		for (var i=0; i<users.length; ++i){          
-  				
-			checklog.push(users[i].log);
-			checkpass.push(users[i].pass);
-			
-			
-		}
-		if ( checklog.indexOf( log ) != -1 ){
-			alert("Login ready");
-			if ( checkpass.indexOf( pass ) != -1 ){
-				alert("Pass ready");
-				autentification();              
-				localStorage.setItem(log, pass);  
-			}else{
-				alert("Password Wrong")
+/*		var checklog=[];  			 
+		var checkpass=[];*/
+		for (var i=0; i<users.length; ++i){
+
+
+
+			if (log ==users[i].log ){
+				if(pass ==users[i].pass){
+					autentification();              
+					localStorage.setItem(log, pass);
+					console.log('mtav')
+
+				}else{
+					console.log("pass wrong")
+				}
+				setTimeout(function(){location.reload()},1000);
+				return;
 			}
-		}	
-		else{
-		alert("Login Wrong")
+
+
 	
 }
+	console.log('Login wrong')
 	
-	
-	console.log(checklog,checkpass)
-	setTimeout(function(){location.reload()},1000);
+
+
 	}	
 			
 		
@@ -366,7 +365,7 @@ function openRightMenu(){
 
 
 
-/*window.onclick = function(event) {
+window.onclick = function(event) {
   if (!event.target.matches('#menu') && !event.target.matches('#openmenu')) {
 
    	document.getElementById('menu').classList.remove('menushow');
@@ -387,7 +386,7 @@ function openRightMenu(){
 	
 
 
-}*/
+}
 
 
 
@@ -396,10 +395,10 @@ var ctx = canvas.getContext("2d");
 
 
 
-var textDataBase=[ "Your text 1 ","Your text 2 ", "Your text 3 ", "Your text 4 ", "Your text 5 " ]  
+var textDataBase=[ "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, neque omnis nihil, earum facilis aperiam doloremque fugit saepe error et enim architecto possimus dignissimos aut non, ex delectus provident dolor." ]  
 
 
-	ctx.fillStyle = "saddlebrown";
+	ctx.fillStyle = "white";
    
     ctx.font = "15pt Verdana";
    

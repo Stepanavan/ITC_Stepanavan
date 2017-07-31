@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 1000px;
+    background-color: crimson;
+}
+
+
+header{
+    margin-top: -12px;
+    width: 6.5em;
+    height: 85vh;
+
+    border-radius: 0px 0px 70px 70px;
+}
+    .head{
+        margin: 12px;
+        display: block;
+        height: 0em;
+        width: 0em;
+        background-color: white;
+        //border-radius: 50%;
+        line-height: 8;
+        text-align: center;
+        border:1px groove white;
+        transition: all ease 500ms;
+        border-top: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-bottom: 100px solid transparent;
+        border-left: 100px solid #990000;
+        margin: 40px;
+    }
+
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: lightgreen;
+    }
+    header{
+        position: relative;
+        height: 37vh;
+        width: 200%;
+      
+}
+        .head{
+        display: inline-block;
+        height: 3em;
+        width: 5em;
+        background-color: chartreuse;
+        line-height: 3;
+        transition: all ease 500ms;
+    }
+
+}

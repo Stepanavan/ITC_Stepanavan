@@ -1,0 +1,46 @@
+#a {
+    color:white;
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    border-radius:20% 20% 70% 70%;
+	animation-name: example;
+    animation-duration: 1s;
+    text-align: center;
+
+}
+#a {
+   
+ 
+
+}
+
+
+
+
+
+@keyframes example {
+    0% {transform: rotateY(0deg);
+
+        background-color: black;
+    
+		
+    }
+    20% {color:transparent;}
+    
+    50% {transform: rotateY(180deg);
+          background-color: blue;
+    
+    }
+   
+    80%{
+        
+        color:transparent;
+    }
+    100% {transform: rotateY(0deg);
+        color:white;
+        background-color: black;
+    }
+}
+
+

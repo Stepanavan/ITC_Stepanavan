@@ -1,0 +1,104 @@
+<!Doctype html>
+
+
+<html>
+    <head>
+
+    <title>Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"  defer>  </script>
+    </head>
+
+    <body onmousedown=colorizer() onmouseup=uncolorizer()>
+    
+        <table> 
+
+        <script type="text/javascript">
+            for (i=0;i<50;i++){
+                document.write("<tr>")            
+
+                for(j=0;j<50;j++) {
+                    document.write("<td onmouseover='aaa(this)' id='a"+j+i+"'></td>")
+
+                }
+
+                document.write("</tr>")
+            }
+           
+        </script>
+
+        </table>
+        <hr>
+        <!--<script>
+             var colors = ['red','green','blue','brown','black','pink','azure']
+              for(i in colors) {
+                    document.write("<div onclick='colorizer(this)' style='background-color:"+colors[i]+"' id='a"+i+"'></div>")
+
+                }
+        </script>    -->
+        <hr>
+        <script>
+        var click=false;
+            var color =0;
+            
+            var color1=0;
+            var color2 = 0
+        function send() {
+        	
+
+        color = document.getElementById('range').value;
+        document.getElementById('div').style.backgroundColor="rgb("+color+","+color1+","+color2+")"
+        console.log(color);
+        }
+            function send1() {
+
+        color1 = document.getElementById('range1').value;
+        document.getElementById('div').style.backgroundColor="rgb("+color+","+color1+","+color2+")"
+        console.log(color1);
+        }
+            function send2() {
+
+        color2 = document.getElementById('range2').value;
+        document.getElementById('div').style.backgroundColor="rgb("+color+","+color1+","+color2+")"
+        console.log(color2);
+        }
+  
+        
+
+        function aaa(a){
+        	if (click==true){
+        	
+        	document.getElementById(a.id).style.backgroundColor="rgb("+color+","+color1+","+color2+")";
+    	}
+
+        }
+        </script>
+      
+        
+        
+   
+        <hr>
+        <div id="div2">  <input type="range" onchange="send()"  id="range" min="0" max="255" step="1" value="0"></div>
+        <div id="div3">  <input type="range" onchange="send1()"  id="range1" min="0" max="255" step="1" value="0"></div>
+         <div id="div4">  <input type="range" onchange="send2()"  id="range2" min="0" max="255" step="1" value="0"></div>
+        <rh>
+            <rh>
+                <rh>
+        <div id='div'></div>
+        
+        
+<!--        <select id="select" onchange="x(this)">
+          <option value='red' >Red</option>
+          <option value='green'>Green</option>
+          <option value ='blue'>Blue</option>
+          <option value ='orange'>Orange</option>
+          <option value ='brown'>Brown</option>
+          <option value ='black'>Black</option>
+
+        </select>-->
+        
+        
+        
+        
+        </body>
+</html>

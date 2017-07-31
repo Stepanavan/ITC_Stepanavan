@@ -1,0 +1,36 @@
+#target {
+    position:relative;
+    width: 300px;
+    height: 30px;
+    left:30%;
+/*    margin: 0;
+    padding: 0;*/
+    background-color:aquamarine;
+    transition:all ease 1s;
+}
+
+#bullet {
+    
+    position:absolute;
+    height: 20px;
+    width: 10px;
+    background-color: #000;
+    border-radius:10px 10px 0 0; 
+    top:0px;
+    transition:all ease 1s;
+
+}
+
+
+
+
+#player{
+    position:relative;
+    height: 50px;
+    width: 30px;
+    background-color: gray;
+    top:400px;
+
+
+    
+}

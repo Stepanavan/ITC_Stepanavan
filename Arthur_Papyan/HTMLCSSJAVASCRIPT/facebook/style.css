@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+form {
+    position: relative;
+    float:right;
+    align-content: center;
+    top:40px;
+    right:50px;
+
+}
+#logo {
+    height: 100px;
+    width: 200px;
+}
+#header {
+    background-color:#3b5998; 
+}

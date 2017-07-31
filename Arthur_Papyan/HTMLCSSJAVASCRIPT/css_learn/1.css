@@ -1,0 +1,92 @@
+body {
+    background-color: #fc00bd;
+}
+ul {
+    background-color: red;
+       position: relative;
+    top:0px;
+} 
+li {
+    background-color: red;
+}
+
+
+#tarber {
+    background-color: black;
+}
+
+.raberner {
+    background-color: white;
+}
+
+
+input{
+   
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    width: 10%;
+
+        font: 16px arial,sans-serif;
+    line-height: 34px;
+    height: 34px !important;
+        text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    transition: all ease 1s;
+}
+
+
+input:focus{
+    width: 100%;
+}
+
+
+#aaa {
+    background-color: blue;
+    height: 35px;
+    overflow: hidden;
+    transition: all ease 1s;
+    width: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 50px;
+    
+}
+#aaa:hover {
+    height: 120px;
+    overflow: hidden;
+    width: 200px;
+}
+#aaa > span {
+font-size: 6.5px;
+
+    
+}
+#aaa > ul {
+margin-top: -2px;
+
+    
+}
+li:hover{
+    box-shadow: 0 0 20px black inset;
+}
+
+
+#hjk{
+    height: 30px;
+    width: 200px;
+    border-radius: 50px;
+    color: aqua;
+    background-color: aqua;
+}
+
+
+#jkl {
+        
+}

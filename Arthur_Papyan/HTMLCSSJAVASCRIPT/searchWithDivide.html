@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    var n = []
+    
+    for(var i = 0;i<100;++i){
+        
+        n.push(i*2+1);
+    	}
+    var indexmin=0;
+    var indexmax=n.length;
+    var num=199;
+    var k=parseInt((indexmin+indexmax)/2);
+	function sort(){
+		k=parseInt((indexmin+indexmax)/2);
+		if (num==n[k]) {
+			//console.log(k);
+    		return k;
+    	} else if(num<n[k] ){
+			indexmax=k;
+    	} else {
+			indexmin=k ;
+    	} 
+    	sort();
+	}
+    
+  	
+   	sort();
+console.log(k);
+    
+    </script>
+   
+   
+   
+    
+</body>
+</html>
