@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+#myProgress2 {
+  width: 100%;
+  background-color: #ddd;
+}
+#myProgress3 {
+  width: 100%;
+  background-color: #ddd;
+}
+
+
+#myBar {
+  width: 1%;
+  height: 50px;
+  background-color: pink;
+}
+#myBar2 {
+  width: 1%;
+  height: 50px;
+  background-color: black;
+}
+#myBar3 {
+  width: 1%;
+  height: 50px;
+  background-color: yellow;
+}
+</style>
+<body >
+
+<div onclick="move('myBar')" id="myProgress">
+  <div id="myBar"></div>
+</div>
+<br>
+
+<div onclick="move('myBar2')" id="myProgress2">
+  <div id="myBar2"></div>
+</div>
+
+<br>
+<div onclick="move('myBar3')" id="myProgress3">
+  <div id="myBar3"></div>
+</div>
+
+<br>
+
+<script>
+
+function move(x) {
+  var qayl=1;
+  var elem = document.getElementById(x); 
+  var width = 1;
+  var id = setInterval(frame, 50);  
+  
+  function frame() {
+    if (width==1){
+      qayl=1;
+    }
+    else if (width == 100) {
+      qayl=-1;
+    } 
+      width+=qayl; 
+      elem.style.width = width + '%';
+  }
+}
+</script>
+
+</body>
+</html>
