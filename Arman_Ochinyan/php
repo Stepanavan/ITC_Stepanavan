@@ -1,0 +1,83 @@
+<?php 
+
+
+
+
+
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$baza = "tvyalner";
+
+$kap = new mysqli("localhost","root","");
+
+
+$baza_sarqel="CREATE database IF NOT EXISTS `tvyalner`;" ; 
+mysqli_query($kap, $baza_sarqel);
+$kap = new mysqli("localhost","root","",$baza);
+$table_sarqel="CREATE TABLE IF NOT EXISTS `info` (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nkar varchar(10),
+video varchar(15),
+tiv int(10)
+
+);" ; 
+
+if ($kap->query($table_sarqel) === TRUE) {
+    echo "Table MyGuests created successfully";
+} else {
+    echo "Error creating table: " . $kap->error;
+}
+
+
+/*
+$tvyal_avel = "INSERT INTO info (nkar, video, tiv)
+VALUES ('1.png', '1.mpeg', 10);";
+
+$x = 1;
+
+while($x <= 5) {
+  if ($kap->query($tvyal_avel) === TRUE) {
+		echo "tvyaly averlacreci";
+	} else {
+		echo "Error creating table: " . $kap->error;
+	}
+  $x++;
+} 
+*/
+
+$sql = "SELECT id FROM info";
+$result = $kap->query($sql);
+echo "<br>";
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"].  "<br>";
+    }
+} else {
+    echo "0 results";
+}
+
+
+
+
+$sql = "UPDATE info SET nkar='2.png' WHERE id BETWEEN 5 AND 12";
+
+if ($kap->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $kap->error;
+}
+
+
+
+
+
+
+
+
+
+$kap->close();
+?>
