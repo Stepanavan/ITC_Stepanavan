@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div>
+<p>Ներմուծել ցանկացած անուն</p>
+<input id="search2" type="text" name="cucak1">
+<button type="search" onclick="searchbook()">կոնկրետ</button>
+</div>
+<script type="text/javascript">
+	var masiv = ["արա","լոռա","անի","դավիթ","կարին","արամ","էլիզ","մարի","սվետա"];
+  
+  console.log(masiv.length);
+  var masivsort = masiv.sort();
+  console.log(masivsort);
+  
+
+
+
+
+var imax = masivsort.length-1;
+
+function searchbook(indexmin,indexmax){
+  tiv = document.getElementById("search2").value;
+  if(!indexmin) {
+    indexmin = 0;
+    if(tiv < masivsort[indexmin]) {
+      console.log("durs e --------");
+      return;
+    }
+  } 
+  if (!indexmax) {
+    indexmax = imax;
+    if(tiv > masivsort[indexmax]) {
+      console.log("durs e ++++++++++");
+      return;
+    }
+  }
+
+  var k = 0;
+   
+  if ((indexmin+indexmax)%2==1){
+    k = parseInt((indexmin+indexmax)/2);
+  } else {
+    k = (indexmin+indexmax)/2;
+  }
+
+var tarberutiun = indexmax-indexmin;
+
+if(tiv == masivsort[k]) {
+      console.log("+++++");
+      return;
+
+    } else if(tarberutiun==1 && tiv<masivsort[indexmax] && tiv>masivsort[indexmin]){
+      console.log("այդպիսի մարդ չկա");
+      return;
+    }
+
+     else if(tiv < masivsort[k]) {
+      indexmax = k;
+      searchbook(indexmin,indexmax);
+    } else if (tiv > masivsort[k] ) {
+        if (tarberutiun==1){
+          indexmin = k+1;
+        }
+        else {
+          indexmin = k;
+        }
+      
+      searchbook(indexmin,indexmax);
+    } 
+    
+  
+  
+}  
+ 
+ 
+</script>
+</body>
+</html>
