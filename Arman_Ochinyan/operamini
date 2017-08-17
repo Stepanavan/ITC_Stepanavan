@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.butid{
+	background-color: white;
+}
+
+.butid:active {
+	border-color:blue;
+    background-color: #cce6ff;
+	
+}
+
+
+.hist{
+	height:50px;
+	overflow:hidden;
+
+	
+}
+
+.histshow{
+	height:300px;
+	overflow:scroll;
+	
+}
+
+</style>
+<meta charset="UTF-8">
+</head>
+<body>
+<div style ="display: inlinne;background-color:#e6e6e6; border-bottom:1px #6b6b6b solid; width:155px; height:20px; margin-bottom:3px;padding-left:20px;" >
+	<h4>Opera mini <img style="padding-left:50px; height:12%; width:12%" src="opera.jpg" ></h4>
+</div>
+<div >
+	<form action="" style="top:20px; right:850px; margin-bottom:3px">
+	  <input  align="center" type="" name="firstname" value="www.">
+	</form>
+</div>
+<div  style="margin-bottom:3px">
+	<form action="" style="top:20px; right:850px; margin-bottom:3px">
+	  <input  align="center" type=""  placeholder="google">
+	</form>
+</div>
+<div ><span style="font-size: 18px; color:#e6e6e6;margin-bottom:2px">O</span><span style=" margin-left:5px; font-size:75%;">Попробуйте Опера для комп...</span>
+</div>
+
+<div style ="display: inlinne;background-color:#e6e6e6; border-bottom:1px #6b6b6b solid;border-top:1px #6b6b6b solid; width:175px; height:20px; margin-bottom:3px" >
+	<span style="font-size: 13px;"><b>Закладки</b> </span>
+</div>
+
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$baza = "silka";
+
+$kap = new mysqli("localhost","root","");
+
+
+$baza_sarqel="CREATE database IF NOT EXISTS `silka`;" ; 
+mysqli_query($kap, $baza_sarqel);
+$kap = new mysqli("localhost","root","",$baza);
+$table_sarqel="CREATE TABLE IF NOT EXISTS `nkar` (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nkar varchar(10),
+hxum varchar(30),
+arjeq varchar(15)
+);" ; 
+
+if ($kap->query($table_sarqel) === TRUE) {
+    
+} else {
+    echo "Error creating table: " . $kap->error;
+}
+
+
+
+$kap = new mysqli("localhost","root","","silka");
+
+$img = "SELECT nkar,hxum,arjeq FROM nkar;";
+
+
+
+if ($kap->connect_error) {
+    die("Connection failed: " . $kap->connect_error);
+} 
+
+
+if ($kap->query($img) === TRUE) {
+    echo "TVYAL bereci";
+}
+$result = $kap->query($img);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        $imgo =  $row["nkar"] ;
+		$hx =  $row["hxum"] ;
+		$ar =  $row["arjeq"] ;
+		echo "<div style=' width:174px;'>";
+		echo "<a href='$hx' style='text-decoration:none'><button class='butid' style='width:100%; height:100%; text-align: left;'><img src='$imgo' style='width:10%; height:10%; margin-left:2px; '> <a href = mobile.php?h=$ar tiv()>$ar </a></button></a><br>";
+		//echo "var tiv=function(){if(h>30){h=30-h}}"
+		echo "</div>";
+		
+    }
+}
+ 
+?>
+<br>
+<br>
+<br>
+<div>
+</div>
+<div style ="display: inlinne;background-color:#e6e6e6; border-bottom:1px #6b6b6b solid; width:175px; height:20px; margin-bottom:3px" >
+	<button id="btn" class="butid" onclick="ist()" style=" width:100%; text-align: left; "><span style="font-size: 13px; "><b >Истоия</b> </span></button>
+	<div id='cont' class="hist">
+	<?php 
+	if(isset($_GET)){
+		$kap = new mysqli("localhost","root","","ist");
+		$h=	$_GET['h'];
+		$sql = "INSERT INTO istoria (id) VALUES('$h')";
+		$kap->query($sql);
+	}	
+	$img = "SELECT id FROM istoria;";
+
+
+
+if ($kap->connect_error) {
+    die("Connection failed: " . $kap->connect_error);
+} 
+
+
+if ($kap->query($img) === TRUE) {
+    echo "TVYAL bereci";
+}
+$result = $kap->query($img);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+		$x =  $row["id"]."<br>";
+
+	   echo "$x" ;
+		
+		
+    }
+}
+	
+	?>
+	
+	</div>
+	
+	
+</div>
+<script>
+document.getElementById('btn').onclick=function(){
+	document.getElementById('cont').classList.toggle('histshow')
+	
+	
+}
+
+</script>
+
+
+</body>
+</html>
