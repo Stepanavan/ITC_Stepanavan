@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var urulus=[];
+        for (var i = 0; i < 20; i++) {
+          var x = {lat: -25.363+(Math.random()/1000), lng: 131.044+(Math.random()/1000),date:"2017.01.01"};
+          urulus.push(x);
+        }
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: urulus[0]
+        });
+        var markers=[];
+        for (var i = 0; i < 20; i++) {
+          var marker = new google.maps.Marker({
+            position: urulus[i],
+            map: map
+          });
+          markers.push(marker);
+          markers[i].addListener('click', function() {
+              alert(this.position);
+              map.setCenter(this.getPosition());
+            });
+        }
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </body>
+</html>
