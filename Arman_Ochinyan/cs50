@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'> 
+<style>
+
+
+
+</style>
+</head>
+<body>
+<input type="text" name="" id="did">
+<input type="button" name="aa" onclick="f1()">
+<script>
+    var f1=function(){
+    a=26;
+    while (a>24 && a<=1){
+var a=document.getElementById("did").innerHTML.value;
+document.write("mutq areq tiv")        
+   
+for(i=0;i<a;++i){
+
+    document.write(" ")
+}
+
+
+for(j=(a-i-1);j<a;++j){
+
+    document.write("#")
+    alert(a)
+}
+}
+
+
+
+
+
+    }
+</script>
+</body>
+</html>
+
