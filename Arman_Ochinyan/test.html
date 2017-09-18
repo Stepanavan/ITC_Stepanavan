@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'> 
+<style>
+td {
+width: 20px;
+}
+</style>
+</head>
+<body>
+<input type="button" name="aa"  value= "test" onclick="f1()">
+<script>
+var f1=function(){
+    var a=26;
+    while (a>24 || a<=1){
+	a=prompt("nermutsel a tiv@");       
+	}
+	document.write("<table>");
+	for(i=2;i<a;++i){
+		document.write("<tr>");
+		for (j=0; j<(a-i);++j)
+		{
+			document.write("<td></td>");
+		}
+		for (j=(a-i); j<a;++j)
+		{
+			document.write("<td>#</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}
+</script>
+</body>
+</html>
