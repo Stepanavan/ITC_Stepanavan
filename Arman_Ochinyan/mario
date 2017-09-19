@@ -4,6 +4,8 @@
 		
 int main(){
 	int a=26;
+	printf("a = ");
+        scanf("%d", &a);
    
     while (a>23 || a<(-1))
     {
