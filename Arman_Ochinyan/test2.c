@@ -27,12 +27,19 @@ void burg (int a){
 	    for (int k = (a-i);k<a;++k){
 	 	    printf("%c",y);
 	 	}
+
+        printf("%c",x);
+
+        for (int k = (a-i);k<a;++k){
+	 	    printf("%c",y);
+	 	}
+
         printf("\n");
 	 }
 }
-		
+
 int main(){
-	int k;
+    int k;
     k = mutq();
     burg(k);	 
 
