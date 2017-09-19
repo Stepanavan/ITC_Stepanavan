@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+
+		
+int main(){
+	int a=26;
+	printf("a = ");
+    scanf("%d", &a);
+   
+    while (a>23 || a<(-1))
+    {
+        printf("a = ");
+        scanf("%d", &a);
+
+    }
+	 		char x = ' ';
+	 		char y = '#';
+
+	 
+	 for (int i = 0;i < (a+1);++i){
+	 	
+	 					 
+	    for (int j = 0;j < (a-i);++j){
+	    	printf("%c",x);
+	 	}
+
+
+	    for (int k = (a-i);k<a;++k){
+	 	    printf("%c",y);
+	 	}
+printf("\n");
+	 }
+return 0;
+	}
