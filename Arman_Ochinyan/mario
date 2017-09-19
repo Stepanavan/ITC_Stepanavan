@@ -21,12 +21,12 @@ int main(){
 	 	
 	 					 
 	    for (int j = 0;j < (a-i-1);++j){
-	    	printf("%c\n",x);
+	    	printf("%c",x);
 	 	}
 
 
 	    for (int k = i;k < a;++k){
-	 	    printf("%c\n",y);
+	 	    printf("%c",y);
 	 	}
 	   printf("\n");
 	 }
