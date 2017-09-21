@@ -8,7 +8,7 @@ x=random.randint(0,1000)
 count = 0
 
 z=0
-while (z<100):
+while (z<1000):
 	print "LOADING[#                 ]" + str(z) +"%"
 	os.system('sleep 0.001')                                                                         
 	os.system('clear')
