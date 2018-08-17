@@ -15,27 +15,40 @@ width:10px;
 
 
 </head>
-<body>
+<body onmouseup="aaa2(this)" onmousedown="aaa3(this)">
 
 <script>
 	gggg="white";
 	k=-1;
+	mouse_checked = 0;
 	document.write("<table>");
 	for(var i=0;i<30;i++){
 		document.write("<tr>");
 		for(var j=0;j<80;j++){
 		k++;
 			
-				document.write("<td id='a" +k+ "' onclick='aaa(this)' style='border-color:#444;'></td>");
+				document.write("<td id='a" +k+ "' onclick='aaa(this) '  onmouseenter='aaa1(this) '  onmouseup='aaa2(this) ' style='border-color:#444;'></td>");
 		
 		}
 		document.write("</tr>");
 	}
 	document.write("</table>");
 	function aaa(asas){
-		//document.getElementById(asas.id).style.backgroundColor=document.getElementById("guyn").value;
-		//document.getElementById("red").checked = true;
 		document.getElementById(asas.id).style.backgroundColor=gggg;
+	}
+
+	function aaa1(asas){
+		if (mouse_checked == 1)
+		{
+			document.getElementById(asas.id).style.backgroundColor=gggg;
+		}
+	}
+
+	function aaa2(asas){
+		mouse_checked = 0;
+	}
+	function aaa3(asas){
+		mouse_checked = 1;
 	}
 
 	function ddd(www){
