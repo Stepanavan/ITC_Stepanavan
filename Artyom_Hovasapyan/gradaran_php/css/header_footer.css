@@ -1,0 +1,67 @@
+body{
+	margin: 0;
+	padding: 0;
+
+}
+a,h1,h2,h3,h4,h5,h6, ul{
+	text-decoration: none;
+}
+
+header{
+	background-color: #2e604f;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+.second_section{
+	padding: 100px 0 ;
+}
+#header_menu_links{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center
+
+}
+
+#logo{
+	margin-right: 140px
+}
+#header_menu_links li a{
+	padding: 30px 18px;
+	text-align: right;
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+#header_menu_links li a:hover {
+	transition: 0.4s;
+	background-color: #96e21cdb;
+}
+.navbar{
+	font-weight: 800;
+	font-size: 12px;
+	padding: 0;
+}
+.navbar-brand {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+#dropdownMenuLink{
+	background:transparent;
+	color:rgba(255,255,255,.5);
+	border:none
+}
+#dropdown-items-book{
+	background: #996;
+
+	font-weight: 800;
+	font-size: 12px;
+}
+
+/*
+
+	Footer
+
+ */

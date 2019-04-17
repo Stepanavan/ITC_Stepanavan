@@ -1,0 +1,38 @@
+@media (max-width: 750px) {
+
+    #logo {
+    	padding: 20px;
+    }
+    #header_menu_links li a{
+    	padding: 10px;
+    	font-size: 11px
+    }
+    header .container{
+		margin-right: 0px !important;
+	}
+}
+@media (max-width: 862px) {
+
+    #logo {
+    	margin-right: 30px;
+    	padding: 20px;
+    }
+    header .container{
+		margin-left: 0px !important;
+	}
+}
+@media (max-width: 612px) {
+	header .container{
+		margin: 0px 0px !important;
+		padding: 10px 0;
+	}
+	#logo {
+    	margin-right:0px;
+    	padding: 20px;
+    }
+}
+@media (max-width: 571px){
+	#header_menu_links li a {
+    padding:13px 20px;
+
+}
