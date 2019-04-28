@@ -1,2 +1,2 @@
-grgeri temanaeri hamar petga hnenc aneng vor ing@ onclick ani
-ing@ url@ vercni u et url ov db-ic et url anun@ gtni u drang tpi
+Mnac hnenc anem vor banastexcnerum poxelis patmakanumel poxvi, PDO(et verjum),dizayn,ha mekel 5 oric avtomat jnjvi(timer dneng u localStoragum true-n false sargeng u mekel phpmyadminum avtomat avelacneng),u kmna manr-munr baner
+

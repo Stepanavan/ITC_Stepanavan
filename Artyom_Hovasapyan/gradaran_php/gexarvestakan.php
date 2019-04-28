@@ -14,6 +14,7 @@
 
          <?php
 				include "php_lracumner/banastexcutyunneri_tip.php";
+
 			 ?>
       </div>
 

@@ -8,4 +8,7 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/header_footer.css">
     <link rel="stylesheet" href="css/header_footer_media.css">
+
+    <link rel="stylesheet" href="css/login.css">
+
 </head>
