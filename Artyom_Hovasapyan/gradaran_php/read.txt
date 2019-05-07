@@ -1,2 +1,19 @@
-Mnac hnenc anem vor banastexcnerum poxelis patmakanumel poxvi, PDO(et verjum),dizayn,ha mekel 5 oric avtomat jnjvi(timer dneng u localStoragum true-n false sargeng u mekel phpmyadminum avtomat avelacneng),u kmna manr-munr baner
+Mnac hnenc anem vor banastexcnerum poxelis patmakanumel poxvi (et hesta storagum kvercnem anun azganun vernagir ),
+mekel karevora vor et patvirel cexarkel@ cookinerov anem vor irang vzlom chanen uxki poxelov(localstoragum true->fasle),
+mekel ajax-ov petga hnenc anem vor amen 30 hatic heto beri (еше) vor sexmem 30 hatel beri(et php banastexcner_alli meja petg poxel, 
+PDO(et verjum),dizayn,ha mekel 5 oric avtomat jnjvi(timer dneng u localStoragum true-n false sargeng u mekel phpmyadminum avtomat avelacneng grgeri ganak@),
+mihatel karzina sargem (vor sax zakazner@ mej@ lini ),js-ov login@ dzem vor sxal baner chgren,u kmna manr-munr baner
 
+ete hostovem bacum petga senc grem
+//	sayt@ :: 000webhost , bayc stex 30 orova talis pordi hamar karam stex sargacs gcem u global senc cuyc tam
+//
+//	$mysqli = new mysqli ("localhost","id9484406_root_host","artyom030201","id9484406_mybase");
+//	
+//	esel url :: https://databases.000webhost.com/sql.php
+
+login :: id9484406_root_host
+password :: artyom030201
+database_name :: id9484406_mybase
+
+
+mekel sax aaa/gradarani meja
